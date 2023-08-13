@@ -495,12 +495,11 @@ class db
             $_SESSION['type'] = $userData['type'];
             $_SESSION['name'] = $userData['name'];
         }
-        if (isset($_SESSION['username']) && $_SESSION['type'] === 'client') {
+        if (isset($_SESSION['username']) && $_SESSION['type'] == 2) {
             $user = $_SESSION['username'];
             $head = "";
-
             if (($_SERVER['HTTP_HOST'] == 'localhost')) {
-                $head = "/namehere";
+                $head = "/globalwizard";
             }
             if (str_contains($_SERVER['REQUEST_URI'], "$head/admin")) {
                 if ($_SERVER['REQUEST_URI'] === "$head/admin") {
@@ -509,19 +508,21 @@ class db
                     header('location:adminlogin');
                 }
             }
-        } elseif (isset($_SESSION['username']) && $_SESSION['type'] === 'super') {
+        } elseif (isset($_SESSION['username']) && $_SESSION['type'] === 1) {
             $head = "";
 
             if (($_SERVER['HTTP_HOST'] == 'localhost')) {
-                $head = "/namehere";
+                $head = "/globalwizard";
             }
             if (!str_contains($_SERVER['REQUEST_URI'], "$head/admin") && !str_contains($_SERVER['REQUEST_URI'], "$head/main/admin")) {
                 header('location:login');
             }
         } else {
+            echo 'bhiii';
+            die;
             $head = "";
             if (($_SERVER['HTTP_HOST'] == 'localhost')) {
-                $head = "/namehere";
+                $head = "/globalwizard";
             }
             if (str_contains($_SERVER['REQUEST_URI'], "$head/admin")) {
                 if ($_SERVER['REQUEST_URI'] === "$head/admin") {

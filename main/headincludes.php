@@ -8,26 +8,34 @@
  <!-- Shubham Template -->
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Pricing cards - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+ <script defer="" data-api="/stats/api/event" data-domain="preview.tabler.io" src="assets/js/script.js.download"></script>
 
- <title>PMS Equity- The Real Earning Start Here</title>
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta content="Premium Multipurpose Admin &amp; Dashboard Template" name="description">
- <meta content="" name="author">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <!-- <link rel="icon" href="#favicon.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="#favicon.ico" type="image/x-icon"> -->
+
+ <!-- CSS files -->
+ <link href="main/dist/usercss/global-wizard.min.css" rel="stylesheet">
+ <link href="main/dist/usercss/global-wizard-flags.min.css" rel="stylesheet">
+ <link href="main/dist/usercss/global-wizard-payments.min.css" rel="stylesheet">
+ <link href="main/dist/usercss/global-wizard-vendors.min.css" rel="stylesheet">
+ <link href="main/dist/usercss/demo.min.css" rel="stylesheet">
 
  <!-- App favicon -->
- <link rel="shortcut icon" href="main/images/logo/favicon.svg">
+ <!-- <link rel="shortcut icon" href="main/images/logo/favicon.svg"> -->
 
 
 
- <link href="main/dist/usercss/selectr.min.css" rel="stylesheet" type="text/css">
+ <!-- <link href="main/dist/usercss/selectr.min.css" rel="stylesheet" type="text/css"> -->
 
  <!-- App css -->
- <link href="main/dist/usercss/bootstrap.min.css" rel="stylesheet" type="text/css">
- <link href="main/dist/usercss/icons.min.css" rel="stylesheet" type="text/css">
- <link href="main/dist/usercss/app.min.css" rel="stylesheet" type="text/css">
+ <!-- <link href="main/dist/usercss/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+ <!-- <link href="main/dist/usercss/icons.min.css" rel="stylesheet" type="text/css"> -->
+ <!-- <link href="main/dist/usercss/app.min.css" rel="stylesheet" type="text/css"> -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- <link href="main/dist/usercss/style.css" rel="stylesheet" type="text/css">
+ <!-- <link href="main/dist/usercss/style.css" rel="stylesheet" type="text/css"> -->
 
  <!-- Google Font: Source Sans Pro -->
  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -56,7 +64,17 @@
 
  <!-- summernote -->
  <link rel="stylesheet" href="main/plugins/summernote/summernote-bs4.min.css">
+ <style>
+   @import url('https://rsms.me/inter/inter.css');
 
+   :root {
+     --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+   }
+
+   body {
+     font-feature-settings: "cv03", "cv04", "cv11";
+   }
+ </style>
 
  <?php
   if (isset($extracss)) {
