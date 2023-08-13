@@ -3129,7 +3129,7 @@ progress {
 
 .form-label {
   margin-bottom: .5rem;
-  font-size: .875rem;
+  font-size: .8rem;
   font-weight: var(--tblr-font-weight-medium)
 }
 
@@ -3156,16 +3156,16 @@ progress {
 
 .form-text {
   margin-top: .25rem;
-  font-size: 85.714285%;
+  font-size: 75.714285%;
   color: var(--tblr-secondary-color)
 }
 
 .form-control {
   display: block;
   width: 100%;
-  padding: .5625rem .75rem;
+  padding: .3rem .75rem;
   font-family: var(--tblr-font-sans-serif);
-  font-size: .875rem;
+  font-size: .8rem;
   font-weight: 400;
   line-height: 1.4285714286;
   color: var(--tblr-body-color);
@@ -7357,7 +7357,7 @@ body[data-bs-theme=dark] [data-bs-theme=light] .btn-close {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--tblr-backdrop-zindex);
+  /* z-index: var(--tblr-backdrop-zindex); */
   width: 100vw;
   height: 100vh;
   background-color: var(--tblr-backdrop-bg)

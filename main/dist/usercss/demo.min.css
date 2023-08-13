@@ -333,3 +333,19 @@ pre.highlight::-webkit-scrollbar-corner {
         
     }
   }
+
+  .fixTableHead {
+	overflow-y: auto;
+	}
+	.fixTableHead thead th {
+	position: sticky;
+	top: 0;
+	}
+	table {
+	border-collapse: collapse;		
+	width: 100%;
+	}
+
+    .custom-para-size{
+        font-size: 12px;
+    }
