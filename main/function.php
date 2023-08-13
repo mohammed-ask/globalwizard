@@ -508,7 +508,7 @@ class db
                     header('location:adminlogin');
                 }
             }
-        } elseif (isset($_SESSION['username']) && $_SESSION['type'] === 1) {
+        } elseif (isset($_SESSION['username']) && $_SESSION['type'] == 1) {
             $head = "";
 
             if (($_SERVER['HTTP_HOST'] == 'localhost')) {
@@ -518,8 +518,6 @@ class db
                 header('location:login');
             }
         } else {
-            echo 'bhiii';
-            die;
             $head = "";
             if (($_SERVER['HTTP_HOST'] == 'localhost')) {
                 $head = "/globalwizard";

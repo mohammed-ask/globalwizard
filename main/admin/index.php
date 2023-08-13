@@ -2,225 +2,325 @@
 include "main/session.php";
 /* @var $obj db */
 ob_start();
-if (in_array(34, $permissions)) {
-    $activeclient = $obj->selectfieldwhere("users", "count(id)", "status =1 and activate='Yes' and type=2 and id != 26");
-    $pendinguser = $obj->selectfieldwhere("users", "count(id)", "status =0");
-    $totalinv = $obj->selectfieldwhere("users", "sum(investmentamount)", "status =1 and id != 26");
-    $opentradeamt = $obj->selectfieldwhere("stocktransaction", "sum(totalamount)", "status =0 and tradestatus='Open' and userid != 26");
-    $openposition = $obj->selectfieldwhere("stocktransaction", "count(id)", "status =0 and tradestatus='Open' and userid != 26");
+
 ?>
-    <style>
-        #datacards a {
-            color: white;
-        }
-    </style>
-    <div class="container px-6 mx-auto grid mobile-bottom-margin">
-
-        <h2 class="my-6 font-semibold text-gray-700 dark:text-gray-200">
-            Dashboard
-        </h2>
-
-        <!-- Cards -->
-        <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-            <!-- Card -->
-            <div class="flex items-center p-3 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
-                        </path>
-                    </svg>
+<div class="page-header d-print-none">
+    <div class="container-xl">
+        <div class="row g-2 align-items-center">
+            <div class="col">
+                <!-- Page pre-title -->
+                <div class="page-pretitle">
+                    Overview
                 </div>
-                <div>
-                    <p class="mb-2  font-medium text-gray-600 dark:text-gray-400">
-                        Active clients
-                    </p>
-                    <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                        <?= $activeclient ?>
-                    </p>
-                </div>
+                <!-- <h2 class="page-title">
+                  Dashboard
+                </h2> -->
             </div>
-
-            <!-- Card -->
-            <div class="flex items-center p-3 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                <div class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                    </svg>
+            <!-- Page title actions -->
+            <div class="col-auto ms-auto d-print-none">
+                <div class="btn-list">
+                    <span class="d-none d-sm-inline">
+                        <a href="#" class="btn">
+                            New view
+                        </a>
+                    </span>
+                    <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report">
+                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 5l0 14"></path>
+                            <path d="M5 12l14 0"></path>
+                        </svg>
+                        Create new report
+                    </a>
+                    <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal" data-bs-target="#modal-report" aria-label="Create new report">
+                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12 5l0 14"></path>
+                            <path d="M5 12l14 0"></path>
+                        </svg>
+                    </a>
                 </div>
-                <div>
-                    <p class="mb-2  font-medium text-gray-600 dark:text-gray-400">
-                        Total investment
-                    </p>
-                    <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                        <span>₹</span> <?= round($totalinv + $opentradeamt, 2) ?>
-                    </p>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="flex items-center p-3 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
-                    <i class="fa-solid fa-user-clock w-5 h-5" fill="currentColor" viewBox="0 0 20 20"></i>
-                </div>
-                <div>
-                    <p class="mb-2  font-medium text-gray-600 dark:text-gray-400">
-                        Pending approval
-                    </p>
-                    <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                        <?= $pendinguser ?>
-                    </p>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="flex items-center p-3 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-                <div class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500">
-                    <i class="fa-solid fa-handshake-angle w-5 h-5" fill="currentColor" viewBox="0 0 20 20"></i>
-                </div>
-                <div>
-                    <p class="mb-2  font-medium text-gray-600 dark:text-gray-400">
-                        Open positions
-                    </p>
-                    <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-                        <?= $openposition ?>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <h3 class="my-6 text-1xl font-semibold text-gray-700 dark:text-gray-200">
-            Open Stock List
-        </h3>
-        <div class="w-full overflow-hidden rounded-lg shadow-xs">
-
-            <div class="w-full ">
-
-                <table id="example1" class="table w-full whitespace-no-wrap">
-                    <thead>
-                        <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                            <th class="px-3 py-2">S.No.</th>
-                            <th class="px-3 py-2">Stock Name</th>
-                            <th class="px-3 py-2">Lot</th>
-                            <th class="px-3 py-2">Price</th>
-                            <th class="px-3 py-2">Stop Loss</th>
-                            <th class="px-3 py-2">Lot/Quantity</th>
-                            <th class="px-3 py-2">Total</th>
-                            <th class="px-3 py-2">Date & Time</th>
-                            <th class="px-3 py-2">User</th>
-                            <th class="px-3 py-2">Status</th>
-                            <th class="px-3 py-2">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <h3 class="my-6 text-1xl font-semibold text-gray-700 dark:text-gray-200" style="margin-top: 5%;">
-            Carry Forword Transactions
-        </h3>
-        <div class="w-full overflow-hidden rounded-lg shadow-xs">
-
-            <div class="w-full ">
-
-                <table id="example2" class="table w-full whitespace-no-wrap">
-                    <thead>
-                        <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                            <th class="px-3 py-2">S.No.</th>
-                            <th class="px-3 py-2">Stock Name</th>
-                            <th class="px-3 py-2">Lot</th>
-                            <th class="px-3 py-2">Price</th>
-                            <th class="px-3 py-2">Stop Loss</th>
-                            <th class="px-3 py-2">Lot/Quantity</th>
-                            <th class="px-3 py-2">Total</th>
-                            <th class="px-3 py-2">Date & Time</th>
-                            <th class="px-3 py-2">User</th>
-                            <th class="px-3 py-2">Status</th>
-                            <th class="px-3 py-2">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                        <!-- <tr class="text-gray-700 dark:text-gray-400">
-                        <td class=" px-3 py-2">1</td>
-                        <td class=" px-3 py-2  font-semibold">
-                            BANK NIFTY
-                        </td>
-                        <td class="px-3 py-2 ">
-                            863.45
-                        </td>
-                        <td class="px-3 py-2 ">
-                            86
-                        </td>
-                        <td class="px-3 py-2 ">
-                            6/10/2020 5:05 PM
-                        </td>
-                        <td class="px-3 py-2 ">
-                            Suyash Thakur
-                        </td>
-
-                        <td class="px-3 py-2">
-                            <div class="flex items-center space-x-4 ">
-
-                                <button class="px-3 py-2 leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
-                                    Buy</button>
-
-                                <button class="flex items-center justify-between px-2 py-2  font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray">
-                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z">
-                                        </path>
-                                    </svg>
-                                </button>
-
-                            </div>
-                        </td>
-
-                    </tr> -->
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
-    <!-- right col -->
-    </section>
+</div>
+<!-- Page body -->
+<div class="page-body">
+    <div class="container-xl">
+        <div class="row row-deck row-cards">
+
+            <div class="col-12">
+                <div class="row row-cards">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card card-sm">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <span class="bg-primary text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2"></path>
+                                                <path d="M12 3v3m0 12v3"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="font-weight-medium">
+                                            132 Sales
+                                        </div>
+                                        <div class="">
+                                            12 waiting payments
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card card-sm">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <span class="bg-green text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/shopping-cart -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                                                <path d="M17 17h-11v-14h-2"></path>
+                                                <path d="M6 5l14 1l-1 7h-13"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="font-weight-medium">
+                                            78 Orders
+                                        </div>
+                                        <div class="">
+                                            32 shipped
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card card-sm">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <span class="bg-twitter text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="font-weight-medium">
+                                            623 Shares
+                                        </div>
+                                        <div class="">
+                                            16 today
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card card-sm">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <span class="bg-facebook text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/brand-facebook -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="font-weight-medium">
+                                            132 Likes
+                                        </div>
+                                        <div class="">
+                                            21 today
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 d-flex flex-column">
+
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Membership Subscribers</h3>
+                        </div>
+
+                        <div class="table-responsive fixTableHead" style="height: 400px;">
+                            <table class="table card-table table-vcenter text-nowrap datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>Transaction Id</th>
+                                        <th>Payment Mode</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <div>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>88798</td>
+                                            <td><span class="badge bg-success me-1"></span>Success</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>8889077</td>
+                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>88798</td>
+                                            <td><span class="badge bg-success me-1"></span>Success</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>8889077</td>
+                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>88798</td>
+                                            <td><span class="badge bg-success me-1"></span>Success</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>8889077</td>
+                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>88798</td>
+                                            <td><span class="badge bg-success me-1"></span>Success</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>8889077</td>
+                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>88798</td>
+                                            <td><span class="badge bg-success me-1"></span>Success</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>8889077</td>
+                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>88798</td>
+                                            <td><span class="badge bg-success me-1"></span>Success</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td>23 Jun, 2023</td>
+                                            <td>16:23</td>
+                                            <td>TR6377366678388</td>
+                                            <td>Upi Transfer</td>
+                                            <td><span>₹</span>8889077</td>
+                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
+                                        </tr>
+
+                                    </tbody>
+                                </div>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <?php
-}
+
 //Assign all Page Specific variables
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: Admin Dashboard";
+$pagetitle = "Global Wizard: Admin Dashboard";
 $contentheader = "";
 $pageheader = "";
 include "main/admin/templete.php";
 ?>
 <script>
-    var table = $('#example1').DataTable({
-        "ajax": "../main/admin/opentradedata.php",
-        "processing": false,
-        "serverSide": true,
-        "pageLength": 10,
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        "order": [
-            [0, "desc"]
-        ],
-    })
-    var table = $('#example2').DataTable({
-        "ajax": "../main/admin/carryfortradedata.php",
-        "processing": false,
-        "serverSide": true,
-        "pageLength": 10,
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        "order": [
-            [0, "desc"]
-        ],
-    })
+
 </script>
