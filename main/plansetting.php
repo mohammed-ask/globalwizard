@@ -50,7 +50,7 @@ include "main/session.php";
                             </div>
                             <div class="col-auto">
                                 <a href="#" class="btn">
-                                    Details
+                                    Renew Plan
                                 </a>
                             </div>
 

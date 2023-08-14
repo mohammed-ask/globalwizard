@@ -3163,7 +3163,7 @@ progress {
 .form-control {
   display: block;
   width: 100%;
-  padding: .3rem .75rem;
+  padding: .4rem .75rem;
   font-family: var(--tblr-font-sans-serif);
   font-size: .8rem;
   font-weight: 400;
@@ -4189,7 +4189,7 @@ textarea.form-control.is-invalid {
 
 .btn {
   --tblr-btn-padding-x: 1rem;
-  --tblr-btn-padding-y: 0.5625rem;
+  --tblr-btn-padding-y: 0.35rem;
   --tblr-btn-font-family: var(--tblr-font-sans-serif);
   --tblr-btn-font-size: 0.875rem;
   --tblr-btn-font-weight: var(--tblr-font-weight-medium);

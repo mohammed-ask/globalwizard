@@ -27,10 +27,7 @@ include "main/session.php";
                             <a href="plan" class="list-group-item list-group-item-action d-flex align-items-center">Active Plan</a>
                             <a href="transaction" class="list-group-item list-group-item-action d-flex align-items-center">Recent Transactions</a>
                         </div>
-                        <h4 class="subheader mt-4">Experience</h4>
-                        <div class="list-group list-group-transparent">
-                            <a href="#" class="list-group-item list-group-item-action">Give Feedback</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-12 col-md-9 d-flex flex-column">
