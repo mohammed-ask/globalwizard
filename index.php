@@ -123,6 +123,9 @@ switch ($request['path']) {
     case "$head/admin/settings";
         require __DIR__ . '/main/admin/settings.php';
         break;
+    case "$head/admin/insertpersonalaccount";
+        require __DIR__ . '/main/admin/insertpersonalaccount.php';
+        break;
     case "$head/admin/logout";
         require __DIR__ . '/main/logout.php';
         break;

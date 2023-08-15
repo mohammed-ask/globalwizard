@@ -80,6 +80,7 @@ $qrimage = $obj->fetchattachment($compdata['paymentqr']);
 $upiid = $compdata['upiid'];
 $companypersonname = '';
 $companygstno = $compdata["gst_no"];
+$activationamt = $compdata["activationmoney"];
 $compstatecode = $obj->selectfieldwhere('state_list', 'gst_code', 'id=' . $compdata['indian_state'] . '');
 
 $requesttoken = '';

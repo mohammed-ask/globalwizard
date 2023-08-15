@@ -26,6 +26,7 @@ if ($id == "Not Applicable") {
         // $personal["company_name"] = $_POST["company_name"];
         // $personal["gst_no"] = $_POST["gst_no"];
         $personal['email'] = $_POST["email"];
+        $personal['activationmoney'] = $_POST["activationmoney"];
         $personal['address_1'] = $_POST["address_line_1"];
         // $personal['pincode'] = $_POST["pincode"];
         // $personal['city'] = $_POST["city"];
@@ -99,6 +100,7 @@ if ($id == "Not Applicable") {
         // $personal["short_name"] = $_POST["short_name"];
         // $personal["website"] = $_POST["website"];
         $personal["email"] = $_POST["email"];
+        $personal['activationmoney'] = $_POST["activationmoney"];
         // $personal["company_name"] = $_POST["company_name"];
         // $personal["gst_no"] = $_POST["gst_no"];
         $personal['address_1'] = $_POST["address_line_1"];
