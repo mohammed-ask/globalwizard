@@ -161,14 +161,14 @@
           <a href="#" class="dropdown-item">Feedback</a>
           <div class="dropdown-divider"></div>
           <a href="https://preview.tabler.io/settings.html" class="dropdown-item">Settings</a>
-          <a href="https://preview.tabler.io/sign-in.html" class="dropdown-item">Logout</a>
+          <a href="logout" class="dropdown-item">Logout</a>
         </div>
       </div>
     </div>
     <div class="collapse navbar-collapse" id="sidebar-menu">
       <ul class="navbar-nav pt-lg-3">
         <li class="nav-item">
-          <a class="nav-link" href="https://preview.tabler.io/">
+          <a class="nav-link" href="index">
             <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -182,10 +182,204 @@
             </span>
           </a>
         </li>
+        <?php if (in_array(4, $permissions) || in_array(14, $permissions) || in_array(43, $permissions)) { ?>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#navbar-user" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                </svg>
+              </span>
+              <span class="nav-link-title">
+                Users Overview
+              </span>
+            </a>
+            <div class="dropdown-menu ">
+              <div class="dropdown-menu-columns">
+                <div class="dropdown-menu-column">
+                  <?php if (in_array(4, $permissions)) { ?>
+                    <a class="dropdown-item" href="users">
+                      Users List
+                    </a>
+                  <?php } ?>
+                  <?php if (in_array(14, $permissions)) { ?>
+                    <a class="dropdown-item" href="userlogindetails">
+                      Login Time Detail
+                    </a>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
+          </li>
+        <?php } ?>
+        <?php if (in_array(15, $permissions) || in_array(16, $permissions) || in_array(17, $permissions)) { ?>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#navbar-mail" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+                  <path d="M3 7l9 6l9 -6"></path>
+                </svg>
+              </span>
+              <span class="nav-link-title">
+                Email
+              </span>
+            </a>
+            <div class="dropdown-menu ">
+              <div class="dropdown-menu-columns">
+                <div class="dropdown-menu-column">
+                  <?php if (in_array(15, $permissions)) { ?>
+                    <a class="dropdown-item" href="composemail">
+                      Compose Mail
+                    </a>
+                  <?php } ?>
+                  <?php if (in_array(16, $permissions)) { ?>
+                    <a class="dropdown-item" href="viewinbox">
+                      Inbox
+                    </a>
+                  <?php } ?>
+                  <?php if (in_array(17, $permissions)) { ?>
+                    <a class="dropdown-item" href="sentmails">
+                      Sent Mail
+                    </a>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
+          </li>
+        <?php } ?>
+        <?php if (in_array(24, $permissions)) { ?>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#navbar-mail" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                  <path d="M12 7v5l3 3"></path>
+                </svg>
+              </span>
+              <span class="nav-link-title">
+                Pending Approvals
+              </span>
+            </a>
+            <div class="dropdown-menu ">
+              <div class="dropdown-menu-columns">
+                <div class="dropdown-menu-column">
+                  <?php if (in_array(24, $permissions) || in_array(45, $permissions) || in_array(46, $permissions)) {
+                  ?>
+                    <a class="dropdown-item" href="pendingapproval">
+                      Pending User
+                    </a>
+                  <?php }
+                  ?>
+                  <?php if (in_array(45, $permissions)) {
+                  ?>
+                    <a class="dropdown-item" href="pendingactivation">
+                      Pending Activiation
+                    </a>
+                  <?php }
+                  ?>
+                  <?php if (in_array(46, $permissions)) {
+                  ?>
+                    <a class="dropdown-item" href="pendingplan">
+                      Pending Plan Membership
+                    </a>
+                  <?php }
+                  ?>
+                </div>
+              </div>
+            </div>
+          </li>
+        <?php } ?>
+        <?php if (in_array(12, $permissions)) {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="membershipplan">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-badge" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M17 17v-13l-5 3l-5 -3v13l5 3z"></path>
+                </svg>
+              </span>
+              <span class="nav-link-title">
+                Membership Plans
+              </span>
+            </a>
+          </li>
+        <?php } ?>
+        <?php if (in_array(12, $permissions)) {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="employeelist">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                </svg>
+              </span>
+              <span class="nav-link-title">
+                Employees
+              </span>
+            </a>
+          </li>
+        <?php } ?>
+        <?php if (in_array(8, $permissions) || in_array(18, $permissions)) { ?>
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#navbar-role" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"> <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                  <path d="M4 13m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                  <path d="M14 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                  <path d="M14 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+                </svg>
+              </span>
+              <span class="nav-link-title">
+                Role Management
+              </span>
+            </a>
+            <div class="dropdown-menu ">
+              <div class="dropdown-menu-columns">
+                <div class="dropdown-menu-column">
+                  <a class="dropdown-item" href="viewrole">
+                    Roles
+                  </a>
+                </div>
 
-        <li class="nav-item active dropdown">
+              </div>
+            </div>
+          </li>
+        <?php } ?>
+        <?php if (in_array(12, $permissions)) {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="index">
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments-horizontal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                  <path d="M4 6l8 0"></path>
+                  <path d="M16 6l4 0"></path>
+                  <path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                  <path d="M4 12l2 0"></path>
+                  <path d="M10 12l10 0"></path>
+                  <path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                  <path d="M4 18l11 0"></path>
+                  <path d="M19 18l1 0"></path>
+                </svg>
+              </span>
+              <span class="nav-link-title">
+                Settings
+              </span>
+            </a>
+          </li>
+        <?php } ?>
+        <!-- <li class="nav-item active dropdown">
           <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="true">
-            <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/layout-2 -->
+            <span class="nav-link-icon d-md-none d-lg-inline-block">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
@@ -215,7 +409,7 @@
 
             </div>
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

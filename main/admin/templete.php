@@ -4,8 +4,12 @@
 
 <head>
     <?php include 'headincludes.php'; ?>
-    <!-- <style>
-        ::-webkit-scrollbar {
+    <style>
+        .card-tools {
+            margin-left: auto;
+        }
+
+        /* ::-webkit-scrollbar {
             width: 4px;
             height: 2px;
         }
@@ -46,12 +50,12 @@
 
         .select2-container--default .select2-selection--single .select2-selection__rendered {
             line-height: 22px;
-        }
+        } */
 
         /* body {
             font-family: 'cursive';
         } */
-    </style> -->
+    </style>
 </head>
 
 <body data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">

@@ -102,6 +102,9 @@ switch ($request['path']) {
     case "$head/admin/sentmails";
         require __DIR__ . '/main/admin/sentmails.php';
         break;
+    case "$head/admin/pendingapproval";
+        require __DIR__ . '/main/admin/pendingapproval.php';
+        break;
     case "$head/admin/employeelist";
         require __DIR__ . '/main/admin/employeelist.php';
         break;

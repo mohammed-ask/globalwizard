@@ -38,7 +38,7 @@
  <!-- Tempusdominus Bootstrap 4 -->
  <!-- <link rel="stylesheet" href="../main/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"> -->
 
- <!-- <link rel="stylesheet" href="../main/dist/css/tailwind.output.css" /> -->
+ <link rel="stylesheet" href="../main/dist/css/tailwind.output.css" />
  <!-- iCheck -->
  <!-- <link rel="stylesheet" href="../main/dist/css/style.css?ver=<?php echo time(); ?>"> -->
  <link rel="stylesheet" href="../main/plugins/icheck-bootstrap/icheck-bootstrap.min.css">

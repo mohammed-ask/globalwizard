@@ -9,75 +9,70 @@ if (isset($_POST['hakuna'])) {
 // $email = $obj->selectfieldwhere("users", 'email', "id=$employeeid");
 
 ?>
-<div class="container px-6 mx-auto grid mobile-bottom-margin">
-    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
-        <!-- Card -->
-
-        <h3 class="my-6 font-semibold text-gray-700 dark:text-gray-200">
-            Compose Mail
-        </h3>
-        <div>
-
-
+<div class="page-body">
+    <div class="container-xl">
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
+            <!-- Card -->
+            <h3 class="my-2 font-semibold text-gray-700 dark:text-gray-200">
+                Compose Mail
+            </h3>
         </div>
-
-    </div>
-
-    <div class="row">
-        <div class="col-12">
-            <div class="card card-default">
-                <div class="card-header">
-                    <h3 class="card-title">Email From :- <?= $sendmailfrom ?></h3>
-                    <!-- <div class="card-tools">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-default">
+                    <div class="card-header">
+                        <h3 class="card-title">Email From :- <?= $sendmailfrom ?></h3>
+                        <!-- <div class="card-tools">
                         <a href="viewrole" class="px-4 py-2  text-sm  bg-white  rounded-lg border border-gray" data-card-widget="">
                             << Back </a>
                                 <button type="button" class="btn btn-tool" data-card-widget="">
                                     <i class="fas fa-times"></i>
                                 </button>
                     </div> -->
-                </div>
-                <form id="addtax" enctype="multipart/form-data">
-                    <div class="card-body">
-                        <label class="block text-md" style="margin-bottom: 5px;">
-                            <span class="text-gray-700 dark:text-gray-400">Send To</span>
-                            <select data-bvalidator="required" class="form-control select2" name="userid" id="userid">
-                                <option value="">Select User</option>
-                                <?php
-                                $cust = $obj->selectextrawhereupdate("users", "id,name", "status != 99 and id != $employeeid and id != 26 and type = 2");
-                                $custname = mysqli_fetch_all($cust);
-                                foreach ($custname as list($id, $name)) { ?>
-                                    <?php if (!empty($sid) && $sid == $id) { ?>
-                                        <option selected value="<?php echo $id; ?>"> <?php echo $name; ?></option>
-                                    <?php } else { ?>
-                                        <option value="<?php echo $id; ?>"> <?php echo $name; ?></option>
-                                <?php }
-                                } ?>
-                            </select>
-                        </label><br>
-                        <label class="block text-md" style="margin-bottom: 5px;">
-                            <span class="text-gray-700 dark:text-gray-400">Subject</span>
-                            <input name="subject" data-bvalidator="required" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Subject" />
-                        </label><br>
-                        <label class="block text-md" style="margin-bottom: 5px;">
-                            <span class="text-gray-700 dark:text-gray-400">Message</span>
-                            <textarea data-bvalidator="" id="content" style="width: 100%;font-family:Century Gothic;font-size: 12px;" rows="10" name="message" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Message"></textarea>
-                        </label><br>
-                        <label class="block text-md" style="margin-bottom: 5px;">
-                            <span class="text-gray-700 dark:text-gray-400">Attach File</span>
-                            <input type="file" multiple name="files[]" data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Subject" />
-                        </label><br>
                     </div>
-                </form>
-                <div class="card-footer">
-                    <button class="px-4 py-2  text-sm  bg-theme-color  rounded-lg border border-gray" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Mail</button>
-                    <div class="col-md-12" id="resultid"></div>
+                    <form id="addtax" enctype="multipart/form-data">
+                        <div class="card-body">
+                            <label class="block text-md" style="margin-bottom: 5px;">
+                                <span class="text-gray-700 dark:text-gray-400">Send To</span>
+                                <select data-bvalidator="required" class="form-control select2" name="userid" id="userid">
+                                    <option value="">Select User</option>
+                                    <?php
+                                    $cust = $obj->selectextrawhereupdate("users", "id,name", "status != 99 and id != $employeeid and id != 26 and type = 2");
+                                    $custname = mysqli_fetch_all($cust);
+                                    foreach ($custname as list($id, $name)) { ?>
+                                        <?php if (!empty($sid) && $sid == $id) { ?>
+                                            <option selected value="<?php echo $id; ?>"> <?php echo $name; ?></option>
+                                        <?php } else { ?>
+                                            <option value="<?php echo $id; ?>"> <?php echo $name; ?></option>
+                                    <?php }
+                                    } ?>
+                                </select>
+                            </label><br>
+                            <label class="block text-md" style="margin-bottom: 5px;">
+                                <span class="text-gray-700 dark:text-gray-400">Subject</span>
+                                <input name="subject" data-bvalidator="required" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Subject" />
+                            </label><br>
+                            <label class="block text-md" style="margin-bottom: 5px;">
+                                <span class="text-gray-700 dark:text-gray-400">Message</span>
+                                <textarea data-bvalidator="" id="content" style="width: 100%;font-family:Century Gothic;font-size: 12px;" rows="10" name="message" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Message"></textarea>
+                            </label><br>
+                            <label class="block text-md" style="margin-bottom: 5px;">
+                                <span class="text-gray-700 dark:text-gray-400">Attach File</span>
+                                <input type="file" multiple name="files[]" data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Subject" />
+                            </label><br>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <button class="px-4 py-2  text-sm  bg-theme-color  rounded-lg border border-gray" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Mail</button>
+                        <div class="col-md-12" id="resultid"></div>
 
+                    </div>
                 </div>
             </div>
+            <!-- /.col -->
         </div>
-        <!-- /.col -->
-    </div>
 
+    </div>
 </div>
 <?php
 //Assign all Page Specific variables
