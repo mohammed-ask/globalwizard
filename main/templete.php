@@ -62,7 +62,7 @@
 
     <!-- Javascript  -->
 
-    <?php //include "footerincludes.php" 
+    <?php include "footerincludes.php"
     ?>
 
 

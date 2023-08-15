@@ -126,6 +126,24 @@ switch ($request['path']) {
     case "$head/admin/insertpersonalaccount";
         require __DIR__ . '/main/admin/insertpersonalaccount.php';
         break;
+    case "$head/admin/membershipplan";
+        require __DIR__ . '/main/admin/membershipplan.php';
+        break;
+    case "$head/admin/addplan";
+        require __DIR__ . '/main/admin/addplan.php';
+        break;
+    case "$head/admin/insertplan";
+        require __DIR__ . '/main/admin/insertplan.php';
+        break;
+    case "$head/admin/editplan";
+        require __DIR__ . '/main/admin/editplan.php';
+        break;
+    case "$head/admin/updateplan";
+        require __DIR__ . '/main/admin/updateplan.php';
+        break;
+    case "$head/admin/deleteplan";
+        require __DIR__ . '/main/admin/deleteplan.php';
+        break;
     case "$head/admin/logout";
         require __DIR__ . '/main/logout.php';
         break;
@@ -213,7 +231,9 @@ switch ($request['path']) {
     case "$head/insertmessage";
         require __DIR__ . '/main/insertmessage.php';
         break;
-
+    case "$head/email";
+        require __DIR__ . '/main/email.php';
+        break;
     case "$head/gitpull";
         require __DIR__ . '/main/guthubpull.php';
         break;

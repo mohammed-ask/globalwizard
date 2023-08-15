@@ -2,24 +2,15 @@
 <script src="main/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="main/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="main/dist/userjs/selectr.min.js"></script>
-<script src="main/dist/plugins/apex-chart/apexcharts.min.js"></script>
-<script src="main/dist/pages/market.init.js"></script>
+<!-- <script src="main/dist/userjs/selectr.min.js"></script> -->
+<!-- <script src="main/dist/plugins/apex-chart/apexcharts.min.js"></script> -->
+<!-- <script src="main/dist/pages/market.init.js"></script> -->
 <!-- App js -->
-<script src="main/dist/userjs/app.js"></script>
-<script>
-  new Selectr('#Watchlist', {
-    searchable: false,
-  });
+<!-- <script src="main/dist/userjs/app.js"></script> -->
 
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-  var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl)
-  });
-</script>
 
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-<script src="main/dist/js/init-alpine.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
+<!-- <script src="main/dist/js/init-alpine.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script> -->
 <!-- <script src="main/dist/js/charts-lines.js" defer></script> -->
 <!-- <script src="main/dist/js/charts-pie.js" defer></script> -->
@@ -53,15 +44,15 @@
 <script src="main/plugins/moment/moment.min.js"></script>
 <script src="main/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="main/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- <script src="main/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script> -->
 <!-- Summernote -->
-<script src="main/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- <script src="main/plugins/summernote/summernote-bs4.min.js"></script> -->
 <!-- overlayScrollbars -->
 <script src="main/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="main/dist/js/jquery-ui-timepicker-addon.js"></script>
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <!-- AdminLTE App -->
-<script src="main/dist/js/adminlte.js"></script>
+<!-- <script src="main/dist/js/adminlte.js"></script> -->
 <script src="main/dist/js/customfunction.js?ver=<?php echo time(); ?>"></script>
 <script src="main/dist/js/del.js?ver=<?php echo time(); ?>"></script>
 <script src="main/dist/js/functions.js?ver=<?php echo date('His'); ?>"></script>
