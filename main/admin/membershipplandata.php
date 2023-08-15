@@ -56,12 +56,12 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M Y");
     $a = "";
     if (in_array(26, $permissions)) {
-        $a = '<button data-bs-toggle="modal" data-bs-target="#modal-report" onclick="dynamicmodal(\'' . $row['id'] . '\', \'editplan\', \'Unlink\', \'Add New Plan\')" class="px-4 py-2 mr-1 text-sm font-medium leading-5 text-white  bg-blue  rounded-lg ">
+        $a = '<button data-bs-toggle="modal" data-bs-target="#modal-report" onclick="dynamicmodal(\'' . $row['id'] . '\', \'editplan\', \'Unlink\', \'Add New Plan\')" class="btn" style="margin-right:10px;">
         Edit
     </button>';
     }
     if (in_array(27, $permissions)) {
-        $a .= "<a style='cursor: pointer;' class='px-4 py-2 ml-1 text-sm font-medium leading-5 text-white  bg-red  rounded-lg '  onclick='del(\"" . $row['id'] . "\", \"deleteplan\", \"Delete Role \")' >Delete</a>";
+        $a .= "<a style='cursor: pointer; background-color: #484848;' class='btn btn-primary'  onclick='del(\"" . $row['id'] . "\", \"deleteplan\", \"Delete Role \")' >Delete</a>";
     }
     $n[] = $a;
     $data[] = $n;

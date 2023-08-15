@@ -5,11 +5,12 @@ $rowplan = $obj->selectextrawhere("plan", "id=$id")->fetch_assoc();
 $plantype = $obj->selectextrawhere("plandetail", "status=1 and planid=$id");
 ?>
 <form id="adduser" onsubmit="event.preventDefault();sendForm('id', '<?= $id ?>', 'updateplan', 'resultid', 'adduser');return 0;">
-    <label class="block text-sm  mb-3" style="margin-bottom: 5px;">
+<div class="row">
+    <label class="form-label col-4" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Name</span>
-        <input name="name" data-bvalidator="required" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="<?= $rowplan['name'] ?>" placeholder="Plan Name" />
+        <input name="name" data-bvalidator="required" class="form-control" value="<?= $rowplan['name'] ?>" placeholder="Plan Name" />
     </label>
-    <label class="block text-md" style="margin-bottom: 5px;">
+    <label class="form-label col-4" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">Plan Type</span>
         <select data-bvalidator="required" class="form-control select2" name="planfor" id="planfor">
             <option value="">Choose One</option>
@@ -17,7 +18,7 @@ $plantype = $obj->selectextrawhere("plandetail", "status=1 and planid=$id");
             <option value="Custom" <?= ($rowplan['planfor'] == 'Custom') ? 'selected' : '' ?>>Custom</option>
         </select>
     </label>
-    <label class="block text-md <?= $rowplan["planfor"] === 'Universal' ? 'd-none' : '' ?>" id="duser" style="margin-bottom: 5px;">
+    <label class="form-label col-4" <?= $rowplan["planfor"] === 'Universal' ? 'd-none' : '' ?>" id="duser" style="margin-bottom: 5px;">
         <span class="text-gray-700 dark:text-gray-400">User List</span>
         <select multiple data-bvalidator="required" class="form-control select2" name="userid[]" id="userid">
             <option value="">Select User</option>
@@ -29,17 +30,17 @@ $plantype = $obj->selectextrawhere("plandetail", "status=1 and planid=$id");
                 echo '<option value="' . $id . '" ' . ($isSelected ? 'selected' : '') . '>' . $name . '</option>';
             } ?>
         </select>
-    </label>
+    </label> </div>
     <?php
     while ($rowplan = $obj->fetch_assoc($plantype)) { ?>
         <div class="row">
             <label class="col-6 block text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Plan</span>
-                <input readonly value="<?= $obj->selectfieldwhere("plantypes", "name", "id=" . $rowplan['plantypeid'] . "") ?>" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="" />
+                <input readonly value="<?= $obj->selectfieldwhere("plantypes", "name", "id=" . $rowplan['plantypeid'] . "") ?>" class="form-control" placeholder="" />
             </label>
             <label class="col-6 block text-sm" style="margin-bottom: 5px;">
                 <span class="text-gray-700 dark:text-gray-400">Amount</span>
-                <input name="price[]" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Enter Amount" value="<?= $rowplan['price'] ?>" /></label>
+                <input name="price[]" class="form-control" placeholder="Enter Amount" value="<?= $rowplan['price'] ?>" /></label>
             <input hidden readonly value="<?= $rowplan['id'] ?>" name="plandetailid[]" placeholder="" />
         </div>
 

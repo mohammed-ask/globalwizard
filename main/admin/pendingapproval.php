@@ -7,8 +7,8 @@ ob_start();
 ?>
 <div class="page-body">
     <div class="container-xl">
-        <div class="grid md:grid-cols-2 xl:grid-cols-2">
-            <h3 class="my-2 font-semibold text-gray-700 dark:text-gray-200">
+        <div>
+            <h3>
                 Pending User's Approvals
             </h3>
         </div>

@@ -136,8 +136,8 @@ table.dataTable>tbody>tr.child ul.dtr-details>li:last-child {
 
 table.dataTable>tbody>tr.child span.dtr-title {
     display: inline-block;
-    min-width: 75px;
-    font-weight: bold
+    min-width: 100px;
+    font-weight: 500
 }
 
 div.dtr-modal {

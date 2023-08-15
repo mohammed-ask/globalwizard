@@ -10,11 +10,11 @@ ob_start();
     <div class="container-xl">
         <div class="card card-default">
             <div class="card-header">
-                <h3 class="my-0 text-1xl font-semibold text-gray-700 dark:text-gray-200">Plans</h3>
+                <h3>Plans</h3>
                 <div class="card-tools">
                     <?php if (in_array(1, $permissions)) { ?>
-                        <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addplan", "Unlink", "Add New Plan")' class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-                            + Add New Plan
+                        <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addplan", "Unlink", "Add New Plan")' class="btn btn-primary">
+                            Add New Plan
                         </button>
                     <?php } ?>
                 </div>

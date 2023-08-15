@@ -10,11 +10,11 @@ if (!in_array(4, $permissions)) {
     <div class="container-xl">
         <div class="card card-default">
             <div class="card-header">
-                <h3 class="my-0 text-1xl font-semibold text-gray-700 dark:text-gray-200">Users List</h3>
+                <h3>Users List</h3>
                 <div class="card-tools">
                     <?php if (in_array(1, $permissions)) { ?>
-                        <button @click="openModal" onclick='dynamicmodal("none", "adduser", "Unlink", "Add New User")' class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-                            + Add User
+                        <button @click="openModal" onclick='dynamicmodal("none", "adduser", "Unlink", "Add New User")' class="btn btn-primary">
+                            Add User
                         </button>
                     <?php } ?>
                     </button>
@@ -22,33 +22,33 @@ if (!in_array(4, $permissions)) {
             </div>
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
                 <!-- /.card-header -->
-                <div class="w-full">
-                    <table id="example2" class="table w-full whitespace-no-wrap">
+                <div class="table-responsive fixTableHead" style="height: 400px;">
+                    <table id="example2" class="table card-table table-vcenter text-nowrap datatable">
                         <thead>
                             <tr>
-                                <th class="px-3 py-2">S.No.</th>
-                                <th class="px-3 py-2">User Name</th>
-                                <th class="px-3 py-2">DOB</th>
-                                <th class="px-3 py-2">Emp ID</th>
-                                <th class="px-3 py-2">Email ID</th>
-                                <th class="px-3 py-2">Mob No.</th>
-                                <th class="px-3 py-2">PAN No.</th>
-                                <th class="px-3 py-2">Addresss</th>
-                                <th class="px-3 py-2">Bank Name</th>
-                                <th class="px-3 py-2">A/c No.</th>
-                                <th class="px-3 py-2">IFSC</th>
-                                <th class="px-3 py-2">Aadhar No.</th>
-                                <th class="px-3 py-2">Password</th>
-                                <!-- <th class="px-3 py-2">Cost</th> -->
-                                <!-- <th class="px-3 py-2">Value</th> -->
-                                <th class="px-3 py-2">Email</th>
-                                <th class="px-3 py-2">Status</th>
-                                <th class="px-3 py-2">Plan History</th>
-                                <th class="px-3 py-2">View Docs</th>
-                                <th class="px-3 py-2">Action</th>
+                                <th>S.No.</th>
+                                <th>User Name</th>
+                                <th>DOB</th>
+                                <th>Emp ID</th>
+                                <th>Email ID</th>
+                                <th>Mob No.</th>
+                                <th>PAN No.</th>
+                                <th>Addresss</th>
+                                <th>Bank Name</th>
+                                <th>A/c No.</th>
+                                <th>IFSC</th>
+                                <th>Aadhar No.</th>
+                                <th>Password</th>
+                                <!-- <th>Cost</th> -->
+                                <!-- <th>Value</th> -->
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Plan History</th>
+                                <th>View Docs</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        <tbody>
                         </tbody>
                         <tfoot></tfoot>
                     </table>

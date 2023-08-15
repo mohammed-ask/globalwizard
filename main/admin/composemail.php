@@ -11,9 +11,9 @@ if (isset($_POST['hakuna'])) {
 ?>
 <div class="page-body">
     <div class="container-xl">
-        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
+        <div>
             <!-- Card -->
-            <h3 class="my-2 font-semibold text-gray-700 dark:text-gray-200">
+            <h3>
                 Compose Mail
             </h3>
         </div>
@@ -21,7 +21,7 @@ if (isset($_POST['hakuna'])) {
             <div class="col-12">
                 <div class="card card-default">
                     <div class="card-header">
-                        <h3 class="card-title">Email From :- <?= $sendmailfrom ?></h3>
+                        <h3>Email From :- <?= $sendmailfrom ?></h3>
                         <!-- <div class="card-tools">
                         <a href="viewrole" class="px-4 py-2  text-sm  bg-white  rounded-lg border border-gray" data-card-widget="">
                             << Back </a>
@@ -32,8 +32,8 @@ if (isset($_POST['hakuna'])) {
                     </div>
                     <form id="addtax" enctype="multipart/form-data">
                         <div class="card-body">
-                            <label class="block text-md" style="margin-bottom: 5px;">
-                                <span class="text-gray-700 dark:text-gray-400">Send To</span>
+                            <label class="form-label" style="margin-bottom: 5px;">
+                                Send To
                                 <select data-bvalidator="required" class="form-control select2" name="userid" id="userid">
                                     <option value="">Select User</option>
                                     <?php
@@ -48,22 +48,22 @@ if (isset($_POST['hakuna'])) {
                                     } ?>
                                 </select>
                             </label><br>
-                            <label class="block text-md" style="margin-bottom: 5px;">
-                                <span class="text-gray-700 dark:text-gray-400">Subject</span>
-                                <input name="subject" data-bvalidator="required" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Subject" />
+                            <label class="form-label" style="margin-bottom: 5px;">
+                                Subject
+                                <input name="subject" data-bvalidator="required" class="form-control" placeholder="Subject" />
                             </label><br>
-                            <label class="block text-md" style="margin-bottom: 5px;">
+                            <label class="form-label" style="margin-bottom: 5px;">
                                 <span class="text-gray-700 dark:text-gray-400">Message</span>
-                                <textarea data-bvalidator="" id="content" style="width: 100%;font-family:Century Gothic;font-size: 12px;" rows="10" name="message" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Message"></textarea>
+                                <textarea data-bvalidator="" id="content" style="width: 100%;font-family:Century Gothic;font-size: 12px;" rows="10" name="message" class="form-control" placeholder="Message"></textarea>
                             </label><br>
-                            <label class="block text-md" style="margin-bottom: 5px;">
+                            <label class="form-label" style="margin-bottom: 5px;">
                                 <span class="text-gray-700 dark:text-gray-400">Attach File</span>
-                                <input type="file" multiple name="files[]" data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed" class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Subject" />
+                                <input type="file" multiple name="files[]" data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed" class="form-control" placeholder="Subject" />
                             </label><br>
                         </div>
                     </form>
                     <div class="card-footer">
-                        <button class="px-4 py-2  text-sm  bg-theme-color  rounded-lg border border-gray" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Mail</button>
+                        <button class=" btn btn-primary" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Mail</button>
                         <div class="col-md-12" id="resultid"></div>
 
                     </div>
