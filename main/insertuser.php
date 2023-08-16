@@ -2,7 +2,9 @@
 session_start();
 // ini_set('display_errors', 1);
 // error_reporting(E_ALL);
-
+print_r($_POST);
+print_r($_FILES);
+die;
 include './function.php';
 include './conn.php';
 if ($_SESSION['otp'] != $_POST['otp']) {
@@ -117,23 +119,7 @@ if ($_SESSION['otp'] != $_POST['otp']) {
             $tb_name = "userdocuments";
             $pradin = $obj->insertnew($tb_name, $postdata);
         }
-        foreach ($defaultstock as $ds) {
-            $jk['Symbol'] = $ds['Symbol'];
-            $jk['symboltoken'] = $ds['symboltoken'];
-            $jk['ExchType'] = 'C';
-            $jk['Expiry'] = '';
-            $jk['OptionType'] = '';
-            $jk['StrikePrice'] = '0';
-            $jk['mktlot'] = '1';
-            $jk['added_on'] = date("Y-m-d H:i:s");
-            $jk['added_by'] = 0;
-            $jk['updated_on'] = date("Y-m-d H:i:s");
-            $jk['updated_by'] = 0;
-            $jk['status'] = 1;
-            $jk['userid'] = $userid;
-            $jk['Exch'] = 'N';
-            $obj->insertnew('userstocks', $jk);
-        }
+
         $obj->saveactivity("Customer Registered", "", $userid, $userid, "User", "Customer Registered");
         echo "Success";
     }

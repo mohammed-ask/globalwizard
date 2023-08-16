@@ -62,9 +62,9 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                                 <div class="form-label">Attach File</div>
                                 <input type="file" class="form-control">
                             </div>
-                            <a class="btn btn-green w-35" href="#">
+                            <!-- <a class="btn btn-green w-35" href="#">
                                 Send Message
-                            </a>
+                            </a> -->
                         </form>
                         <button style="background-color: #057c7c;" class="btn btn-success w-10 my-3" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Message</button>
                         <div class="col-md-12" id="resultid"></div>
