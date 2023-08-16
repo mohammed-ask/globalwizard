@@ -13,14 +13,14 @@ $perm = explode(",", $row['permissions']);
             <div class="card-header">
                 <h3 class="card-title">Edit Role</h3>
                 <div class="card-tools">
-                    <a href="viewrole" class="px-4 py-2  text-sm  bg-white  rounded-lg border border-gray" data-card-widget="">
-                        << Back </a>
+                    <a href="viewrole" class="btn" data-card-widget="">
+                        Back </a>
                            
                 </div>
             </div>
             <form id="addrole" onsubmit="event.preventDefault();sendForm('id', '<?php echo $role_id; ?>', 'updaterole', 'resultid', 'addrole');return 0;">
                 <div class="card-body">
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="exampleInputEmail1">Name</label>
                         <input type="text" class="form-control" value="<?php echo $row['name']; ?>" id="name" placeholder="" name="name">
                     </div>
@@ -29,7 +29,7 @@ $perm = explode(",", $row['permissions']);
                         $resultmodule = $obj->selectextrawhere("modules", "status=1 order by department");
                         while ($rowmodule = $obj->fetch_assoc($resultmodule)) {
                         ?>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-5">
                                 <div class="card card-widget">
                                     <div class="card-header">
 
@@ -66,7 +66,7 @@ $perm = explode(",", $row['permissions']);
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="px-4 py-2  text-sm  bg-blue  rounded-lg">Save</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                     <div id="resultid" class="form-result"></div>
                 </div>
             </form>

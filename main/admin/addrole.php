@@ -5,21 +5,22 @@ ob_start();
 ?>
 <div class="row">
     <div class="col-12 mobile-bottom-margin">
-        <div class="card card-default">
-            <div class="card-header">
-                <h3 class="card-title">Add Role</h3>
-                <div class="card-tools">
-                    <a href="viewrole" class="px-4 py-2  text-sm  bg-white  rounded-lg border border-gray" data-card-widget="">
-                        << Back </a>
+    <div>
+
+                <div style="text-align: right;">
+                    <a href="viewrole" class="btn my-3" data-card-widget="">
+                        Back </a>
                             <!-- <button type="button" class="btn btn-tool" data-card-widget="">
                                 <i class="fas fa-times"></i>
                             </button> -->
                 </div>
             </div>
+        <div class="card card-default">
+        <h3 class="card-header">Add New Role</h3>
             <form id="addrole" onsubmit="event.preventDefault();sendForm('', '', 'insertrole', 'resultid', 'addrole');return 0;">
                 <div class="card-body">
-                    <div class="form-group">
-                        <label>Name</label>
+                    <div class="col-4 form-group mb-3">
+                        <label class="mb-2">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="" name="name">
                     </div>
                     <div class="row">
@@ -27,7 +28,7 @@ ob_start();
                         $resultmodule = $obj->selectextrawhere("modules", "status=1 order by department  ");
                         while ($rowmodule = $obj->fetch_assoc($resultmodule)) {
                         ?>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-5">
                                 <div class="card card-widget">
                                     <div class="card-header">
                                         <div class=" d-inline ">
@@ -65,7 +66,7 @@ ob_start();
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                    <button type="submit" class="px-4 py-2  text-sm  bg-blue  rounded-lg ">Save</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                     <div id="resultid" class="form-result"></div>
                 </div>
             </form>

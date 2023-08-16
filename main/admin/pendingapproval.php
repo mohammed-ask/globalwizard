@@ -7,32 +7,34 @@ ob_start();
 ?>
 <div class="page-body">
     <div class="container-xl">
+        <div class="card">
         <div>
-            <h3>
+            <h3 class="card-header">
                 Pending User's Approvals
             </h3>
         </div>
-        <div class="w-full overflow-hidden rounded-lg shadow-xs">
-            <div class="w-full ">
-                <table id="example2" class="table w-full whitespace-no-wrap">
+        <div>
+            <div class="table-responsive fixTableHead" style="height: 450px;">
+                <table id="example2" class="table card-table table-vcenter text-nowrap datatable">
                     <thead>
-                        <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                            <th class="px-3 py-2">S.No.</th>
-                            <th class="px-3 py-2">User Name</th>
-                            <th class="px-3 py-2">Email ID</th>
-                            <th class="px-3 py-2">Mobile No.</th>
-                            <th class="px-3 py-2">Status</th>
-                            <th class="px-3 py-2">More Details</th>
-                            <th class="px-3 py-2">User Docs</th>
-                            <th class="px-3 py-2">Action</th>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>User Name</th>
+                            <th>Email ID</th>
+                            <th>Mobile No.</th>
+                            <th>Status</th>
+                            <th>More Details</th>
+                            <th>User Docs</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
+                    <tbody>
                     </tbody>
                 </table>
 
             </div>
         </div>
+    </div>
     </div>
 </div>
 <?php

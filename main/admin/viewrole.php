@@ -5,22 +5,22 @@ ob_start();
 ?>
 <div class="page-body">
     <div class="container-xl">
-        <div class="card card-default">
-            <div class="card-header">
-                <h3 class="my-0 text-1xl font-semibold text-gray-700 dark:text-gray-200">Roles</h3>
-                <div class="card-tools">
+    <div class="mb-3" style="text-align: right;">
                     <?php if (in_array(25, $permissions)) { ?>
-                        <a href="addrole" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-                            <b> + Add Role</b>
-                        </a>
+                        <a href="addrole" class="btn btn-primary">
+                            Add New Role</a>
                     <?php } ?>
                     </button>
                 </div>
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>Roles</h3>
+                
             </div>
-            <div class="w-full overflow-hidden rounded-lg shadow-xs">
+            <div>
                 <!-- /.card-header -->
-                <div class="w-full">
-                    <table id="example2" class="table w-full whitespace-no-wrap">
+                <div class="table-responsive fixTableHead" style="height: 400px;">
+                    <table id="example2" class="table card-table table-vcenter text-nowrap datatable">
                         <thead>
 
                             <tr>

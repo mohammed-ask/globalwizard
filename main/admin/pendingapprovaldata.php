@@ -52,7 +52,7 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] =  "<button class='px-4 py-2 leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700' aria-label='view'>
     <span class='w-5 h-5' fill='currentColor'>Pending</span>
 </button>";
-    $n[] =  "<button class='flex items-center justify-between px-3 py-1 bg-purple text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
+    $n[] =  "<button class='btn' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
     if (in_array(44, $permissions)) {
         $n[] = "<button class='px-3 py-1  text-sm  bg-blue  rounded-sm ' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
     View Docs</button>";

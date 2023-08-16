@@ -8,16 +8,17 @@ ob_start();
 ?>
 <div class="page-body">
     <div class="container-xl">
-        <div class="card card-default">
-            <div class="card-header">
-                <h3>Plans</h3>
-                <div class="card-tools">
+    <div class="mb-3" style="text-align: right;">
                     <?php if (in_array(1, $permissions)) { ?>
                         <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addplan", "Unlink", "Add New Plan")' class="btn btn-primary">
                             Add New Plan
                         </button>
                     <?php } ?>
                 </div>
+        <div class="card card-default">
+            <div class="card-header">
+                <h3>Plans</h3>
+                
             </div>
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
                 <!-- /.card-header -->

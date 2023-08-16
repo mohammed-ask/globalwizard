@@ -31,7 +31,7 @@ ob_start();
                             <path d="M12 5l0 14"></path>
                             <path d="M5 12l14 0"></path>
                         </svg>
-                        Create new report
+                        Create New Plan
                     </a>
 
 
