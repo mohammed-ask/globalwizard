@@ -62,7 +62,8 @@ $plan = $obj->selectextrawhere("plan", "status =1");
   <div class="container-xl">
     <div class="row row-cards">
       <?php
-      while ($rowplan = $obj->fetch_assoc($plan)) { ?>
+      while ($rowplan = $obj->fetch_assoc($plan)) {
+        $monthlyplan = $obj->selectextrawhere("plandetail", "planid=" . $rowplan['id'] . " and plantypeid=1 and status = 1")->fetch_assoc(); ?>
         <div class="col-sm-6 col-lg-4">
           <div class="card card-md">
             <div class="card-body text-center">
@@ -78,7 +79,9 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                 <tbody>
                   <?php
                   $plantype = $obj->selectextrawhere("plandetail", "planid=" . $rowplan['id'] . "");
-                  while ($rowplandetail = $obj->fetch_assoc($plantype)) { ?>
+                  while ($rowplandetail = $obj->fetch_assoc($plantype)) {
+
+                  ?>
                     <tr>
                       <td>
                         <div class="progressbg">
@@ -96,8 +99,8 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                 </tbody>
               </table>
               <div class="text-center mt-4">
-                <a class="btn btn-green w-85" data-bs-toggle="offcanvas" href="#offcanvasEnd" role="button" aria-controls="offcanvasEnd">Choose plan</a>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel">
+                <a class="btn btn-green w-85" data-bs-toggle="offcanvas" href="#offcanvasEnd<?= $rowplan['id'] ?>" role="button" aria-controls="offcanvasEnd<?= $rowplan['id'] ?>">Choose plan</a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd<?= $rowplan['id'] ?>" aria-labelledby="offcanvasEndLabel">
                   <div class="offcanvas-header">
                     <h2 class="offcanvas-title" id="offcanvasEndLabel">Order Summary</h2>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -113,18 +116,21 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                             </h4>
                             <div class="mb-3">
                               <div class="form-label"></div>
-                              <select class="form-select  w-85 pb-1 pt-1" fdprocessedid="5a12go">
-                                <option value="1">Monthly</option>
-                                <option value="2">Quaterly</option>
-                                <option value="3">Half Yearly</option>
-                                <option value="3">Yearly</option>
+                              <input type="text" hidden class="inp" value="<?= $rowplan['id'] ?>">
+                              <select class="form-select plantype w-85 pb-1 pt-1" fdprocessedid="5a12go">
+                                <?php
+                                $types = $obj->selectextrawhereupdate("plantypes", "id,name", "status = 1");
+                                $types = mysqli_fetch_all($types);
+                                foreach ($types as list($id, $name)) { ?>
+                                  <option value="<?= $id ?>"><?= $name ?></option>
+                                <?php } ?>
                               </select>
                             </div>
 
 
                           </div>
-                          <div class="col-auto bill-date text-secondary mt-5" style="font-size: 14px;">
-                            <span>₹</span> 2,34,623
+                          <div class="col-auto bill-date text-secondary mt-5 amt" style="font-size: 14px;">
+                            <span>₹</span> <?= $monthlyplan['price'] ?>
                           </div>
 
                         </div>
@@ -138,8 +144,10 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                               CGST - 9% & SGST - 9%
                             </div>
                           </div>
-                          <div class="col-auto bill-date text-secondary" style="font-size: 14px;">
-                            <span>₹</span>4,623
+                          <div class="col-auto bill-date text-secondary gstamt" style="font-size: 14px;">
+                            <span>₹</span><?php
+                                          $gst = $monthlyplan['price'] * 18 / 100;
+                                          echo $gst ?>
                           </div>
 
                         </div>
@@ -153,8 +161,8 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                               Total Amount
                             </div>
                           </div>
-                          <div class="col-auto bill-date text-secondary" style="font-size: 14px;">
-                            <span>₹</span> 2,34,623
+                          <div class="col-auto bill-date text-secondary totalamt" style="font-size: 14px;">
+                            <span>₹</span> <?= $monthlyplan['price'] + $gst ?>
                           </div>
 
                         </div>
@@ -162,124 +170,15 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                       </div>
                     </div>
 
-                    <div class="mt-3">
-                      <button class="btn btn-primary w-100" style="background-color: black; 
+                    <div class="mt-3 modalbtn">
+                      <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("<?= $rowplan["id"] ?>", "addpayment", "1", "Add Payment")' class="btn btn-primary w-100" style="background-color: black; 
                           font-weight: 700;" type="button" data-bs-dismiss="pay" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
                         I'm Ready to Pay
                       </button>
                     </div>
 
-                    <!-- ----------------------model section start -->
-
-                    <div class="modal modal-blur fade" id="modal-scrollable" tabindex="-1" aria-hidden="true" style="display: none;">
-                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal Name</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-
-                            <div>
-                              <h4 class="m-0 text-center font-15 py-3 px-0 font-weight-700">Pay Using Bank Transfer, NEFT, IMPS, Net Banking or UPI Options</h4>
-                            </div>
-                            <div class="border rounded">
-                              <div class="bg-light">
-                                <h5 style="padding-left:16px !important;" class="m-0 font-14 p-2">Bank : HDFC Bank</h5>
-                              </div>
-
-                              <div class="row p-3" style="overflow-wrap: break-word;">
-
-                                <div class="col-4" style="border-right: 1px solid lightgray;">
-                                  <h5 class="m-0">Holder Name</h5>
-                                  <p class="mb-0 custom-para-size">Global Wizard Pvt Ltd</p>
-                                </div><!--end col-->
-
-                                <div class="col-4" style="border-right: 1px solid lightgray;">
-                                  <h5 class="m-0">Account No.</h5>
-                                  <p class="mb-0 custom-para-size">89898989898989</p>
-                                </div><!--end col-->
-
-                                <div class="col-4">
-                                  <h5 class="m-0">IFSC Code</h5>
-                                  <p class="m-0 custom-para-size">HDFC0006578</p>
-                                </div><!--end col-->
-
-
-                              </div><!--end row-->
-                            </div>
-                            <div class="border rounded mt-3" style="overflow-wrap: break-word;">
-                              <div class="row p-3">
-                                <div class="col-lg-6">
-                                  <img style="width:200px; height: 200px; border: 1px solid lightgrey; padding: 3px;border-radius: 5px;" height="85px" class="m-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/QR_Code_Example.svg/552px-QR_Code_Example.svg.png?20111025115625" alt="Scan QR & Pay">
-
-                                </div><!--end col-->
-                                <div class="col-lg-6">
-                                  <div>
-                                    <h3 class="my-5">Scan Qr Using Your UPI App & Pay</h3>
-                                  </div><!--end col-->
-
-                                  <div>
-                                    <h4 class="m-0">Or Pay Using UPI ID</h4>
-                                    <p class="mb-0 mt-1">78787878787@ybl</p>
-
-                                  </div><!--end col-->
-                                </div>
-
-                              </div><!--end row-->
-                            </div>
-                            <h4 style="margin-top: 30px !important; margin-bottom: 15px !important; text-align: center; font-size: 13px;" class="my-3">** Pay First, Then Add Transaction Details Below **</h4>
-                            <div class="modal-body p-0" style="text-align: left;     overflow: hidden;">
-
-                              <div class="row">
-                                <div class="col-lg-6">
-                                  <div class="mb-3">
-                                    <label class="form-label mb-0">Mobile No.</label>
-                                    <input type="text" class="form-control" placeholder="Mobile No. Used for Payment">
-                                  </div>
-                                </div>
-                                <div class="col-lg-6">
-                                  <div class="mb-3">
-                                    <label class="form-label mb-0">Transaction Id/UTR</label>
-                                    <input type="text" class="form-control" placeholder="Payment Transaction Id">
-                                  </div>
-                                </div>
-                                <div class="col-lg-6">
-                                  <div class="mb-3">
-                                    <label class="form-label mb-0">Payment Mode</label>
-                                    <input type="text" class="form-control" placeholder="UPI, PhonePe, Bank">
-                                  </div>
-                                </div>
-                                <div class="col-lg-6">
-                                  <div class="mb-3">
-                                    <label class="form-label mb-0">Amount</label>
-                                    <input type="number" class="form-control" placeholder="Paid Amount">
-                                  </div>
-                                </div>
-
-                              </div>
-
-                              <h5 style="margin-top: 5px !important; margin-bottom: 3px !important;" class="my-3 text-danger">Important*</h5>
-                              <ul class="mb-0 custom-para-size">
-                                <li>Your Payment will take 30 mins to 1hr to reflect in Your Account after reviewing by our team.</li>
-
-                                <li>There is no any hidden Charges like transaction fee, processing fee & more.</li>
-                              </ul>
-
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-success">Send Payment Details For Approval</button>
-                            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-danger">Send Payment Details For Approval</button> -->
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                     <!-- --------------------------success model Start--------- -->
-                    <div class="modal modal-blur fade" id="modal-success" tabindex="-1" role="dialog" aria-hidden="true">
+                    <!-- <div class="modal modal-blur fade" id="modal-success" tabindex="-1" role="dialog" aria-hidden="true">
                       <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
                         <div class="modal-content">
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -306,77 +205,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="modal modal-blur fade" id="modal-danger" tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          <div class="modal-status bg-danger"></div>
-                          <div class="modal-body text-center py-4">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M10.24 3.957l-8.422 14.06a1.989 1.989 0 0 0 1.7 2.983h16.845a1.989 1.989 0 0 0 1.7 -2.983l-8.423 -14.06a1.989 1.989 0 0 0 -3.4 0z"></path>
-                              <path d="M12 9v4"></path>
-                              <path d="M12 17h.01"></path>
-                            </svg>
-                            <h3>Are you sure?</h3>
-                            <div class="text-secondary">Do you really want to remove 84 files? What you've done cannot be undone.</div>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="w-100">
-                              <div class="row">
-                                <div class="col"><a href="https://preview.tabler.io/modals.html#" class="btn w-100" data-bs-dismiss="modal">
-                                    Cancel
-                                  </a></div>
-                                <div class="col"><a href="https://preview.tabler.io/modals.html#" class="btn btn-danger w-100" data-bs-dismiss="modal">
-                                    Delete 84 items
-                                  </a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- ---------------------------------Success Model End -->
-
-                    <!-- ---------------------------------------danger Model Start--------------- -->
-
-                    <div class="modal modal-blur fade" id="modal-danger" tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          <div class="modal-status bg-danger"></div>
-                          <div class="modal-body text-center py-4">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M10.24 3.957l-8.422 14.06a1.989 1.989 0 0 0 1.7 2.983h16.845a1.989 1.989 0 0 0 1.7 -2.983l-8.423 -14.06a1.989 1.989 0 0 0 -3.4 0z"></path>
-                              <path d="M12 9v4"></path>
-                              <path d="M12 17h.01"></path>
-                            </svg>
-                            <h3>Are you sure?</h3>
-                            <div class="text-secondary">Do you really want? What you've done cannot be undone.</div>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="w-100">
-                              <div class="row">
-                                <div class="col"><a href="#" class="btn w-100" data-bs-dismiss="modal">
-                                    Cancel
-                                  </a></div>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <!-- ----------------------------------------danger model end------------------ -->
-
-                    <!-- ----------------------model section end -->
+                    </div> -->
 
 
                     <div class="btn-list mt-4" style="text-align: center; display: block; font-size: 16px; font-weight: 700;">
@@ -433,5 +262,28 @@ $contentheader = "";
 $pageheader = "";
 include "main/templete.php"; ?>
 <script>
-
+  $('.plantype').on('change', function() {
+    ref = $(this).closest('.offcanvas-body')
+    planid = $(this).closest('.offcanvas-body').find('.inp').val()
+    plantypeid = $(this).val()
+    console.log(plantypeid)
+    $.post({
+      url: "main/fetchplanamount.php",
+      data: {
+        plantypeid: plantypeid,
+        planid: planid
+      },
+      success: function(response) {
+        console.log(response, 'rrr')
+        gstamt = parseFloat(response) * 18 / 100
+        totalamt = parseFloat(response) + gstamt
+        $(ref).find('.amt').html('₹' + response)
+        $(ref).find('.gstamt').html('₹' + gstamt)
+        $(ref).find('.totalamt').html('₹' + totalamt)
+        $(ref).find('.modalbtn').html(`<button data-bs-toggle="modal" data-bs-target="#modal-report" onclick="dynamicmodal('${planid}', 'addpayment', '${plantypeid}', 'Add Payment Immidiate')" class="btn btn-primary w-100" style="background-color: black; font-weight: 700;" type="button" data-bs-dismiss="pay" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
+                        I'm Ready to Pay
+                      </button>`);
+      },
+    });
+  });
 </script>

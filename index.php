@@ -231,6 +231,9 @@ switch ($request['path']) {
     case "$head/insertmessage";
         require __DIR__ . '/main/insertmessage.php';
         break;
+    case "$head/addpayment";
+        require __DIR__ . '/main/addpayment.php';
+        break;
     case "$head/email";
         require __DIR__ . '/main/email.php';
         break;

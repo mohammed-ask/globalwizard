@@ -42,7 +42,7 @@
     </div>
     <script src="main/dist/userjs/global-wizard.min.js.download" defer=""></script>
     <script src="main/dist/userjs/demo.min.js.download" defer=""></script>
-    <div class="modal fade" id="myModal">
+    <!-- <div class="modal fade" id="myModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -53,9 +53,36 @@
                 </div>
                 <div class="p-3">
                     <button type="button" class="btn btn-success w-10 my-3" id="modalfooterbtn" onclick="$('#modalsubmit').click();">Submit</button>
-                    <!-- <button type="button" class="btn btn-primary" id="modalfooterbtn" onclick="$('#modalsubmit').click();">Save changes</button> -->
-                    <!-- <button type="button" class="btn btn-info" data-dismiss="modal">Close</button> -->
+                   
                 </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="modal modal-blur fade" id="modal-report" tabindex="-1" aria-hidden="true" style="display: none;" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalheading">Modal Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modaldata">
+
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+                        Cancel
+                    </a>
+                    <button id="modalfooterbtn" onclick="$('#modalsubmit').click();" class="btn btn-primary ms-auto">
+                        Submit
+                    </button>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-success">Send Payment Details For Approval</button>
+                
+                </div> -->
             </div>
         </div>
     </div>

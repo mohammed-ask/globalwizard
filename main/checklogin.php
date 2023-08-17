@@ -1,6 +1,6 @@
 <?php
 session_start();
-$captcha_code = $_SESSION['captcha_code'];
+// $captcha_code = $_SESSION['captcha_code'];
 // if ($captcha_code !== (int)$_POST['captcha']) {
 //     echo "<div class='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative' role='alert'>Invalid Captcha</div>";
 //     die;

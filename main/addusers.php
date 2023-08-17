@@ -893,7 +893,7 @@
                             </div>
                             <div class="buttons button_space">
                                 <button class="back_button">Back</button>
-                                <button class="next_button">Next Step</button>
+                                <button class="next_button" id="otp_button">Next Step</button>
                             </div>
 
                         </div>
@@ -901,7 +901,7 @@
                         <div class="main">
                             <div class="card-body">
                                 <h2 class="card-title card-title-lg text-center mb-4">Authenticate Your Account</h2>
-                                <p class="my-4 text-center">Please confirm your account by entering the authorization code sent to <strong>abcdefg@gmail.com</strong>.</p>
+                                <p class="my-4 text-center">Please confirm your account by entering the authorization code sent to your Mail
                                 <div class="my-5">
                                     <div class="row g-4">
                                         <div class="col">
@@ -930,6 +930,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div id="timer"></div>
                                     </div>
                                 </div>
                                 <!-- <div class="my-4">
@@ -958,90 +959,8 @@
 
                 </div>
 
-                <!-- ------------------------------------- fourth step compeleted ------------------------------------------>
-
-
-
-
-
-
-
             </div>
-
-            <!-- ------------------------------------- third step compeleted ------------------------------------------>
-
-
-            <!-- ------------------------------------- fourth step Started ------------------------------------------>
-
-            <!-- <div class="main">
-
-
-                    <form class="card card-md" action="#" method="get" autocomplete="off" novalidate="">
-                        <div class="card-body">
-                            <h2 class="card-title card-title-lg text-center mb-4">Authenticate Your Account</h2>
-                            <p class="my-4 text-center">Please confirm your account by entering the authorization code sent to <strong>abcdefg@gmail.com</strong>.</p>
-                            <div class="my-5">
-                                <div class="row g-4">
-                                    <div class="col">
-                                        <div class="row g-2">
-                                            <div class="col">
-                                                <input type="text" class="form-control form-control-lg text-center py-3" maxlength="1" inputmode="numeric" pattern="[0-9]*" data-code-input="" fdprocessedid="i4fe2">
-                                            </div>
-                                            <div class="col">
-                                                <input type="text" class="form-control form-control-lg text-center py-3" maxlength="1" inputmode="numeric" pattern="[0-9]*" data-code-input="" fdprocessedid="scnzf2">
-                                            </div>
-                                            <div class="col">
-                                                <input type="text" class="form-control form-control-lg text-center py-3" maxlength="1" inputmode="numeric" pattern="[0-9]*" data-code-input="" fdprocessedid="8cs6ou">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="row g-2">
-                                            <div class="col">
-                                                <input type="text" class="form-control form-control-lg text-center py-3" maxlength="1" inputmode="numeric" pattern="[0-9]*" data-code-input="" fdprocessedid="hak2vr">
-                                            </div>
-                                            <div class="col">
-                                                <input type="text" class="form-control form-control-lg text-center py-3" maxlength="1" inputmode="numeric" pattern="[0-9]*" data-code-input="" fdprocessedid="8oh1">
-                                            </div>
-                                            <div class="col">
-                                                <input type="text" class="form-control form-control-lg text-center py-3" maxlength="1" inputmode="numeric" pattern="[0-9]*" data-code-input="" fdprocessedid="js5utrc">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="my-4">
-                                <label class="form-check">
-                                    <input type="checkbox" class="form-check-input">
-                                    Dont't ask for codes again on this device
-                                </label>
-                            </div>
-                            <div class="form-footer">
-                                <div class="btn-list flex-nowrap">
-                                    <a href="#" class="btn w-100">
-                                        Cancel
-                                    </a>
-                                    <a href="#" class="btn btn-primary w-100">
-                                        Verify
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-
-                </div> -->
-
-
-
-
         </div>
-        <div class="hr-text">or</div>
-        <div class="text-center mt-3 mb-3" style="font-size: 14px;">
-            Don't have account yet? <span style="font-weight: 600;"><a href="sign-up.html" tabindex="-1">Sign
-                    up</a></span>
-        </div>
-
     </div>
 
     </div>
