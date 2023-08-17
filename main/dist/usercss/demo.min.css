@@ -350,4 +350,6 @@ pre.highlight::-webkit-scrollbar-corner {
         font-size: 12px;
     }
 
-   
+    .main {
+        padding: 0px !important;
+    }

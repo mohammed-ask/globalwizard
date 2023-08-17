@@ -69,12 +69,12 @@ while ($row = $obj->fetch_assoc($result)) {
         //     <input type="checkbox" ' . $smsenable . ' class="setactive" data-type="sms" data-id="' . $row['id'] . '" value="' . $row['sms'] . '">
         //     <span class="slider round" ></span>
         // </label>';
-        $n[] =  '<label class="switch">
-    <input type="checkbox" ' . $emailenabled . ' class="setactive" data-type="emailenabled" data-id="' . $row['id'] . '" value="' . $row['emailenabled'] . '">
+        $n[] =  '<label class="form-check form-switch">
+    <input type="checkbox" ' . $emailenabled . ' class="setactive form-check-input" data-type="emailenabled" data-id="' . $row['id'] . '" value="' . $row['emailenabled'] . '">
     <span class="slider round"></span>
 </label>';
-        $n[] = '<label class="switch">
-    <input type="checkbox" ' . $activation . ' class="setactive" data-type="activate" data-id="' . $row['id'] . '" value="' . $row['activate'] . '">
+        $n[] = '<label class="form-check form-switch">
+    <input type="checkbox" ' . $activation . ' class="setactive form-check-input" data-type="activate" data-id="' . $row['id'] . '" value="' . $row['activate'] . '">
     <span class="slider round"></span>
 </label>';
     } else {
