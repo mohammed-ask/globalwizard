@@ -99,7 +99,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                 </tbody>
               </table>
               <div class="text-center mt-4">
-                <a class="btn btn-green w-85" data-bs-toggle="offcanvas" href="#offcanvasEnd<?= $rowplan['id'] ?>" role="button" aria-controls="offcanvasEnd<?= $rowplan['id'] ?>">Choose plan</a>
+                <a class="btn btn-green py-2 w-85" data-bs-toggle="offcanvas" href="#offcanvasEnd<?= $rowplan['id'] ?>" role="button" aria-controls="offcanvasEnd<?= $rowplan['id'] ?>">Choose plan</a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd<?= $rowplan['id'] ?>" aria-labelledby="offcanvasEndLabel">
                   <div class="offcanvas-header">
                     <h2 class="offcanvas-title" id="offcanvasEndLabel">Order Summary</h2>
@@ -171,7 +171,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                     </div>
 
                     <div class="mt-3 modalbtn">
-                      <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("<?= $rowplan["id"] ?>", "addpayment", "1", "Add Payment")' class="btn btn-primary w-100" style="background-color: black; 
+                      <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("<?= $rowplan["id"] ?>", "addpayment", "1", "Add Payment")' class="btn btn-primary py-2 w-100" style="background-color: black; 
                           font-weight: 700;" type="button" data-bs-dismiss="pay" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
                         I'm Ready to Pay
                       </button>

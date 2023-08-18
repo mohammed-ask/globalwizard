@@ -3,12 +3,12 @@ include 'main/session.php';
 print_r($_GET);
 ?>
 <div>
-    <h4 class=" text-center mb-5 mt-1">Pay Using Bank Transfer, NEFT, IMPS, Net Banking or UPI Options</h4>
+    <h4 class=" text-center mb-3 mt-1">Pay Using Bank Transfer, NEFT, IMPS, Net Banking or UPI Options</h4>
 </div>
 
 <div class="card">
-    <div class="card-body" style="padding: 9px;">
-        <ul class="nav nav-tabs card-header-tabs nav-fill" data-bs-toggle="tabs" role="tablist">
+    <div class="card-body" style="padding: 0px;">
+        <ul class="nav nav-tabs card-header-tabs nav-fill m-0" data-bs-toggle="tabs" role="tablist">
             <li class="nav-item" role="presentation">
                 <a href="#tabs-home-7" class="nav-link active" data-bs-toggle="tab" aria-selected="true" role="tab">
                     Pay Using <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 466" width="40" id="upi">
@@ -33,13 +33,13 @@ print_r($_GET);
         </ul>
 
 
-        <div class="card-body px-0">
+        <div class="card-body px-0 py-0">
             <div class="tab-content">
 
                 <div class="tab-pane active show" id="tabs-home-7" role="tabpanel">
-                    <div class="border rounded mt-3" style="overflow-wrap: break-word;">
+                    <div class="rounded mt-3" style="overflow-wrap: break-word;">
                         <div class="row p-3">
-                            <div class="col-lg-6" style="text-align: left;">
+                            <div class="col-lg-6" style="text-align: center;">
                                 <img style="width:200px; height: 200px; border: 1px solid lightgrey; padding: 3px;border-radius: 5px;" height="85px" class="m-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/QR_Code_Example.svg/552px-QR_Code_Example.svg.png?20111025115625" alt="Scan QR & Pay">
 
                             </div><!--end col-->
@@ -56,7 +56,7 @@ print_r($_GET);
 
                                 </div>
                                 <div class="my-3">
-                                    <h4 class="m-0">Amount to pay: <br> <span style="font-size: 16px; font-weight: 800;">₹ 4523567</span></h4>
+                                    <h4 class="m-0">Amount to Pay: <br> <span style="font-size: 16px; font-weight: 800;">₹ 4523567</span></h4>
 
 
                                 </div>
@@ -71,7 +71,7 @@ print_r($_GET);
                 </div>
                 <div class="tab-pane" id="tabs-profile-7" role="tabpanel">
 
-                    <div class="border rounded mt-3">
+                    <div class="rounded mt-3">
                         <div class="bg-light">
                             <h5 style="padding-left:16px !important;" class="m-0 font-14 p-2">Bank : HDFC Bank</h5>
                         </div>
@@ -94,7 +94,7 @@ print_r($_GET);
                             </div><!--end col-->
 
                             <div class="mt-3 py-1 card" style="text-align: center;">
-                                    <h4 class="m-0">Amount to pay: <span style="font-size: 14px; font-weight: 800;">₹ 4523567</span></h4>
+                                    <h4 class="m-0">Amount to Pay: <span style="font-size: 14px; font-weight: 800;">₹ 4523567</span></h4>
 
 
                                 </div>
