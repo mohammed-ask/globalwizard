@@ -144,7 +144,7 @@ print_r($_GET);
 
     <h5 style="margin-top: 5px !important; margin-bottom: 3px !important;" class="my-3 text-danger">Important*</h5>
     <ul class="mb-0 custom-para-size">
-        <li>Your Payment will take 30 mins to 1hr to reflect in Your Account after reviewing by our team.</li>
+        <li>Your payment request will take approximately 30 minutes to 1 hour to be reviewed by our team.</li>
 
         <li>There is no any hidden Charges like transaction fee, processing fee & more.</li>
     </ul>
