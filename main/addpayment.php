@@ -56,7 +56,7 @@ print_r($_GET);
 
                                 </div>
                                 <div class="my-3">
-                                    <h4 class="m-0">Amount to pay: <br> <span style="font-size: 14px; font-weight: 800;">₹ 4523567</span></h4>
+                                    <h4 class="m-0">Amount to pay: <br> <span style="font-size: 16px; font-weight: 800;">₹ 4523567</span></h4>
 
 
                                 </div>
@@ -93,7 +93,11 @@ print_r($_GET);
                                 <p class="m-0 custom-para-size">HDFC0006578</p>
                             </div><!--end col-->
 
+                            <div class="mt-3 py-1 card" style="text-align: center;">
+                                    <h4 class="m-0">Amount to pay: <span style="font-size: 14px; font-weight: 800;">₹ 4523567</span></h4>
 
+
+                                </div>
                         </div><!--end row-->
                     </div>
 
