@@ -159,6 +159,15 @@ switch ($request['path']) {
     case "$head";
         require __DIR__ . '/main/index.php';
         break;
+    case "$head/aboutus";
+        require __DIR__ . '/main/about.php';
+        break;
+    case "$head/pricing";
+        require __DIR__ . '/main/pricing.php';
+        break;
+    case "$head/contact";
+        require __DIR__ . '/main/contact.php';
+        break;
     case "$head/register";
         require __DIR__ . '/main/addusers.php';
         break;

@@ -150,3 +150,6 @@ print_r($_GET);
     </ul>
 
 </div>
+<script>
+    $('#modalfooterbtn').html('Send Payment Detail for approval')
+</script>
