@@ -5,8 +5,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <h1 class="navbar-brand navbar-brand-autodark">
-      <a href="https://preview.tabler.io/">
-        <img src="./Dashboard - Tabler - Premium and Open Source dashboard template with responsive and high quality UI._files/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+      <a href="#">
+        <img src="../main\images\logo\Global Wizard Colored Logo 2.0.png"  width="110" height="32" alt="Tabler" class="navbar-brand-image">
       </a>
     </h1>
     <div class="navbar-nav flex-row d-lg-none">

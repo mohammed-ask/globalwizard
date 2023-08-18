@@ -10,7 +10,7 @@
 
  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Pricing cards - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+ <title>Global Wizard Pvt Ltd</title>
  <script defer="" data-api="/stats/api/event" data-domain="preview.tabler.io" src="assets/js/script.js.download"></script>
 
  <!-- <link rel="icon" href="#favicon.ico" type="image/x-icon">
