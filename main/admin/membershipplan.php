@@ -10,7 +10,7 @@ ob_start();
     <div class="container-xl">
     <div class="mb-3" style="text-align: right;">
                     <?php if (in_array(1, $permissions)) { ?>
-                        <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addplan", "Unlink", "Add New Plan")' class="btn btn-primary">
+                        <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addplan", "Unlink", "Add New Plan")' class="btn btn-primary py-2">
                             Add New Plan
                         </button>
                     <?php } ?>

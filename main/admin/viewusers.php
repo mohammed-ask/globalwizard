@@ -10,7 +10,7 @@ if (!in_array(4, $permissions)) {
     <div class="container-xl">
     <div class="mb-3" style="text-align: right;">
                     <?php if (in_array(1, $permissions)) { ?>
-                        <button @click="openModal" onclick='dynamicmodal("none", "adduser", "Unlink", "Add New User")' class="btn btn-primary">
+                        <button @click="openModal" onclick='dynamicmodal("none", "adduser", "Unlink", "Add New User")' class="btn btn-primary py-2">
                             Add User
                         </button>
                     <?php } ?>

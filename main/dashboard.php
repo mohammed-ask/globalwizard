@@ -2,21 +2,71 @@
 include "main/session.php";
 $plan = $obj->selectextrawhere("plan", "status =1");
 ?>
-<div class="page-header d-print-none">
-  <div class="container-xl">
-    <div class="row g-2 align-items-center">
-      <div class="col mt-6" style="margin-bottom: -10px;">
-        <h2 class="page-title">
-          Current Membership & Subscribtion
-        </h2>
-      </div>
-    </div>
-  </div>
-</div>
+
+<div class="d-lg-none mt-2" style="text-align: center;">
+                <div>
+                    <?php
+                    if (empty($pstatus) && empty($paypending)) { ?>
+                        <a data-bs-toggle="offcanvas" href="#offcanvasEnd99" role="button" aria-controls="offcanvasEnd99" class="btn py-2" target="_blank" rel="noreferrer">
+                            <!-- Download SVG icon from    -->
+                            <svg xmlns="http://www.w3.org/2000/svg" style="color: #db0b0b;" class="icon icon-tabler icon-tabler-shield-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M17.67 17.667a12 12 0 0 1 -5.67 3.333a12 12 0 0 1 -8.5 -15c.794 .036 1.583 -.006 2.357 -.124m3.128 -.926a11.997 11.997 0 0 0 3.015 -1.95a12 12 0 0 0 8.5 3a12 12 0 0 1 -1.116 9.376"></path>
+                                <path d="M3 3l18 18"></path>
+                            </svg>
+                            Activate Your Account
+                        </a>
+                    <?php } elseif (!empty($pstatus)) { ?>
+                        <a href="#" class="btn py-2" target="_blank" rel="noreferrer">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" style="color: green;" class="icon icon-tabler icon-tabler-shield-star" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M11.143 20.743a12 12 0 0 1 -7.643 -14.743a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3c.504 1.716 .614 3.505 .343 5.237"></path>
+                                <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"></path>
+                            </svg>
+                            Account is Active
+                        </a>
+                    <?php } elseif (!empty($paypending)) { ?>
+                        <a role="button" class="btn py-2" target="_blank" rel="noreferrer">
+                            <!-- Download SVG icon from    -->
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" style="color: #db0b0b;" class="icon icon-tabler icon-tabler-shield-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M17.67 17.667a12 12 0 0 1 -5.67 3.333a12 12 0 0 1 -8.5 -15c.794 .036 1.583 -.006 2.357 -.124m3.128 -.926a11.997 11.997 0 0 0 3.015 -1.95a12 12 0 0 0 8.5 3a12 12 0 0 1 -1.116 9.376"></path>
+                                <path d="M3 3l18 18"></path>
+                            </svg> -->
+                            Pending for Approval
+                        </a>
+                    <?php } ?>
+
+                    <!-- <a href="#" class="btn py-2" target="_blank" rel="noreferrer">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" style="color: green;" class="icon icon-tabler icon-tabler-shield-star" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M11.143 20.743a12 12 0 0 1 -7.643 -14.743a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3c.504 1.716 .614 3.505 .343 5.237"></path>
+                        <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"></path>
+                     </svg>
+                   Account is Active
+                  </a> -->
+
+                </div>
+            </div>
+
+
+
+
+
 <div class="page-body">
   <div class="container-xl">
     <div class="card">
+    
       <div class="card-body">
+      <div>
+        <h2 class="m-0" style="text-align: left; color: #0117a1; text-decoration-line: underline;">
+          Plans & Subscriptions
+        </h2>
+      </div>
+      <div class="page-header d-print-none mt-2">
+
         <div class="row g-2 align-items-center">
 
           <div class="col">
@@ -49,7 +99,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
   <div class="container-xl">
     <div class="row g-2 align-items-center">
       <div class="col">
-        <h2 class="page-title">
+        <h2 class="page-title" style="color: #0117a1;">
           Membership Plans & Pricing
         </h2>
       </div>
@@ -64,7 +114,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
       <?php
       while ($rowplan = $obj->fetch_assoc($plan)) {
         $monthlyplan = $obj->selectextrawhere("plandetail", "planid=" . $rowplan['id'] . " and plantypeid=1 and status = 1")->fetch_assoc(); ?>
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-6 col-lg-4 px-3">
           <div class="card card-md">
             <div class="card-body text-center">
               <div class="text-uppercase text-secondary font-weight-medium mb-3"><?= $rowplan['name'] ?></div>
@@ -105,7 +155,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                 <?php } else { ?>
                   <a class="btn btn-green py-2 w-85" data-bs-toggle="offcanvas" href="#offcanvasEnd<?= $rowplan['id'] ?>" role="button" aria-controls="offcanvasEnd<?= $rowplan['id'] ?>">Choose plan</a>
                 <?php } ?>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd<?= $rowplan['id'] ?>" aria-labelledby="offcanvasEndLabel">
+                <div class="offcanvas offcanvas-end mt-0" tabindex="-1" id="offcanvasEnd<?= $rowplan['id'] ?>" aria-labelledby="offcanvasEndLabel">
                   <div class="offcanvas-header">
                     <h2 class="offcanvas-title" id="offcanvasEndLabel">Order Summary</h2>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -202,7 +252,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
           </div>
         </div>
       <?php } ?>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd99" aria-labelledby="offcanvasEndLabel">
+      <div class="offcanvas offcanvas-end mt-0" tabindex="-1" id="offcanvasEnd99" aria-labelledby="offcanvasEndLabel">
         <div class="offcanvas-header">
           <h2 class="offcanvas-title" id="offcanvasEndLabel">Order Summary</h2>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -214,8 +264,9 @@ $plan = $obj->selectextrawhere("plan", "status =1");
 
                 <div class="col" style="text-align: left;">
                   <h4 class="card-title m-0">
-                    Activate Account
+                    Account Activation Plan
                   </h4>
+                  <h5>(gst inclusive)</h5>
                   <div class="mb-3">
                     <div class="form-label"></div>
                     <input type="text" hidden class="inp" value="5000">
@@ -231,16 +282,16 @@ $plan = $obj->selectextrawhere("plan", "status =1");
 
 
                 </div>
-                <div class="col-auto bill-date text-secondary mt-5 amt" style="font-size: 14px;">
+                <div class="col-auto bill-date text-secondary mt-3 amt" style="font-size: 14px;">
                   <span>₹</span> <?= $activationamt ?>
                 </div>
 
               </div>
-              <div class="row g-2 align-items-center">
+              <div class="g-2 align-items-center">
 
-                <hr class="mt-3" style="margin-bottom: 1px;">
-                <hr class="mt-0 mb-2">
-                <div class="row g-2 align-items-center">
+                <hr class="mt-1" style="margin-bottom: 1px;">
+                <hr class="mt-0 mb-0">
+                <div class="row g-2 align-items-center mt-0">
 
                   <div class="col" style="text-align: left;">
 
@@ -257,7 +308,9 @@ $plan = $obj->selectextrawhere("plan", "status =1");
               </div>
             </div>
 
-            <div class="mt-3 modalbtn">
+           
+          </div>
+          <div class="mt-3 modalbtn">
               <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("membership", "addpayment", "", "Add Payment")' class="btn btn-primary py-2 w-100" style="background-color: black; 
                           font-weight: 700;" type="button" data-bs-dismiss="pay" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
                 I'm Ready to Pay
@@ -276,8 +329,8 @@ $plan = $obj->selectextrawhere("plan", "status =1");
               </p>
 
             </div>
-            <p style="font-size:12px;">We accept Debit Cards, Credit Card, Netbanking, Paytm, Phonepe, Google Pay & other UPI.</p>
-          </div>
+            <p style="font-size:12px; text-align:center;">We accept Debit Cards, Credit Card, Netbanking, Paytm, Phonepe, Google Pay & other UPI.</p>
+
         </div>
       </div>
       <div class="col-12">
@@ -286,7 +339,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
             <div class="row align-items-center">
               <div class="col">
                 <h2 class="h3">Enterprise-ready. Reach out for a custom quote.</h2>
-                <p class="m-0 text-secondary">Tabler is designed to work great for large enterprises. Take a look at our feature comparison.</p>
+                <p class="m-0">Tabler is designed to work great for large enterprises. Take a look at our feature comparison.</p>
               </div>
               <div class="col-auto">
                 <a href="#" class="btn">

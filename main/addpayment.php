@@ -112,9 +112,9 @@ if ($_GET['hakuna'] !== 'membership') {
 
 <h4 style="margin-top: 30px !important; margin-bottom: 15px !important; text-align: center; font-size: 13px;" class="my-3">** Pay First, Then Add Transaction Details Below **</h4>
 <div class="modal-body p-0" style="text-align: left;     overflow: hidden;">
-    <form class="row gy-2 gx-3 align-items-end" id="addfund">
+    <form class="row" id="addfund">
 
-        <div class="row">
+        <div class="row m-0">
             <div class="col-lg-6">
                 <div class="mb-3">
                     <label class="form-label mb-0">Mobile No.</label>

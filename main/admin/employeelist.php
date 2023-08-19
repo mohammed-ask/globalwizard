@@ -11,8 +11,8 @@ if (!in_array(12, $permissions)) {
         <div>
             <div style="text-align: right;">
             <?php if (in_array(9, $permissions)) { ?>
-                <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addemployee", "", "Add Employee")' class="btn btn-primary mb-3">
-                    + Add Employee
+                <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addemployee", "", "Add Employee")' class="btn btn-primary mb-3 py-2">
+                    Add Employee
                 </button>
             <?php } ?>
             </div>
@@ -52,7 +52,7 @@ if (!in_array(12, $permissions)) {
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity";
+$pagetitle = "Global Wizard Pvt Ltd";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";

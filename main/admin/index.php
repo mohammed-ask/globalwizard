@@ -26,7 +26,7 @@ ob_start();
                             New view
                         </a>
                     </span> -->
-                    <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addemployee", "", "Add Employee")'>
+                    <a href="#" class="btn btn-primary d-none d-sm-inline-block py-2" data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("none", "addemployee", "", "Add Employee")'>
                         <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                         <svg style="display: inline; " xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -166,10 +166,11 @@ ob_start();
                                     <tr>
                                         <th>Date</th>
                                         <th>Time</th>
-                                        <th>Transaction Id</th>
-                                        <th>Payment Mode</th>
-                                        <th>Amount</th>
-                                        <th>Status</th>
+                                        <th>Subscribers</th>
+                                        <th>Plan Name</th>
+                                        <th>Plan Validity</th>
+                                        <th>Remaining Days</th>
+                                        <th>Plan Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
