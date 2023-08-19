@@ -72,6 +72,7 @@ if ($emailcount > 0) {
     // $x['policyread'] = $_POST['policyread'];
     $x['type'] = 2;
     $x['role'] = 2;
+    $x['membershipstatus'] = 'No';
     // $x['longholding'] = 'No';
     $userid = $obj->insertnew($tb_name, $x);
     $path = "uploads/userdocs";

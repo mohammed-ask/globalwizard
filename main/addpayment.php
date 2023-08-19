@@ -1,6 +1,9 @@
 <?php
 include 'main/session.php';
 print_r($_GET);
+if ($_GET['hakuna'] !== 'membership') {
+    $planamount = $obj->selectfieldwhere('plandetail', 'price', 'planid=' . $_GET['hakuna'] . ' and plantypeid = ' . $_GET['matata'] . '');
+}
 ?>
 <div>
     <h4 class=" text-center mb-3 mt-1">Pay Using Bank Transfer, NEFT, IMPS, Net Banking or UPI Options</h4>
@@ -40,7 +43,7 @@ print_r($_GET);
                     <div class="rounded mt-3" style="overflow-wrap: break-word;">
                         <div class="row p-3">
                             <div class="col-lg-6" style="text-align: center;">
-                                <img style="width:200px; height: 200px; border: 1px solid lightgrey; padding: 3px;border-radius: 5px;" height="85px" class="m-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/QR_Code_Example.svg/552px-QR_Code_Example.svg.png?20111025115625" alt="Scan QR & Pay">
+                                <img style="width:200px; height: 200px; border: 1px solid lightgrey; padding: 3px;border-radius: 5px;" height="85px" class="m-0" src="<?= $qrimage ?>" alt="Scan QR & Pay">
 
                             </div><!--end col-->
                             <div class="col-lg-6" style="text-align:left;">
@@ -52,13 +55,11 @@ print_r($_GET);
 
                                 <div>
                                     <h4 class="m-0">Or Pay Using UPI ID</h4>
-                                    <p class="mb-0 mt-1">78787878787@ybl</p>
+                                    <p class="mb-0 mt-1"><?= $upiid ?></p>
 
                                 </div>
                                 <div class="my-3">
-                                    <h4 class="m-0">Amount to Pay: <br> <span style="font-size: 16px; font-weight: 800;">₹ 4523567</span></h4>
-
-
+                                    <h4 class="m-0">Amount to Pay: <br> <span style="font-size: 16px; font-weight: 800;">₹ <?= $_GET['hakuna'] === 'membership' ? $activationamt : $planamount ?></span></h4>
                                 </div>
                                 <!--end col-->
                             </div>
@@ -73,31 +74,29 @@ print_r($_GET);
 
                     <div class="rounded mt-3">
                         <div class="bg-light">
-                            <h5 style="padding-left:16px !important;" class="m-0 font-14 p-2">Bank : HDFC Bank</h5>
+                            <h5 style="padding-left:16px !important;" class="m-0 font-14 p-2"><?= "Bank: " . $bankname ?></h5>
                         </div>
 
                         <div class="row p-3" style="overflow-wrap: break-word;">
 
                             <div class="col-4" style="border-right: 1px solid lightgray;">
                                 <h5 class="m-0">Holder Name</h5>
-                                <p class="mb-0 custom-para-size">Global Wizard Pvt Ltd</p>
+                                <p class="mb-0 custom-para-size"><?= $bankaccountname ?></p>
                             </div><!--end col-->
 
                             <div class="col-4" style="border-right: 1px solid lightgray;">
                                 <h5 class="m-0">Account No.</h5>
-                                <p class="mb-0 custom-para-size">89898989898989</p>
+                                <p class="mb-0 custom-para-size"><?= $bankaccountno ?></p>
                             </div><!--end col-->
 
                             <div class="col-4">
                                 <h5 class="m-0">IFSC Code</h5>
-                                <p class="m-0 custom-para-size">HDFC0006578</p>
+                                <p class="m-0 custom-para-size"><?= $bankifsccode ?></p>
                             </div><!--end col-->
 
                             <div class="mt-3 py-1 card" style="text-align: center;">
-                                    <h4 class="m-0">Amount to Pay: <span style="font-size: 14px; font-weight: 800;">₹ 4523567</span></h4>
-
-
-                                </div>
+                                <h4 class="m-0">Amount to Pay: <span style="font-size: 14px; font-weight: 800;">₹ <?= $_GET['hakuna'] === 'membership' ? $activationamt : $planamount ?></span></h4>
+                            </div>
                         </div><!--end row-->
                     </div>
 
@@ -113,41 +112,45 @@ print_r($_GET);
 
 <h4 style="margin-top: 30px !important; margin-bottom: 15px !important; text-align: center; font-size: 13px;" class="my-3">** Pay First, Then Add Transaction Details Below **</h4>
 <div class="modal-body p-0" style="text-align: left;     overflow: hidden;">
+    <form class="row gy-2 gx-3 align-items-end" id="addfund">
 
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="mb-3">
-                <label class="form-label mb-0">Mobile No.</label>
-                <input type="text" class="form-control" placeholder="Mobile No. Used for Payment">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <label class="form-label mb-0">Mobile No.</label>
+                    <input type="text" data-bvalidator="required,minlength[10],maxlength[10]" name="mobile" class="form-control" placeholder="Mobile No. Used for Payment">
+                </div>
             </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="mb-3">
-                <label class="form-label mb-0">Transaction Id/UTR</label>
-                <input type="text" class="form-control" placeholder="Payment Transaction Id">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <label class="form-label mb-0">Transaction Id/UTR</label>
+                    <input type="text" data-bvalidator="required" name="transactionid" class="form-control" placeholder="Payment Transaction Id">
+                </div>
             </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="mb-3">
-                <label class="form-label mb-0">Payment Mode</label>
-                <input type="text" class="form-control" placeholder="UPI, PhonePe, Bank">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <label class="form-label mb-0">Payment Mode</label>
+                    <input type="text" data-bvalidator="required" name="paymentmethod" class="form-control" placeholder="UPI, PhonePe, Bank">
+                </div>
             </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="mb-3">
-                <label class="form-label mb-0">Amount</label>
-                <input type="number" class="form-control" placeholder="Paid Amount">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <label class="form-label mb-0">Amount</label>
+                    <input readonly type="number" step="any" name="amount" data-bvalidator="required" value="<?= $_GET['hakuna'] === 'membership' ? $activationamt : $planamount ?>" class="form-control" placeholder="Paid Amount">
+                </div>
             </div>
-        </div>
+            <input hidden type="text" name="paidfor" value="<?= $_GET['hakuna'] === 'membership' ? 'Membership' : 'Plan' ?>">
+            <button hidden id="modalsubmit" style="background-color: #057c7c;" class="btn btn-success w-100 my-3" onclick="event.preventDefault();sendForm('', '', 'insertpayment', 'resultid', 'addfund')">Send Payment Details For Approval</button>
+            <div class="col-md-12" id="resultid"></div>
+    </form>
+</div>
 
-    </div>
+<h5 style="margin-top: 5px !important; margin-bottom: 3px !important;" class="my-3 text-danger">Important*</h5>
+<ul class="mb-0 custom-para-size">
+    <li>Your payment request will take approximately 30 minutes to 1 hour to be reviewed by our team.</li>
 
-    <h5 style="margin-top: 5px !important; margin-bottom: 3px !important;" class="my-3 text-danger">Important*</h5>
-    <ul class="mb-0 custom-para-size">
-        <li>Your payment request will take approximately 30 minutes to 1 hour to be reviewed by our team.</li>
-
-        <li>There is no any hidden Charges like transaction fee, processing fee & more.</li>
-    </ul>
+    <li>There is no any hidden Charges like transaction fee, processing fee & more.</li>
+</ul>
 
 </div>
 <script>

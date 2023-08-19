@@ -18,6 +18,7 @@ $rowuserdata = $obj->selectextrawhere("users", "id=" . $employeeid . "")->fetch_
 $avatarpath = $obj->fetchattachment($rowuserdata['avatar']);
 $investmentamount = empty($rowuserdata['investmentamount']) ? 0 : $rowuserdata['investmentamount'];
 $username = $rowuserdata['name'];
+$membershipstatus = $rowuserdata['membershipstatus'];
 $permissions = array();
 if (isset($_SESSION['permissions']) && (!empty($_SESSION['permissions']))) {
     $permissions = explode(",", $_SESSION['permissions']);

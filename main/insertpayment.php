@@ -13,10 +13,11 @@ $xx['mobile'] = $_POST['mobile'];
 $xx['transactionid'] = $_POST['transactionid'];
 $xx['paymentmethod'] = $_POST['paymentmethod'];
 $xx['amount'] = $_POST['amount'];
+$xx['paidfor'] = $_POST['paidfor'];
 $fund = $obj->insertnew("fundrequest", $xx);
 $obj->saveactivity("Fund Added by User", "", $fund, $employeeid, "User", "Fund Added by User");
 if ($fund > 0) {
-    echo "Redirect : Your deposit has been received and is now being verified by our team.  URLfund";
+    echo "Redirect : Your Payment has been received and is now being verified by our team.  URLdashboard";
 } else {
     echo "Something went wrong, please try again later";
 }

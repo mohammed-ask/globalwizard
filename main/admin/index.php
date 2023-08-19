@@ -161,7 +161,7 @@ ob_start();
                         </div>
 
                         <div class="table-responsive fixTableHead" style="height: 400px;">
-                            <table class="table card-table table-vcenter text-nowrap datatable">
+                            <table id="example1" class="table card-table table-vcenter text-nowrap datatable">
                                 <thead>
                                     <tr>
                                         <th>Date</th>
@@ -172,125 +172,17 @@ ob_start();
                                         <th>Status</th>
                                     </tr>
                                 </thead>
-                                <div>
-                                    <tbody>
+                                <tbody>
 
-                                        <tr>
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>88798</td>
-                                            <td><span class="badge bg-success me-1"></span>Success</td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>8889077</td>
-                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>88798</td>
-                                            <td><span class="badge bg-success me-1"></span>Success</td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>8889077</td>
-                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>88798</td>
-                                            <td><span class="badge bg-success me-1"></span>Success</td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>8889077</td>
-                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>88798</td>
-                                            <td><span class="badge bg-success me-1"></span>Success</td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>8889077</td>
-                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>88798</td>
-                                            <td><span class="badge bg-success me-1"></span>Success</td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>8889077</td>
-                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>88798</td>
-                                            <td><span class="badge bg-success me-1"></span>Success</td>
-
-                                        </tr>
-                                        <tr>
-
-                                            <td>23 Jun, 2023</td>
-                                            <td>16:23</td>
-                                            <td>TR6377366678388</td>
-                                            <td>Upi Transfer</td>
-                                            <td><span>₹</span>8889077</td>
-                                            <td><span class="badge bg-warning me-1"></span>Pending</td>
-                                        </tr>
-
-                                    </tbody>
-                                </div>
+                                    <tr>
+                                        <td>23 Jun, 2023</td>
+                                        <td>16:23</td>
+                                        <td>TR6377366678388</td>
+                                        <td>Upi Transfer</td>
+                                        <td><span>₹</span>88798</td>
+                                        <td><span class="badge bg-success me-1"></span>Success</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
 
@@ -318,5 +210,20 @@ $pageheader = "";
 include "main/admin/templete.php";
 ?>
 <script>
-
+    var table = $('#example1').DataTable({
+        "ajax": "../main/admin/paymentdata.php",
+        "processing": false,
+        "serverSide": true,
+        "pageLength": 10,
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+        "order": [
+            [0, "desc"]
+        ],
+    })
 </script>

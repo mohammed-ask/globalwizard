@@ -99,7 +99,12 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                 </tbody>
               </table>
               <div class="text-center mt-4">
-                <a class="btn btn-green py-2 w-85" data-bs-toggle="offcanvas" href="#offcanvasEnd<?= $rowplan['id'] ?>" role="button" aria-controls="offcanvasEnd<?= $rowplan['id'] ?>">Choose plan</a>
+                <?php
+                if ($membershipstatus === 'No') { ?>
+                  <a class="btn btn-green py-2 w-85" data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("", "activateaccountalert", "1", "Account not activated")'>Choose plan</a>
+                <?php } else { ?>
+                  <a class="btn btn-green py-2 w-85" data-bs-toggle="offcanvas" href="#offcanvasEnd<?= $rowplan['id'] ?>" role="button" aria-controls="offcanvasEnd<?= $rowplan['id'] ?>">Choose plan</a>
+                <?php } ?>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd<?= $rowplan['id'] ?>" aria-labelledby="offcanvasEndLabel">
                   <div class="offcanvas-header">
                     <h2 class="offcanvas-title" id="offcanvasEndLabel">Order Summary</h2>
@@ -176,38 +181,6 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                         I'm Ready to Pay
                       </button>
                     </div>
-
-                    <!-- --------------------------success model Start--------- -->
-                    <!-- <div class="modal modal-blur fade" id="modal-success" tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          <div class="modal-status bg-success"></div>
-                          <div class="modal-body text-center py-4">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-green icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                              <path d="M9 12l2 2l4 -4"></path>
-                            </svg>
-                            <h3>Payment succedeed</h3>
-                            <div class="">Your payment of ₹ 2897690 has been successfully submitted. Your Membership will Active once your payment will Approved</div>
-                          </div>
-                          <div class="modal-footer">
-                            <div class="w-100">
-                              <div class="row">
-                                <div class="col"><a href="#" class="btn w-100" data-bs-dismiss="modal">
-                                    Go to dashboard
-                                  </a></div>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> -->
-
-
                     <div class="btn-list mt-4" style="text-align: center; display: block; font-size: 16px; font-weight: 700;">
                       <p>
                         <svg style="color: rgb(1, 219, 114); stroke-width: 2.5px !important; width: 25px; height: 25px;" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -229,8 +202,84 @@ $plan = $obj->selectextrawhere("plan", "status =1");
           </div>
         </div>
       <?php } ?>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd99" aria-labelledby="offcanvasEndLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title" id="offcanvasEndLabel">Order Summary</h2>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="card">
+            <div class="card-body">
+              <div class="row g-2 align-items-center">
+
+                <div class="col" style="text-align: left;">
+                  <h4 class="card-title m-0">
+                    Activate Account
+                  </h4>
+                  <div class="mb-3">
+                    <div class="form-label"></div>
+                    <input type="text" hidden class="inp" value="5000">
+                    <!-- <select class="form-select plantype w-85 pb-1 pt-1" fdprocessedid="5a12go">
+                      <?php
+                      $types = $obj->selectextrawhereupdate("plantypes", "id,name", "status = 1");
+                      $types = mysqli_fetch_all($types);
+                      foreach ($types as list($id, $name)) { ?>
+                        <option value="<?= $id ?>"><?= $name ?></option>
+                      <?php } ?>
+                    </select> -->
+                  </div>
 
 
+                </div>
+                <div class="col-auto bill-date text-secondary mt-5 amt" style="font-size: 14px;">
+                  <span>₹</span> <?= $activationamt ?>
+                </div>
+
+              </div>
+              <div class="row g-2 align-items-center">
+
+                <hr class="mt-3" style="margin-bottom: 1px;">
+                <hr class="mt-0 mb-2">
+                <div class="row g-2 align-items-center">
+
+                  <div class="col" style="text-align: left;">
+
+                    <div style="color: rgb(0, 0, 0); font-weight: 500;">
+                      Total Amount
+                    </div>
+                  </div>
+                  <div class="col-auto bill-date text-secondary totalamt" style="font-size: 14px;">
+                    <span>₹</span> <?= $activationamt ?>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mt-3 modalbtn">
+              <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("membership", "addpayment", "", "Add Payment")' class="btn btn-primary py-2 w-100" style="background-color: black; 
+                          font-weight: 700;" type="button" data-bs-dismiss="pay" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
+                I'm Ready to Pay
+              </button>
+            </div>
+            <div class="btn-list mt-4" style="text-align: center; display: block; font-size: 16px; font-weight: 700;">
+              <p>
+                <svg style="color: rgb(1, 219, 114); stroke-width: 2.5px !important; width: 25px; height: 25px;" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M11.5 21h-4.5a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v.5"></path>
+                  <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                  <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+                  <path d="M15 19l2 2l4 -4"></path>
+                </svg>
+                Secure Payment
+              </p>
+
+            </div>
+            <p style="font-size:12px;">We accept Debit Cards, Credit Card, Netbanking, Paytm, Phonepe, Google Pay & other UPI.</p>
+          </div>
+        </div>
+      </div>
       <div class="col-12">
         <div class="card card-md">
           <div class="card-body">

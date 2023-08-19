@@ -105,6 +105,15 @@ switch ($request['path']) {
     case "$head/admin/pendingapproval";
         require __DIR__ . '/main/admin/pendingapproval.php';
         break;
+    case "$head/admin/pendingactivation";
+        require __DIR__ . '/main/admin/pendingactivation.php';
+        break;
+    case "$head/admin/approveactivation";
+        require __DIR__ . '/main/admin/approveactivation.php';
+        break;
+    case "$head/admin/pendingplan";
+        require __DIR__ . '/main/admin/pendingplan.php';
+        break;
     case "$head/admin/employeelist";
         require __DIR__ . '/main/admin/employeelist.php';
         break;
@@ -210,9 +219,7 @@ switch ($request['path']) {
     case "$head/addfund";
         require __DIR__ . '/main/addfund.php';
         break;
-    case "$head/insertfund";
-        require __DIR__ . '/main/insertfund.php';
-        break;
+
     case "$head/test";
         require __DIR__ . '/main/test.php';
         break;
@@ -242,6 +249,12 @@ switch ($request['path']) {
         break;
     case "$head/addpayment";
         require __DIR__ . '/main/addpayment.php';
+        break;
+    case "$head/insertpayment";
+        require __DIR__ . '/main/insertpayment.php';
+        break;
+    case "$head/activateaccountalert";
+        require __DIR__ . '/main/activateaccountalert.php';
         break;
     case "$head/email";
         require __DIR__ . '/main/email.php';
