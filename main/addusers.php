@@ -257,7 +257,7 @@
             border: none;
             outline: 0;
             border-radius: 5px;
-            border: 1px solid #057c7c;
+            border: 1px solid #0054a6;
             gap: 20px;
             box-sizing: border-box;
             padding: 0px 10px;
@@ -338,7 +338,7 @@
             width: 100px;
             border: none;
             border-radius: 5px;
-            background-color: #057c7c;
+            background-color: #0054a6;
             font-size: 12px;
             color: #fff;
             cursor: pointer;
@@ -743,7 +743,7 @@
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
                 <a href="#" class="navbar-brand navbar-brand-autodark">
-                    <img src="#" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                    <img src="main\images\logo\Global Wizard Colored Logo 2.0.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
                 </a>
             </div>
             <div class="card card-md">
@@ -807,7 +807,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="buttons">
+                            <div class="buttons mt-3">
                                 <button class="next_button">Next Step</button>
                             </div>
                         </div>
@@ -841,7 +841,7 @@
                             </div>
 
                             <div class="buttons button_space">
-                                <button class="back_button">Back</button>
+                                <button class="back_button mt-3">Back</button>
                                 <button class="next_button">Next Step</button>
                             </div>
                         </div>
@@ -892,7 +892,7 @@
                                 </div>
                             </div>
                             <div class="buttons button_space">
-                                <button class="back_button">Back</button>
+                                <button class="back_button mt-3">Back</button>
                                 <button class="next_button" id="otp_button">Next Step</button>
                             </div>
 
@@ -958,7 +958,10 @@
                     </form>
 
                 </div>
-
+                <div class="hr-text">or</div>
+                <div class="text-center mt-3 mb-3" style="font-size: 15px;">
+                   Already have account Account? <span style="font-weight: 600;"><a href="register" tabindex="-1">Sign In</a></span>
+                </div>
             </div>
         </div>
     </div>

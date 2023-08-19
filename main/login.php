@@ -121,7 +121,7 @@ include './main/conn.php';
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
                 <a href="#" class="navbar-brand navbar-brand-autodark">
-                    <img src="#" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                    <img src="main\images\logo\Global Wizard Colored Logo 2.0.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
                 </a>
             </div>
             <div class="card card-md">
