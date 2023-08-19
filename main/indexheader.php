@@ -81,7 +81,7 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
 
 
 </head>
-dy class="topPd" data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
+<div class="topPd" data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
 
 <header class="mainHeader">
 
@@ -146,7 +146,7 @@ dy class="topPd" data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed=
 
             <nav class="navbar p-0 navbar-expand-xl navbar-light">
 
-                <a class="navbar-brand p-0 mr-0" href="index.html"><img src="#" alt="logo"></a>
+                <a class="navbar-brand p-0 mr-0" href="index.html"><img src="main\images\logo\Global Wizard Colored logo 2.0.png" alt="logo"></a>
 
                 <button class="navbar-toggler menu-icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -201,4 +201,4 @@ dy class="topPd" data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed=
 
     </div>
 
-</header>
+</header></div>

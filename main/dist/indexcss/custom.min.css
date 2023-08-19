@@ -115,7 +115,7 @@ p {
 
 @media (max-width: 575.98px) {
     .topPd {
-        padding-top: 125px
+        padding-top: 135px
     }
 }
 
@@ -127,7 +127,7 @@ p {
     position: relative;
     z-index: 2;
     font-size: 18px;
-    color: #84ba3f
+    color: #0054a6
 }
 
 .videoBtn::before,
@@ -146,7 +146,7 @@ p {
 
 .videoBtn::before {
     z-index: 0;
-    background: #84ba3f;
+    background: #0054a6;
     animation: pulse-border 1500ms ease-out infinite
 }
 
@@ -191,7 +191,7 @@ p {
     height: 35px;
     left: 0;
     right: 0;
-    background-color: #84ba3f;
+    background-color: #0054a6;
     z-index: -1;
     color: #fff;
     -webkit-transform: skewX(-28deg);
@@ -225,7 +225,7 @@ p {
     transform: translate(-50%, -50%);
     width: 6px;
     height: 6px;
-    background: #84ba3f;
+    background: #df00df;
     border-radius: 50px;
     margin-left: -3px
 }
@@ -312,8 +312,8 @@ p {
     right: -2px;
     left: 100%;
     top: 100%;
-    border-right: 2px solid #84ba3f;
-    border-bottom: 2px solid #84ba3f
+    border-right: 2px solid #0054a6;
+    border-bottom: 2px solid #0054a6
 }
 
 .serviceBox::after {
@@ -321,8 +321,8 @@ p {
     left: -2px;
     right: 100%;
     bottom: 100%;
-    border-top: 2px solid #84ba3f;
-    border-left: 2px solid #84ba3f
+    border-top: 2px solid #0054a6;
+    border-left: 2px solid #0054a6
 }
 
 .serviceBox:hover {
@@ -371,7 +371,7 @@ p {
 .serviceBox a {
     font-size: 14px;
     line-height: 22px;
-    color: #84ba3f;
+    color: #0054a6;
     margin-top: 15px;
     display: inline-block
 }
@@ -429,7 +429,7 @@ p {
 
 .commonList li i {
     margin-right: 4px;
-    color: #84ba3f
+    color: #0054a6
 }
 
 .topSticky {
@@ -466,7 +466,7 @@ p {
 .sk-cube-grid .sk-cube {
     width: 33%;
     height: 33%;
-    background-color: #84ba3f;
+    background-color: #0054a6;
     float: left;
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
     animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out
@@ -579,7 +579,7 @@ p {
 
 .mainHeader_top .contact-icons li a em {
     font-size: 16px;
-    color: #84ba3f
+    color: #0054a6
 }
 
 .mainHeader_top .social-icons {
@@ -665,7 +665,7 @@ p {
     height: 2px;
     width: 30px;
     display: block;
-    background: #84ba3f;
+    background: #0054a6;
     margin-bottom: 4px;
     transition: transform .2s ease, background-color .5s ease
 }
@@ -689,7 +689,7 @@ p {
 
 .mainHeader_down .navbar .navbar-nav .nav-item.active a.nav-link,
 .mainHeader_down .navbar .navbar-nav .nav-item:hover a.nav-link {
-    color: #84ba3f
+    color: #0054a6
 }
 
 .mainHeader_down .navbar .navbar-nav .nav-item.active a.nav-link::before,
@@ -713,7 +713,7 @@ p {
     left: 0px;
     width: 0px;
     height: 2px;
-    background-color: #84ba3f;
+    background-color: #0054a6;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -731,7 +731,7 @@ p {
     -o-transition: all .3s ease;
     transition: all .3s ease;
     border: none;
-    border-top: 2px solid #84ba3f;
+    border-top: 2px solid #0054a6;
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
@@ -763,7 +763,7 @@ p {
 .mainHeader_down .navbar .navbar-nav .nav-item .dropdown-menu li a.active,
 .mainHeader_down .navbar .navbar-nav .nav-item .dropdown-menu li a:active,
 .mainHeader_down .navbar .navbar-nav .nav-item .dropdown-menu li a:hover {
-    color: #84ba3f;
+    color: #0054a6;
     background-color: transparent
 }
 
@@ -782,7 +782,7 @@ p {
     width: 230px;
     top: -10px;
     left: 166px;
-    border-top: 2px solid #84ba3f
+    border-top: 2px solid #0054a6
 }
 
 .mainHeader_down .navbar .navbar-nav .nav-item .subMenu ul {
@@ -808,7 +808,7 @@ p {
 .mainHeader_down .navbar .navbar-nav .nav-item .subMenu ul li a.active,
 .mainHeader_down .navbar .navbar-nav .nav-item .subMenu ul li a:active,
 .mainHeader_down .navbar .navbar-nav .nav-item .subMenu ul li a:hover {
-    color: #84ba3f;
+    color: #0054a6;
     background-color: transparent
 }
 
@@ -942,7 +942,7 @@ p {
 
 .footer_top {
     padding: 50px 0px;
-    border-top: 2px solid #84ba3f
+    border-top: 2px solid #0054a6
 }
 
 .footer_top .row {
@@ -1032,7 +1032,7 @@ p {
 }
 
 .footer_top .widgetList .linkList li a:hover {
-    color: #84ba3f
+    color: #0054a6
 }
 
 .footer_top .widgetList .linkList li a:hover i {
@@ -1107,7 +1107,7 @@ p {
 .footer_top .widgetList .addresLink li i {
     width: 25px;
     height: 25px;
-    background: #84ba3f;
+    background: #0054a6;
     line-height: 25px;
     text-align: center;
     border-radius: 5px;
@@ -1129,7 +1129,7 @@ p {
 }
 
 .footer_top .widgetList .addresLink li a:hover {
-    color: #84ba3f
+    color: #0054a6
 }
 
 .footer_bottom {
@@ -1156,7 +1156,7 @@ p {
 }
 
 .footer_bottom ul li a:hover {
-    color: #84ba3f
+    color: #0054a6
 }
 
 @media (max-width: 991.98px) {
@@ -1281,8 +1281,8 @@ p {
 }
 
 .btn-primary {
-    border-color: #84ba3f;
-    background-color: #84ba3f
+    border-color: #0054a6;
+    background-color: #0054a6
 }
 
 .btn-primary:hover,
@@ -1291,14 +1291,14 @@ p {
 .btn-primary.active,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus {
-    color: #84ba3f;
-    border-color: #84ba3f;
+    color: #0054a6;
+    border-color: #0054a6;
     background-color: transparent;
     box-shadow: none
 }
 
 .btn-white {
-    color: #84ba3f;
+    color: #0054a6;
     border-color: #fff;
     background-color: #fff
 }
@@ -1340,8 +1340,8 @@ p {
 
 .form-group .custom-checkbox .custom-control-input:checked~.custom-control-label::before,
 .form-group .custom-radio .custom-control-input:checked~.custom-control-label::before {
-    border-color: #84ba3f;
-    background-color: #84ba3f
+    border-color: #0054a6;
+    background-color: #0054a6
 }
 
 .form-group .custom-checkbox .custom-control-label,
@@ -1417,7 +1417,7 @@ p {
 .table thead td a,
 .table tbody th a,
 .table tbody td a {
-    color: #84ba3f
+    color: #0054a6
 }
 
 .table thead th .form-control,
@@ -1471,11 +1471,13 @@ p {
 }
 
 .breadSec .breadcrumb-item::before {
-    color: #84ba3f
+    color: #fff;
+    font-weight: 700;
 }
 
 .breadSec .breadcrumb-item.active {
-    color: #84ba3f
+    color: #fff;
+    font-weight: 700;
 }
 
 .breadSec .breadcrumb-item a {
@@ -1483,7 +1485,7 @@ p {
 }
 
 .breadSec .breadcrumb-item a:hover {
-    color: #84ba3f
+    color: #0054a6
 }
 
 @media (min-width: 992px) {
@@ -1533,7 +1535,7 @@ p {
 }
 
 .accordion_card a[aria-expanded="true"] {
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .accordion_card a[aria-expanded="true"]::before {
@@ -1573,7 +1575,7 @@ p {
 }
 
 .customTab li a.nav-link.active {
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 @media (max-width: 1199.98px) {
@@ -1617,7 +1619,7 @@ p {
     opacity: 1;
     font-weight: 200;
     color: #fff;
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .modal-content {
@@ -1637,7 +1639,7 @@ p {
 }
 
 .modal-body p a {
-    color: #84ba3f
+    color: #0054a6
 }
 
 .modal-body .form-control {
@@ -1707,7 +1709,7 @@ p {
 .bootstrap-select .dropdown-menu li a.selected,
 .bootstrap-select .dropdown-menu li a:hover {
     color: #fff;
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .bootstrap-select .dropdown-menu li a span.check-mark {
@@ -1752,7 +1754,7 @@ p {
 .homePage .bannerSec .owl-theme .owl-dots .owl-dot.active span {
     width: 14px;
     height: 14px;
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .homePage .bannerSec .owl-theme .owl-dots .owl-dot:not(:last-child) {
@@ -1761,7 +1763,7 @@ p {
 
 .homePage .bannerSec .owl-theme .owl-dots .owl-dot span {
     background: #fff;
-    border: 1px solid #84ba3f;
+    border: 1px solid #0054a6;
     width: 12px;
     height: 12px;
     margin: 0;
@@ -2208,7 +2210,7 @@ p {
     position: absolute;
     width: 30px;
     height: 2px;
-    background: #84ba3f;
+    background: #0054a6;
     bottom: 10px;
     left: 0
 }
@@ -2242,8 +2244,8 @@ p {
 
 .aboutSec_content .feature_box:hover em {
     color: #fff;
-    border-color: #84ba3f;
-    background-color: #84ba3f
+    border-color: #0054a6;
+    background-color: #0054a6
 }
 
 .aboutSec_content .feature_box em {
@@ -2366,7 +2368,7 @@ p {
     position: absolute;
     width: 30px;
     height: 2px;
-    background: #84ba3f;
+    background: #0054a6;
     bottom: 10px;
     left: 0
 }
@@ -2480,7 +2482,7 @@ p {
     font-size: 25px;
     width: 50px;
     height: 50px;
-    background: #84ba3f;
+    background: #0054a6;
     color: #fff;
     text-align: center;
     line-height: 50px;
@@ -2634,7 +2636,7 @@ p {
     -ms-transform: rotate(15deg);
     -o-transform: rotate(15deg);
     transform: rotate(15deg);
-    background: #84ba3f
+    background: #0054a6
 }
 
 .growthSec .growthbBox_icons::after {
@@ -2715,7 +2717,7 @@ p {
 }
 
 .visionhSec .nav-link.active {
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .visionhSec h3 {
@@ -2807,7 +2809,7 @@ p {
     position: absolute;
     left: 0;
     top: 0;
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .pricingSec_middle .price {
@@ -2899,7 +2901,7 @@ p {
     position: relative;
     display: block;
     padding: 28px 0px;
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .pricingSec .pricing-block-one .pricing-table .table-header .price-box span {
@@ -3071,7 +3073,7 @@ p {
     margin: 0 auto;
     height: 3px;
     width: 70px;
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .contactInfo_box a {
@@ -3079,7 +3081,7 @@ p {
 }
 
 .contactInfo_box a:hover {
-    color: #84ba3f
+    color: #0054a6
 }
 
 .contactInfo_box img {
@@ -3187,7 +3189,7 @@ p {
     content: '';
     width: 3px;
     position: absolute;
-    background-color: #84ba3f;
+    background-color: #0054a6;
     height: 100%;
     left: 0;
     top: 0
@@ -3274,7 +3276,7 @@ p {
     bottom: -2px;
     height: 3px;
     width: 70px;
-    background-color: #84ba3f
+    background-color: #0054a6
 }
 
 .serviceDetails .contactInfoBox a {
@@ -3282,7 +3284,7 @@ p {
 }
 
 .serviceDetails .contactInfoBox a:hover {
-    color: #84ba3f
+    color: #0054a6
 }
 
 .serviceDetails .contactInfoBox .form-group .form-control,

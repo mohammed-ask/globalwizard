@@ -4,7 +4,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <h1 class="navbar-brand navbar-brand-autodark">
+    <h1 class="navbar-brand navbar-brand-autodark mt-3">
       <a href="#">
         <img src="../main\images\logo\Global Wizard Colored Logo 2.0.png"  width="110" height="32" alt="Tabler" class="navbar-brand-image">
       </a>
