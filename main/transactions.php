@@ -86,7 +86,7 @@ include "main/templete.php"; ?>
     "lengthChange": false,
     "searching": false,
     "ordering": true,
-    "info": true,
+    "info": false,
     "autoWidth": false,
     "responsive": true,
     "order": [
