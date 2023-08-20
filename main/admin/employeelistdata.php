@@ -76,7 +76,7 @@ while ($row = $obj->fetch_assoc($result)) {
     }
     $a  .= '</div>';
     $n[] = $a;
-    $n[] = '<button class="btn" @click="openModal" onclick="dynamicmodal(\'' . $row["id"] . '\', \'employeeclient\', \'\', \'Employee Clients\')">View Clients</button>';
+    $n[] = '<button class="btn" data-bs-toggle="modal" data-bs-target="#modal-report"  onclick="dynamicmodal(\'' . $row["id"] . '\', \'employeeclient\', \'\', \'Employee Clients\')">View Clients</button>';
     $data[] = $n;
     $i++;
 }

@@ -130,27 +130,18 @@ include './main/conn.php';
                     <form method="post" onsubmit="event.preventDefault();sendForm('', '', 'checklogin', 'resultid', 'loginform');return 0;" id="loginform">
                         <div class="mb-3">
                             <label class="form-label">Email address</label>
-                            <input type="email" name="email" class="form-control" style="    padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                            <input data-bvalidator='required' type="email" name="email" class="form-control" style="    padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
                         </div>
-                        <div class="mb-2">
+                        <div class="mb-2" style="position: relative;">
                             <label class="form-label">
                                 Password
                                 <span class="form-label-description">
                                     <a href="#">forgot password?</a>
                                 </span>
                             </label>
-                            <div class="input-group input-group-flat">
-                                <input type="password" class="form-control" placeholder="Your password" name="password" autocomplete="off" fdprocessedid="cllljp">
-                                <span class="input-group-text">
-                                    <a href="#" class="link-secondary" data-bs-toggle="tooltip" aria-label="Show password" data-bs-original-title="Show password"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                                            <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path>
-                                        </svg>
-                                    </a>
-                                </span>
-                            </div>
+                            <!-- <div class="input-group input-group-flat"> -->
+                            <input data-bvalidator='required' type="password" class="form-control" placeholder="Your password" name="password" autocomplete="off" fdprocessedid="cllljp" id="pass">
+                            <i id="eye" class="fa fa-eye" style="position: absolute; top:35px; right:10px" aria-hidden="true"></i>
                         </div>
                         <div class="mb-2">
                             <label class="form-check">

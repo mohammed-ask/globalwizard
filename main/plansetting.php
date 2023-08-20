@@ -1,5 +1,11 @@
 <?php
 include "main/session.php";
+$activeplan = $obj->selectextrawhereupdate('subscribers inner join plandetail on plandetail.id = subscribers.plandetailid inner join plan on plan.id = plandetail.planid inner join plantypes on plantypes.id = plandetail.plantypeid', "subscribers.id,subscribers.expireon,subscribers.added_on,plan.name,plantypes.name as pname,subscribers.status", "subscribers.userid=$employeeid and subscribers.status = 1")->fetch_assoc();
+$curdate = date('Y-m-d');
+if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
+    $obj->delete("subscribers", $activeplan['id']);
+    header('location:plan');
+}
 ?>
 <div class="page-header d-print-none">
     <div class="container-xl">
@@ -34,28 +40,46 @@ include "main/session.php";
                     <div class="card-body">
                         <div class="row g-2 align-items-center">
 
-                            <div class="col">
-                                <h4 class="card-title m-0">
-                                    Subscribed Plan Name
-                                </h4>
-                                <div style="color: gray; font-weight: 500;">
-                                    Quarterly/ Half Yearly/ Yearly
+                            <?php
+                            if (!empty($activeplan)) { ?>
+                                <div class="col">
+                                    <h4 class="card-title m-0">
+                                        <?= $activeplan['name'] ?>
+                                    </h4>
+                                    <div style="color: gray; font-weight: 500;">
+                                        <?= $activeplan['pname'] ?>
+                                    </div>
+                                    <div class="text-secondary bill-date">
+                                        Billed on - <?= changedateformatespecito($activeplan['added_on'], "Y-m-d H:i:s", "d M Y") ?>
+                                    </div>
+                                    <div class="small mt-1">
+                                        <span style="margin-right: 10px;">Status</span> <span class="badge bg-green"></span> Active
+                                    </div>
                                 </div>
-                                <div class="text-secondary bill-date">
-                                    Billed on - Aug 08, 2023
+                            <?php } else { ?>
+                                <div class="col">
+                                    <h4 class="card-title m-0">
+                                        No active plan right now
+                                    </h4>
+                                    <div style="color: gray; font-weight: 500;">
+
+                                    </div>
+                                    <div class="text-secondary bill-date">
+
+                                    </div>
+                                    <div class="small mt-1">
+                                        <span style="margin-right: 10px;">Status</span> <span class="badge bg-danger"></span> Inactive
+                                    </div>
                                 </div>
-                                <div class="small mt-1">
-                                    <span style="margin-right: 10px;">Status</span> <span class="badge bg-green"></span> Active
+                                <div class="col-auto">
+                                    <a href="#" class="btn">
+                                        Renew Plan
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="col-auto">
-                                <a href="#" class="btn">
-                                    Renew Plan
-                                </a>
-                            </div>
+                            <?php } ?>
 
                         </div>
-                        <div class="plan-expired-date"> Your Current Plan Will Expired on <span style="font-weight: 600;margin-right: 5px;">23 Dec, 2013</span>
+                        <div class="plan-expired-date"> Your Current Plan Will Expired on <span style="font-weight: 600;margin-right: 5px;"><?= changedateformatespecito($activeplan['expireon'], "Y-m-d", "d M, Y") ?></span>
                         </div>
                     </div>
                 </div>

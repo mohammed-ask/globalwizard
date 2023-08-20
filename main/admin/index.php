@@ -4,7 +4,7 @@ include "main/session.php";
 ob_start();
 
 ?>
- 
+
 
 <div class="page-header d-print-none">
     <div class="container-xl">
@@ -173,31 +173,19 @@ ob_start();
                                         <th>Time</th>
                                         <th>Subscribers</th>
                                         <th>Plan Name</th>
+                                        <th>Plan Type</th>
                                         <th>Plan Validity</th>
                                         <th>Remaining Days</th>
                                         <th>Plan Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-
-                                    <tr>
-                                        <td>23 Jun, 2023</td>
-                                        <td>16:23</td>
-                                        <td>TR6377366678388</td>
-                                        <td>Upi Transfer</td>
-                                        <td><span>₹</span>88798</td>
-                                        <td><span class="badge bg-success me-1"></span>Success</td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
 
                     </div>
                 </div>
-
-
-
-
             </div>
 
         </div>

@@ -8,7 +8,7 @@ $paypending = $obj->selectfieldwhere('fundrequest', 'count(id)', "userid=" . $em
             <span class="navbar-toggler-icon"></span>
         </button>
         <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-            <a href="#">
+            <a href="dashboard">
                 <img src="main\images\logo\Global Wizard Colored Logo 2.0.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
             </a>
         </h1>
@@ -16,7 +16,7 @@ $paypending = $obj->selectfieldwhere('fundrequest', 'count(id)', "userid=" . $em
             <div class="nav-item d-none d-md-flex me-3">
                 <div class="btn-list">
                     <?php
-                    if (empty($pstatus) && empty($paypending)) { ?>
+                    if (empty($pstatus) && empty($paypending) && $membershipstatus === 'No') { ?>
                         <a data-bs-toggle="offcanvas" href="#offcanvasEnd99" role="button" aria-controls="offcanvasEnd99" class="btn py-2" target="_blank" rel="noreferrer">
                             <!-- Download SVG icon from    -->
                             <svg xmlns="http://www.w3.org/2000/svg" style="color: #db0b0b;" class="icon icon-tabler icon-tabler-shield-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -26,8 +26,8 @@ $paypending = $obj->selectfieldwhere('fundrequest', 'count(id)', "userid=" . $em
                             </svg>
                             Activate Your Account
                         </a>
-                    <?php } elseif (!empty($pstatus)) { ?>
-                        <a href="#" class="btn py-2" target="_blank" rel="noreferrer">
+                    <?php } elseif (!empty($pstatus) || $membershipstatus === 'Yes') { ?>
+                        <a class="btn py-2" target="_blank" rel="noreferrer">
 
                             <svg xmlns="http://www.w3.org/2000/svg" style="color: green;" class="icon icon-tabler icon-tabler-shield-star" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -38,12 +38,6 @@ $paypending = $obj->selectfieldwhere('fundrequest', 'count(id)', "userid=" . $em
                         </a>
                     <?php } elseif (!empty($paypending)) { ?>
                         <a role="button" class="btn py-2" target="_blank" rel="noreferrer">
-                            <!-- Download SVG icon from    -->
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" style="color: #db0b0b;" class="icon icon-tabler icon-tabler-shield-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M17.67 17.667a12 12 0 0 1 -5.67 3.333a12 12 0 0 1 -8.5 -15c.794 .036 1.583 -.006 2.357 -.124m3.128 -.926a11.997 11.997 0 0 0 3.015 -1.95a12 12 0 0 0 8.5 3a12 12 0 0 1 -1.116 9.376"></path>
-                                <path d="M3 3l18 18"></path>
-                            </svg> -->
                             Pending for Approval
                         </a>
                     <?php } ?>
@@ -98,15 +92,14 @@ $paypending = $obj->selectfieldwhere('fundrequest', 'count(id)', "userid=" . $em
             </div>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                    <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                    <span class="avatar avatar-sm" style="background-image: url(<?= empty($avatarpath) ? 'main/images/user.jpeg' : $avatarpath ?>)"></span>
                     <div class="d-none d-xl-block ps-2">
-                        <div>Sharma Ji Ka Ladka</div>
-                        <div class="mt-1 small" style="color: gray;">Chennai</div>
+                        <div><?= $username ?></div>
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
 
-                    <a href="plan" class="dropdown-item">Settings</a>
+                    <a href="account" class="dropdown-item">Settings</a>
                     <a href="logout" class="dropdown-item">Logout</a>
                 </div>
             </div>

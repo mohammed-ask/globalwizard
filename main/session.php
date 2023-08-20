@@ -16,8 +16,10 @@ $employeeid = $_SESSION['userid'];
 $role = $_SESSION['role'];
 $rowuserdata = $obj->selectextrawhere("users", "id=" . $employeeid . "")->fetch_assoc();
 $avatarpath = $obj->fetchattachment($rowuserdata['avatar']);
-$investmentamount = empty($rowuserdata['investmentamount']) ? 0 : $rowuserdata['investmentamount'];
+
 $username = $rowuserdata['name'];
+$useremail = $rowuserdata['email'];
+$usermobile = $rowuserdata['mobile'];
 $membershipstatus = $rowuserdata['membershipstatus'];
 $permissions = array();
 if (isset($_SESSION['permissions']) && (!empty($_SESSION['permissions']))) {

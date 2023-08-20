@@ -21,6 +21,7 @@ foreach ($_POST['plantypeid'] as $key => $val) {
     $tt['updated_by'] = $employeeid;
     $tt['status'] = 1;
     $tt['price'] = $_POST['price'][$key];
+    $tt['gstprice'] = $_POST['price'][$key] + ($_POST['price'][$key] * 18 / 100);
     $tt['plantypeid'] = $val;
     $tt['planid'] = $plan;
     $pland = $obj->insertnew("plandetail", $tt);

@@ -14,6 +14,9 @@ $xx['transactionid'] = $_POST['transactionid'];
 $xx['paymentmethod'] = $_POST['paymentmethod'];
 $xx['amount'] = $_POST['amount'];
 $xx['paidfor'] = $_POST['paidfor'];
+if (!empty($_POST['plandetailid'])) {
+    $xx['plandetailid'] = $_POST['plandetailid'];
+}
 $fund = $obj->insertnew("fundrequest", $xx);
 $obj->saveactivity("Fund Added by User", "", $fund, $employeeid, "User", "Fund Added by User");
 if ($fund > 0) {

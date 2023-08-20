@@ -5,37 +5,39 @@ ob_start();
 
 
 ?>
-<div class="container px-6 mx-auto grid mobile-bottom-margin">
-    <div class="flex my-4 items-center justify-between">
-        <h3 class="my-0 font-semibold text-gray-700 dark:text-gray-200">Pending Investment</h3>
 
+<div class="page-body">
+    <div class="container-xl">
+        <div class="card">
+            <div>
+                <h3 class="card-header">
+                    Pending Activation Approvals
+                </h3>
+            </div>
+            <div>
+                <div class="table-responsive fixTableHead" style="height: 450px;">
+                    <table id="example2" class="table card-table table-vcenter text-nowrap datatable">
+                        <thead>
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Client Name</th>
+                                <th>Mobile No.</th>
+                                <th>Transaction Id</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Payment Method</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    </table>
 
-    </div>
-
-    <div class="w-full overflow-hidden rounded-lg shadow-xs">
-
-        <div class="w-full ">
-
-            <table id="example2" class="table w-full whitespace-no-wrap">
-                <thead>
-                    <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-3 py-2">S.No.</th>
-                        <th class="px-3 py-2">Client Name</th>
-                        <th class="px-3 py-2">Mobile No.</th>
-                        <th class="px-3 py-2">Transaction Id</th>
-                        <th class="px-3 py-2">Date</th>
-                        <th class="px-3 py-2">Amount</th>
-                        <th class="px-3 py-2">Payment Method</th>
-                        <th class="px-3 py-2">Action</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                </tbody>
-            </table>
+                </div>
+            </div>
         </div>
     </div>
-
-    <br>
 </div>
 <?php
 //Assign all Page Specific variables
@@ -50,7 +52,7 @@ include "templete.php";
 <script>
     $(function() {
         $('#example2').DataTable({
-            "ajax": "../main/admin/pendinginvestmentdata.php",
+            "ajax": "../main/admin/pendingplandata.php",
             "processing": true,
             "serverSide": true,
             "pageLength": 15,

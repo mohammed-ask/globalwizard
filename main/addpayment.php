@@ -1,8 +1,11 @@
 <?php
 include 'main/session.php';
 print_r($_GET);
+$plandetailid = '';
 if ($_GET['hakuna'] !== 'membership') {
-    $planamount = $obj->selectfieldwhere('plandetail', 'price', 'planid=' . $_GET['hakuna'] . ' and plantypeid = ' . $_GET['matata'] . '');
+    $plandetailid = $obj->selectfieldwhere('plandetail', 'id', 'planid=' . $_GET['hakuna'] . ' and plantypeid = ' . $_GET['what'] . ' and status = 1');
+    $planamount = $obj->selectfieldwhere('plandetail', 'price', 'planid=' . $_GET['hakuna'] . ' and plantypeid = ' . $_GET['what'] . ' and status = 1');
+    $planamount = $planamount + ($planamount * 18 / 100);
 }
 ?>
 <div>
@@ -140,6 +143,7 @@ if ($_GET['hakuna'] !== 'membership') {
                 </div>
             </div>
             <input hidden type="text" name="paidfor" value="<?= $_GET['hakuna'] === 'membership' ? 'Membership' : 'Plan' ?>">
+            <input hidden type="text" name="plandetailid" value="<?= $plandetailid ?>">
             <button hidden id="modalsubmit" style="background-color: #057c7c;" class="btn btn-success w-100 my-3" onclick="event.preventDefault();sendForm('', '', 'insertpayment', 'resultid', 'addfund')">Send Payment Details For Approval</button>
             <div class="col-md-12" id="resultid"></div>
     </form>

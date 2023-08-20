@@ -1,5 +1,5 @@
 <?php
-include '../session.php';
+include 'session.php';
 /* @var $obj db */
 $limit = $_GET['length'];
 $start = $_GET['start'];
@@ -33,18 +33,14 @@ if ((isset($_GET['columns'][0]["search"]["value"])) && (!empty($_GET['columns'][
 if ((isset($_GET['columns'][1]["search"]["value"])) && (!empty($_GET['columns'][1]["search"]["value"]))) {
     $search .= " and users.description like '" . $_GET['columns'][1]["search"]["value"] . "'";
 }
-$join = "inner join subscribers on subscribers.paymentid = fundrequest.id ";
-$join .= "inner join plandetail on plandetail.id = subscribers.plandetailid ";
-$join .= "inner join plan on plan.id = plandetail.planid ";
-$join .= "inner join plantypes on plantypes.id = plandetail.plantypeid ";
-$join .= "inner join users on users.id = fundrequest.userid ";
-$return['recordsTotal'] = $obj->selectfieldwhere("fundrequest $join ", "count(fundrequest.id)", "subscribers.status in (1,0) ");
-$return['recordsFiltered'] = $obj->selectfieldwhere("fundrequest $join", "count(fundrequest.id)", "subscribers.status in (1,0) $search ");
+$join = "inner join users on users.id = fundrequest.userid";
+$return['recordsTotal'] = $obj->selectfieldwhere("fundrequest $join ", "count(fundrequest.id)", "fundrequest.status in (1,0) ");
+$return['recordsFiltered'] = $obj->selectfieldwhere("fundrequest $join", "count(fundrequest.id)", "fundrequest.status in (1,0) $search ");
 $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "fundrequest $join",
-    "fundrequest.id,plan.name as pname,plantypes.name as ptname,users.name,subscribers.expireon,users.mobile,fundrequest.added_on,subscribers.status,amount,paymentmethod,transactionid,investmentamount",
-    "subscribers.status in (1,0) $search $order limit $start, $limit"
+    "fundrequest.id,name,userid,users.mobile,fundrequest.added_on,fundrequest.status,amount,paymentmethod,transactionid,investmentamount",
+    "fundrequest.status in (1,0) and userid=$employeeid $search $order limit $start, $limit"
 );
 $num = $obj->total_rows($result);
 $data = array();
@@ -53,17 +49,10 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M,Y");
     $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "H:i a");
     $n[] = "<strong>" . $row['name'] . "</strong>";
-    $n[] = $row['pname'];
-    $n[] = $row['ptname'];
-    $n[] = changedateformatespecito($row['expireon'], "Y-m-d", "d M Y");
-    $date1 = new DateTime();
-    $date2 = new DateTime($row['expireon']);
-    $interval = $date1->diff($date2);
-    $days = $interval->days;
-    $months = $interval->m;
-    $years = $interval->y;
-    $n[] = $days . ' Remaining';
-    $n[] =  $row['status'] == 1 ? 'Active' : 'Expired';
+    $n[] = $row['transactionid'];
+    $n[] =  $row['paymentmethod'];
+    $n[] =  "<strong>" . $currencysymbol . $row['amount'] . "</strong>";
+    $n[] = $row['status'] == 1 ? '<span class="badge bg-success me-1"></span>Success' : '<span class="badge bg-danger me-1"></span>Pending';
     $data[] = $n;
     $i++;
 }
