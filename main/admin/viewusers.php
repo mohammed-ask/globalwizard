@@ -44,6 +44,7 @@ if (!in_array(4, $permissions)) {
                                 <!-- <th>Value</th> -->
                                 <th>Email</th>
                                 <th>Status</th>
+                                <th>Activation</th>
                                 <th>Plan History</th>
                                 <th>View Docs</th>
                                 <th>Action</th>

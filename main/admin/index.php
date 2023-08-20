@@ -54,20 +54,22 @@ ob_start();
                             <div class="card-body">
                                 <div class="row align-items-center">
                                     <div class="col-auto">
-                                        <span class="bg-primary text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2"></path>
-                                                <path d="M12 3v3m0 12v3"></path>
-                                            </svg>
+                                        <span class="bg-primary text-white avatar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                </svg>
                                         </span>
                                     </div>
                                     <div class="col">
                                         <div class="font-weight-medium">
-                                            132 Sales
+                                          <span style="font-weight: 600;">13</span> <a style="color: #182433;" href="userlist">Active Users</a>
                                         </div>
                                         <div class="">
-                                            12 waiting payments
+                                        <span style="font-weight: 600;">13</span> <a style="color: #182433;" href="pendinguser">Pending Users</a>
                                         </div>
                                     </div>
                                 </div>
@@ -80,21 +82,20 @@ ob_start();
                                 <div class="row align-items-center">
                                     <div class="col-auto">
                                         <span class="bg-green text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/shopping-cart -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                                                <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                                                <path d="M17 17h-11v-14h-2"></path>
-                                                <path d="M6 5l14 1l-1 7h-13"></path>
-                                            </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+   <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+   <path d="M15 19l2 2l4 -4"></path>
+</svg>
                                         </span>
                                     </div>
                                     <div class="col">
                                         <div class="font-weight-medium">
-                                            78 Orders
+                                        <span style="font-weight: 600;">13</span> Users
                                         </div>
-                                        <div class="">
-                                            32 shipped
+                                        <div class="" style="font-weight: 500;">
+                                        Subscribers
                                         </div>
                                     </div>
                                 </div>
@@ -107,18 +108,18 @@ ob_start();
                                 <div class="row align-items-center">
                                     <div class="col-auto">
                                         <span class="bg-twitter text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
-                                            </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-receipt" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2"></path>
+</svg>
                                         </span>
                                     </div>
                                     <div class="col">
-                                        <div class="font-weight-medium">
-                                            623 Shares
+                                        <div>
+                                        <span style="font-weight: 600;">06</span> Pending Plans
                                         </div>
                                         <div class="">
-                                            16 today
+                                        <span style="font-weight: 600;">06</span> Membership Plans
                                         </div>
                                     </div>
                                 </div>
@@ -131,18 +132,22 @@ ob_start();
                                 <div class="row align-items-center">
                                     <div class="col-auto">
                                         <span class="bg-facebook text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/brand-facebook -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
-                                            </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-code" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M8 9h8"></path>
+   <path d="M8 13h6"></path>
+   <path d="M11.012 19.193l-3.012 1.807v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v6"></path>
+   <path d="M20 21l2 -2l-2 -2"></path>
+   <path d="M17 17l-2 2l2 2"></path>
+</svg>
                                         </span>
                                     </div>
                                     <div class="col">
                                         <div class="font-weight-medium">
-                                            132 Likes
+                                        <span style="font-weight: 600;">03</span> Mail
                                         </div>
-                                        <div class="">
-                                            21 today
+                                        <div class="" style="font-weight: 500;">
+                                            Pending Mails
                                         </div>
                                     </div>
                                 </div>

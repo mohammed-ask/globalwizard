@@ -77,6 +77,10 @@ while ($row = $obj->fetch_assoc($result)) {
     <input type="checkbox" ' . $activation . ' class="setactive form-check-input" data-type="activate" data-id="' . $row['id'] . '" value="' . $row['activate'] . '">
     <span class="slider round"></span>
 </label>';
+$n[] = '<label class="form-check form-switch">
+<input type="checkbox" ' . $activation . ' class="setactive form-check-input" data-type="activate" data-id="' . $row['id'] . '" value="' . $row['activate'] . '">
+<span class="slider round"></span>
+</label>';
     } else {
         // $n[] = '';
         $n[] = '';
@@ -121,11 +125,11 @@ while ($row = $obj->fetch_assoc($result)) {
     //          <span class='w-5 h-5'><i class='fa fa-duotone fa-share-from-square'></i></span>
     //      </button><div id='redirect'></div>";
     // }
-    if (in_array(32, $permissions)) {
-        $a .= "<button class='flex items-center justify-between btn' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"addinvestmentamount\", \"\", \"Add Fund\")'  aria-label='Go'>
-             <span>+ Add Fund</span>
-         </button>";
-    }
+    // if (in_array(32, $permissions)) {
+    //     $a .= "<button class='flex items-center justify-between btn' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"addinvestmentamount\", \"\", \"Add Fund\")'  aria-label='Go'>
+    //          <span>+ Add Fund</span>
+    //      </button>";
+    // }
     $a  .= '</div>';
     $n[] = $a;
     $data[] = $n;
