@@ -43,7 +43,7 @@ $rowemployee = $obj->selectextrawhere("users", "id=" . $id . "")->fetch_assoc();
         </select>
     </label><br>
     <div>
-        <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium hidden">
+        <button type="submit" hidden id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium ">
             Submit
         </button>
     </div>

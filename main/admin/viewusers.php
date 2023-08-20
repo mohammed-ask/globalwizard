@@ -8,18 +8,18 @@ if (!in_array(4, $permissions)) {
 ?>
 <div class="page-body">
     <div class="container-xl">
-    <div class="mb-3" style="text-align: right;">
-                    <?php if (in_array(1, $permissions)) { ?>
-                        <button @click="openModal" onclick='dynamicmodal("none", "adduser", "Unlink", "Add New User")' class="btn btn-primary py-2">
-                            Add User
-                        </button>
-                    <?php } ?>
-                    </button>
-                </div>
+        <div class="mb-3" style="text-align: right;">
+            <?php if (in_array(1, $permissions)) { ?>
+                <button data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal("none", "adduser", "Unlink", "Add New User")' class="btn btn-primary py-2">
+                    Add User
+                </button>
+            <?php } ?>
+            </button>
+        </div>
         <div class="card card-default">
             <div class="card-header">
                 <h3>Users List</h3>
-                
+
             </div>
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
                 <!-- /.card-header -->

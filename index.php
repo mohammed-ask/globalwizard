@@ -81,6 +81,12 @@ switch ($request['path']) {
     case "$head/admin/users";
         require __DIR__ . '/main/admin/viewusers.php';
         break;
+    case "$head/admin/userdocs";
+        require __DIR__ . '/main/admin/userdocs.php';
+        break;
+    case "$head/admin/viewfundhistory";
+        require __DIR__ . '/main/admin/viewfundhistory.php';
+        break;
     case "$head/admin/adduser";
         require __DIR__ . '/main/admin/adduser.php';
         break;

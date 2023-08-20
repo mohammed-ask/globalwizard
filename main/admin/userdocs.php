@@ -1,7 +1,8 @@
 <?php
 include "main/session.php";
 $id = $_GET['hakuna'];
-$docs = $obj->selectextrawhere("userdocuments", "status = 1 and userid =" . $id . ""); ?>
+$docs = $obj->selectextrawhere("userdocuments", "status = 1 and userid =" . $id . "");
+?>
 <div class="w-full overflow-hidden rounded-lg shadow-xs">
 
     <div class="w-full ">
@@ -21,7 +22,7 @@ $docs = $obj->selectextrawhere("userdocuments", "status = 1 and userid =" . $id 
                             <?= $data['name'] ?>
                         </td>
                         <td class=" px-3 py-2 text-sm">
-                            <a target="_blank" href="../main/<?= $obj->fetchattachment($data['path']) ?>"><img src="../main/<?= $obj->fetchattachment($data['path']) ?>" /></a>
+                            <a target="_blank" href="../<?= $obj->fetchattachment($data['path']) ?>"><img style="width: 100px;height:100px" src="../<?= $obj->fetchattachment($data['path']) ?>" /></a>
                         </td>
                     </tr>
                 <?php } ?>

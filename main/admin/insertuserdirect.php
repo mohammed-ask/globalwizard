@@ -59,22 +59,22 @@ if ($emailcount > 0) {
     $x['dob'] = changedateformate($_POST['dob']);
     $x['adharno'] = $_POST['adharno'];
     $x['panno'] = $_POST['panno'];
-    $x['bankname'] = $_POST['bankname'];
-    $x['accountno'] = $_POST['accountno'];
-    $x['ifsc'] = $_POST['ifsc'];
+    // $x['bankname'] = $_POST['bankname'];
+    // $x['accountno'] = $_POST['accountno'];
+    // $x['ifsc'] = $_POST['ifsc'];
     $x['employeeref'] = $_POST['employeeref'];
     $x['password'] = $_POST['password'];
-    $x['longholding'] = $_POST['longholding'];
-    $x['carryforward'] = $_POST['carryforward'];
-    $x['message'] = $_POST['message'];
+    // $x['longholding'] = $_POST['longholding'];
+    // $x['carryforward'] = $_POST['carryforward'];
+    // $x['message'] = $_POST['message'];
     // $x['policyread'] = $_POST['policyread'];
     $x['type'] = 2;
     $x['role'] = 2;
-    $x['longholding'] = 'No';
-    $x['startdatetime'] = changedateformatespecito($_POST['starttime'], "d/m/Y H:i:s", "Y-m-d H:i:s");
-    $x['enddatetime'] = changedateformatespecito($_POST['endtime'], "d/m/Y H:i:s", "Y-m-d H:i:s");
+    // $x['longholding'] = 'No';
+    // $x['startdatetime'] = changedateformatespecito($_POST['starttime'], "d/m/Y H:i:s", "Y-m-d H:i:s");
+    // $x['enddatetime'] = changedateformatespecito($_POST['endtime'], "d/m/Y H:i:s", "Y-m-d H:i:s");
     // $x['investmentamount'] = $_POST['investmentamount'];
-    $x['limit'] = $_POST['limit'];
+    // $x['limit'] = $_POST['limit'];
 
     $userid = $obj->insertnew($tb_name, $x);
     $path = "main/uploads/userdocs";
@@ -97,49 +97,7 @@ if ($emailcount > 0) {
         $tb_name = "userdocuments";
         $pradin = $obj->insertnew($tb_name, $postdata);
     }
-    $defaultstock = array(
-        // array(
-        //     'Symbol' => 'NIFTY',
-        //     'symboltoken' => '999920000',
-        // ),
-        // array(
-        //     'Symbol' => 'SENSEX',
-        //     'symboltoken' => '999901',
-        // ),
-        array(
-            'Symbol' => 'RELIANCE',
-            'symboltoken' => '2885',
-        ),
-        array(
-            'Symbol' => 'HINDALCO',
-            'symboltoken' => '1363',
-        ),
-        array(
-            'Symbol' => 'M&M',
-            'symboltoken' => '2031',
-        ),
-        array(
-            'Symbol' => 'INFY',
-            'symboltoken' => '1594',
-        )
-    );
-    foreach ($defaultstock as $ds) {
-        $jk['Symbol'] = $ds['Symbol'];
-        $jk['symboltoken'] = $ds['symboltoken'];
-        $jk['ExchType'] = 'C';
-        $jk['Expiry'] = '';
-        $jk['OptionType'] = '';
-        $jk['StrikePrice'] = '0';
-        $jk['mktlot'] = '1';
-        $jk['added_on'] = date("Y-m-d H:i:s");
-        $jk['added_by'] = 0;
-        $jk['updated_on'] = date("Y-m-d H:i:s");
-        $jk['updated_by'] = 0;
-        $jk['status'] = 1;
-        $jk['userid'] = $userid;
-        $jk['Exch'] = 'N';
-        $obj->insertnew('userstocks', $jk);
-    }
+
     $obj->saveactivity("Added Customer by Admin", "", $userid, $employeeid, "Admin", "Added Customer by Admin");
     $mail = new PHPMailer(true);
 

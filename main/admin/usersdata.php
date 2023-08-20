@@ -64,6 +64,7 @@ while ($row = $obj->fetch_assoc($result)) {
     // $smsenable = $row['sms'] === 'Yes' ? 'checked' : '';
     $emailenabled = $row['emailenabled'] === 'Yes' ? 'checked' : '';
     $activation = $row['activate'] === 'Yes' ? 'checked' : '';
+    $membershipstatus = $row['membershipstatus'] === 'Yes' ? 'checked' : '';
     if (in_array(40, $permissions)) {
         //         $n[] =  ' <label class="switch">
         //     <input type="checkbox" ' . $smsenable . ' class="setactive" data-type="sms" data-id="' . $row['id'] . '" value="' . $row['sms'] . '">
@@ -77,8 +78,8 @@ while ($row = $obj->fetch_assoc($result)) {
     <input type="checkbox" ' . $activation . ' class="setactive form-check-input" data-type="activate" data-id="' . $row['id'] . '" value="' . $row['activate'] . '">
     <span class="slider round"></span>
 </label>';
-$n[] = '<label class="form-check form-switch">
-<input type="checkbox" ' . $activation . ' class="setactive form-check-input" data-type="activate" data-id="' . $row['id'] . '" value="' . $row['activate'] . '">
+        $n[] = '<label class="form-check form-switch">
+<input type="checkbox" ' . $membershipstatus . ' class="setactive form-check-input" data-type="membershipstatus" data-id="' . $row['id'] . '" value="' . $row['membershipstatus'] . '">
 <span class="slider round"></span>
 </label>';
     } else {
@@ -90,14 +91,14 @@ $n[] = '<label class="form-check form-switch">
 
     $n[] = '<button class="btn" onclick="window.location.href=\'viewfundhistory?hakuna=' . $row['id'] . '\'">View Detail</button>';
     if (in_array(44, $permissions)) {
-        $n[] = "<button class='btn' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
+        $n[] = "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
     View Docs</button>";
     } else {
         $n[] = "";
     }
     $a = "<div class='space-x-4'>";
     if (in_array(2, $permissions)) {
-        $a .= "<button class='flex items-center justify-between btn' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"edituser\", \"\", \"Edit Customer\")' aria-label='Edit'>
+        $a .= "<button class='flex items-center justify-between btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"edituser\", \"\", \"Edit Customer\")' aria-label='Edit'>
              <svg class='w-3 h-3' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20'>
                  <path d='M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z'>
                  </path>

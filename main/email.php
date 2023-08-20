@@ -56,7 +56,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Message<span class="form-label-description"></label>
-                                <textarea class="form-control" name="example-textarea-input" rows="8" placeholder="Type your message">Oh! Come and see the violence inherent in the system! Help, help, I'm being repressed! We shall say 'Ni' again to you, if you do not appease us. I'm not a witch. I'm not a witch. Camelot!</textarea>
+                                <textarea class="form-control" name="example-textarea-input" rows="8" placeholder="Type your message"></textarea>
                             </div>
                             <div class="mb-5 col-lg-4 col-md-6">
                                 <div class="form-label">Attach File</div>
@@ -166,12 +166,12 @@ include "main/templete.php"; ?>
                 render: function(data, type, full, meta) {
                     return "<div class='text-wrap width-200 bg-red'>" + data + "</div>";
                 },
-                targets: 5,
+                targets: 4,
                 visible: false,
             }],
             "fnRowCallback": function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
-                // console.log(aData)
-                if (aData[5] == 1) {
+                console.log(aData)
+                if (aData[4] == 1) {
 
                 } else {
                     $('td', nRow).attr('style', 'background-color: rgb(199, 255, 255) !important');

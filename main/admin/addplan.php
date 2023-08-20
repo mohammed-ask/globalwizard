@@ -4,32 +4,33 @@ $plantype = $obj->selectextrawhere("plantypes", "status=1");
 ?>
 <form id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertplan', 'resultid', 'adduser');return 0;">
 
-<div class="row">
-    <label class="form-label col-4" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Name</span>
-        <input name="name" data-bvalidator="required" class="form-control" placeholder="Plan Name" />
-    </label>
-    <label class="form-label col-4" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">Plan Type</span>
-        <select data-bvalidator="required" class="form-select" name="planfor" id="planfor">
-            <option value="">Choose One</option>
-            <option value="Universal">Universal</option>
-            <option value="Custom">Custom</option>
-        </select>
-    </label>
-    <label class="form-label col-4" id="duser" style="margin-bottom: 5px;">
-        <span class="text-gray-700 dark:text-gray-400">User List</span>
-        <select multiple data-bvalidator="required" class="form-select select2" name="userid[]" id="userid">
-            <option value="">Select User</option>
-            <?php
-            $role = $obj->selectextrawhereupdate("users", "id,name", "status = 1 and type = 2");
-            $emprole = mysqli_fetch_all($role);
-            foreach ($emprole as list($id, $name)) { ?>
-                <option value="<?php echo $id; ?>"> <?php echo $name; ?></option>
-            <?php
-            } ?>
-        </select>
-    </label> </div>
+    <div class="row">
+        <label class="form-label col-4" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Name</span>
+            <input name="name" data-bvalidator="required" class="form-control" placeholder="Plan Name" />
+        </label>
+        <label class="form-label col-4" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">Plan Type</span>
+            <select data-bvalidator="required" class="form-select" name="planfor" id="planfor">
+                <option value="">Choose One</option>
+                <option value="Universal">Universal</option>
+                <option value="Custom">Custom</option>
+            </select>
+        </label>
+        <label class="form-label col-4" id="duser" style="margin-bottom: 5px;">
+            <span class="text-gray-700 dark:text-gray-400">User List</span>
+            <select multiple data-bvalidator="required" class="form-select select2" name="userid[]" id="userid">
+                <option value="">Select User</option>
+                <?php
+                $role = $obj->selectextrawhereupdate("users", "id,name", "status = 1 and type = 2");
+                $emprole = mysqli_fetch_all($role);
+                foreach ($emprole as list($id, $name)) { ?>
+                    <option value="<?php echo $id; ?>"> <?php echo $name; ?></option>
+                <?php
+                } ?>
+            </select>
+        </label>
+    </div>
     <?php
     while ($rowplan = $obj->fetch_assoc($plantype)) { ?>
         <div class="row">
@@ -42,10 +43,9 @@ $plantype = $obj->selectextrawhere("plantypes", "status=1");
                 <input name="price[]" class="form-control" placeholder="Enter Amount" /></label>
             <input hidden readonly value="<?= $rowplan['id'] ?>" name="plantypeid[]" placeholder="" />
         </div>
-
     <?php } ?>
     <div>
-        <button type="submit" id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium hidden">
+        <button type="submit" hidden id="modalsubmit" class="w-full px-3 py-1 mt-6 text-sm font-medium ">
             Submit
         </button>
     </div>

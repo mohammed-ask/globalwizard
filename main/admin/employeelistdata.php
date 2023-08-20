@@ -62,7 +62,7 @@ while ($row = $obj->fetch_assoc($result)) {
     }
     $a = "<div class=''>";
     if (in_array(10, $permissions)) {
-        $a .= "<button class='btn' style='margin-right:10px;' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"editemployee\", \"\", \"Edit Employee\")' aria-label='Edit'>
+        $a .= "<button class='btn' style='margin-right:10px;' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"editemployee\", \"\", \"Edit Employee\")' aria-label='Edit'>
              <svg class='w-4 h-4' aria-hidden='true' fill='currentColor' viewBox='0 0 20 20'>
                  <path d='M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z'>
                  </path>
