@@ -40,7 +40,7 @@ $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "fundrequest $join",
     "fundrequest.id,name,userid,users.mobile,fundrequest.added_on,fundrequest.status,amount,paymentmethod,transactionid,investmentamount",
-    "fundrequest.status in (1,0) and userid=$employeeid $search $order limit $start, $limit"
+    "fundrequest.status in (1,0) and userid=$employeeid $search $order"
 );
 $num = $obj->total_rows($result);
 $data = array();

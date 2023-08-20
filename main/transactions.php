@@ -82,7 +82,7 @@ include "main/templete.php"; ?>
     "processing": false,
     "serverSide": true,
     "pageLength": 10,
-    "paging": true,
+    "paging": false,
     "lengthChange": false,
     "searching": false,
     "ordering": true,
