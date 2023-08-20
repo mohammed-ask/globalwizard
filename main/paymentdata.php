@@ -12,7 +12,7 @@ $orderdirection = "";
 if (isset($_GET['order'][0]['dir'])) {
     $orderdirection = $_GET['order'][0]['dir'];
 }
-$oary = array('users.id', 'users.name', 'users.email', 'users.mobile', 'users.panno', 'users.dob', 'users.address', 'users.bankname', 'users.accountno', 'users.ifsc', 'users.password', 'users.cost', 'users.investmentamount');
+$oary = array('fundrequest.id', 'users.name', 'users.email', 'users.mobile', 'users.panno', 'users.dob', 'users.address', 'users.bankname', 'users.accountno', 'users.ifsc', 'users.password', 'users.cost', 'users.investmentamount');
 $ocoloum = "";
 if (isset($_GET['order'][0]['column'])) {
     $ci = $_GET['order'][0]['column'];
@@ -47,8 +47,7 @@ $data = array();
 while ($row = $obj->fetch_assoc($result)) {
     $n = array();
     $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M,Y");
-    $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "H:i a");
-    $n[] = "<strong>" . $row['name'] . "</strong>";
+    $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "H:i");
     $n[] = $row['transactionid'];
     $n[] =  $row['paymentmethod'];
     $n[] =  "<strong>" . $currencysymbol . $row['amount'] . "</strong>";
