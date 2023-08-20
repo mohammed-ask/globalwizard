@@ -15,12 +15,12 @@ include './main/conn.php';
 
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pricing cards - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+    <title>Global Wizard Pvt Ltd
     </title>
     <script defer="" data-api="/stats/api/event" data-domain="preview.tabler.io" src="../main/dist/userjs/script.js.download"></script>
 
-    <link rel="icon" href="#favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="#favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../main/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../main/images/logo/favicon.png" type="image/x-icon">
 
     <!-- CSS files -->
     <link href="../main/dist/usercss/global-wizard.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@ include './main/conn.php';
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
 
-    <link rel="shortcut icon" href="../main/images/logo/fevicon.png">
+   
 
     <style>
         /* --------------------alertify---------------- */
@@ -133,11 +133,12 @@ include './main/conn.php';
                             <input type="email" data-bvalidator='required' name="email" class="form-control" style="    padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
                         </div>
                         <div class="mb-2" style="position: relative;">
-                            <input data-bvalidator='required' type="password" class="form-control" placeholder="Your password" name="password" autocomplete="off" fdprocessedid="cllljp" id="pass">
-                            <i id="eye" class="fa fa-eye" style="position: absolute; top:10px; right:10px" aria-hidden="true"></i>
+                        <label class="form-label">Password</label>
+                            <input data-bvalidator='required' type="password" class="form-control" style="    padding: 0.578rem 0.75rem;" placeholder="Your password" name="password" autocomplete="off" fdprocessedid="cllljp" id="pass">
+                            <i id="eye" class="fa fa-eye" style="position: absolute; top:39px; right:10px" aria-hidden="true"></i>
                         </div>
                         <div class="form-footer">
-                            <button type="submit" class="btn btn-primary w-100" fdprocessedid="fwmdo">Sign in</button>
+                            <button type="submit" class="btn btn-primary py-2 w-100" fdprocessedid="fwmdo">Sign in</button>
                             <div id="resultid"></div>
                         </div>
                     </form>

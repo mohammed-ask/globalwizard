@@ -6,12 +6,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pricing cards - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+    <title>Sign Up - Global Wizard
     </title>
     <script defer="" data-api="/stats/api/event" data-domain="preview.tabler.io" src="main/dist/userjs/script.js.download"></script>
 
-    <link rel="icon" href="#favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="#favicon.ico" type="image/x-icon">
+    <link rel="icon" href="main/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="main/images/logo/favicon.png" type="image/x-icon">
 
     <!-- CSS files -->
     <link href="main/dist/usercss/global-wizard.min.css" rel="stylesheet">
@@ -32,7 +32,6 @@
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
 
-    <link rel="shortcut icon" href="main/images/logo/favicon.svg">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -808,7 +807,7 @@
                                 </div>
                             </div>
                             <div class="buttons mt-3">
-                                <button class="next_button">Next Step</button>
+                                <button class="next_button w-100">Next Step</button>
                             </div>
                         </div>
 
@@ -951,7 +950,7 @@
                                 </div> -->
                                 <div class="buttons button_space">
                                     <button class="back_button">Back</button>
-                                    <button id="subotp" class="submit_button" disabled="disabled">Submit now</button>
+                                    <button id="subotp" class="submit_button" disabled="disabled">Verify</button>
                                 </div>
                             </div>
                         </div>

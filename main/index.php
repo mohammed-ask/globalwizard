@@ -50,7 +50,7 @@
 
 
 
-                                                <a href="#" class="btn btn-primary">Sign Up</a>
+                                                <a href="register" class="btn btn-primary">Sign Up</a>
 
 
 
@@ -115,7 +115,7 @@
 
 
 
-                                                <a href="#" class="btn btn-primary">Sign Up</a>
+                                                <a href="register" class="btn btn-primary">Sign Up</a>
 
 
 
@@ -178,7 +178,7 @@
 
 
 
-                                                <a href="#" class="btn btn-primary">Sign Up</a>
+                                                <a href="register" class="btn btn-primary">Sign Up</a>
 
 
 
@@ -382,7 +382,7 @@
 
 
 
-                        <a href="about.html" class="btn btn-primary">More about us</a>
+                        <a href="aboutus" class="btn btn-primary">More about us</a>
 
 
 

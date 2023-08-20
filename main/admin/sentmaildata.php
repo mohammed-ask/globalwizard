@@ -40,7 +40,7 @@ $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "mail",
     "*",
-    "status = 1 and senderid = $id $search $order limit $start, $limit"
+    "status = 1 and senderid = $id $search $order"
 );
 $num = $obj->total_rows($result);
 $data = array();

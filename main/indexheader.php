@@ -20,15 +20,9 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
 
     <!-- Favicon -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" href="main/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="main/images/logo/favicon.png" type="image/x-icon">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="#">
-
-    <link rel="icon" type="image/png" sizes="16x16" href="#">
-
-    <link rel="manifest" href="#>
-
-	<link rel=" mask-icon" href="#" color="#84ba3f">
 
 
 
@@ -76,7 +70,7 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
     <script src="main/dist/indexjs/api.js.download"></script>
     <script src="main/dist/indexjs/jquery-3.6.0.min.js.download"></script>
 
-    <title>Global Wizard Investment Advisor-Intraday Trading Tips-Free Intraday Tips-Intraday Stock Tips</title>
+    <title>Global Wizard</title>
 
 
 

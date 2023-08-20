@@ -65,7 +65,7 @@ if (!in_array(4, $permissions)) {
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS Equity: Users List";
+$pagetitle = "Global Wizard";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";
@@ -77,11 +77,11 @@ include "templete.php";
             "processing": true,
             "serverSide": true,
             "pageLength": 1000,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [

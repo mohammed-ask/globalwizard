@@ -63,7 +63,8 @@
  <!-- summernote -->
 
  <!-- App favicon -->
- <link rel="shortcut icon" href="../main/images/logo/favicon.svg">
+ <link rel="icon" href="../main/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../main/images/logo/favicon.png" type="image/x-icon">
 
  <!-- summernote -->
  <link rel="stylesheet" href="../main/plugins/summernote/summernote-bs4.min.css">

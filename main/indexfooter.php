@@ -12,11 +12,11 @@
 
                         <a href="#">
 
-                            <img src="#" alt="footer-logo">
+                            <img src="main/images/logo/Global Wizard white logo.png" alt="footer-logo">
 
                         </a>
 
-                        <p>TGlobal Wizard provides the best service on the market. Contact us to get your quote.</p>
+                        <p>Global Wizard provides the best service on the market. Contact us to get your quote.</p>
 
 
 
@@ -58,12 +58,11 @@
                         <ul class="list-none linkList">
 
 
-                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Stock Cash Premium</li>
-                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Stock Cash Premium</li>
-                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Stock Cash Premium</li>
-                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Stock Cash Premium</li>
-                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Stock Cash Premium</li>
-                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Stock Cash Premium</li>
+                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Base Metal Premium Service</li>
+                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Bullions Premium Service</li>
+                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>MCX Commodity Service</li>
+                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>Nitfy Future Tips</li>
+                            <li style="color: #cccccc; font-size: 14px;"><i class="fa fa-angle-double-right mr-2"></i>HNI Cash/Future/Option</li>
 
                         </ul>
 

@@ -265,7 +265,7 @@
 
                 </p> -->
 
-                <p class="text-white">Trade Nexa Investment Advisor &amp; Research provides you Trading tips of the Indian <br class="d-none d-lg-block">stock market &amp; Commodity Market with intense analysis done by our Team of Analysts
+                <p class="text-white">Global Wizard Investment Advisor &amp; Research provides you Trading tips of the Indian <br class="d-none d-lg-block">stock market &amp; Commodity Market with intense analysis done by our Team of Analysts
 
                 </p>
 
@@ -321,7 +321,7 @@
 
                                 <h3>Clients</h3>
 
-                                <h4>500+</h4>
+                                <h4>1232+</h4>
 
                             </div>
 
@@ -339,7 +339,7 @@
 
                                 <h3>Team members</h3>
 
-                                <h4>50+</h4>
+                                <h4>75+</h4>
 
                             </div>
 

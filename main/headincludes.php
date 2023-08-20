@@ -13,8 +13,8 @@
  <title>Global Wizard Pvt Ltd</title>
  <script defer="" data-api="/stats/api/event" data-domain="preview.tabler.io" src="assets/js/script.js.download"></script>
 
- <link rel="icon" href="main/images/logo/fevicon.png" type="image/x-icon">
- <link rel="shortcut icon" href="main/images/logo/fevicon.png" type="image/x-icon">
+ <link rel="icon" href="main/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="main/images/logo/favicon.png" type="image/x-icon">
 
  <!-- CSS files -->
  <link href="main/dist/usercss/global-wizard.min.css" rel="stylesheet">

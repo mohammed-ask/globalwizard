@@ -66,7 +66,7 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                                 Send Message
                             </a> -->
                         </form>
-                        <button style="background-color: #057c7c;" class="btn btn-success w-10 my-3" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Message</button>
+                        <button style="background-color: #0054a6;" class="btn btn-success w-10 py-2 my-3" onclick="sendForm('', '', 'insertmail', 'resultid', 'addtax')">Send Message</button>
                         <div class="col-md-12" id="resultid"></div>
                     </div>
                     <div class="tab-pane" id="tabs-profile-3" role="tabpanel">
@@ -152,11 +152,11 @@ include "main/templete.php"; ?>
             "processing": true,
             "serverSide": true,
             "pageLength": 10,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [
@@ -183,12 +183,12 @@ include "main/templete.php"; ?>
             "ajax": "main/sentmaildata.php",
             "processing": true,
             "serverSide": true,
-            "pageLength": 10,
-            "paging": true,
+            "pageLength": 100,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [

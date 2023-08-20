@@ -49,8 +49,9 @@
                                             <h3><?= $rowplan['name'] ?></h3>
                                             <div class="price-box">
                                                 <span>recommended</span>
-                                                <h2>₹<?= $monthlyprice ?></h2>
                                                 <p>Start from </p>
+                                                <h2>₹<?= $monthlyprice ?></h2>
+                                                
                                             </div>
                                         </div>
                                         <div class="table-content">
