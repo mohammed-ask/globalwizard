@@ -583,7 +583,6 @@
         }
 
         /* --------------------alertify---------------- */
-
         .alertify .ajs-header {
             display: none;
 
@@ -603,7 +602,7 @@
 
             padding: 15px 0px 0 0px !important;
             max-width: 400px !important;
-            border-radius: 5px !important;
+            border-radius: 15px !important;
         }
 
         .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
@@ -640,6 +639,10 @@
         .form-control[type=file]:not(:disabled):not([readonly]) {
             cursor: pointer;
         }
+
+        .alertify .ajs-footer {
+    border-radius: 0 0 15px 15px;
+}
 
 
 

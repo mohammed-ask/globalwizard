@@ -50,17 +50,8 @@ include './main/conn.php';
    
 
     <style>
+
         /* --------------------alertify---------------- */
-        @import url('https://rsms.me/inter/inter.css');
-
-        :root {
-            --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
-        }
-
-        body {
-            font-feature-settings: "cv03", "cv04", "cv11";
-        }
-
         .alertify .ajs-header {
             display: none;
 
@@ -72,7 +63,7 @@ include './main/conn.php';
             margin-left: 0px !important;
             margin-right: 0px !important;
             min-height: 35px !important;
-            background-color: #cde6ff  !important;
+            background-color: #cde6ff !important;
             padding: 0px !important;
         }
 
@@ -80,8 +71,7 @@ include './main/conn.php';
 
             padding: 15px 0px 0 0px !important;
             max-width: 400px !important;
-            border-radius: 5px !important;
-            top: 25%;
+            border-radius: 15px !important;
         }
 
         .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
@@ -112,6 +102,16 @@ include './main/conn.php';
             transition-timing-function: ease-out;
             transition-duration: 500ms !important;
         }
+
+
+
+        .form-control[type=file]:not(:disabled):not([readonly]) {
+            cursor: pointer;
+        }
+
+        .alertify .ajs-footer {
+    border-radius: 0 0 15px 15px;
+}
     </style>
 </head>
 
