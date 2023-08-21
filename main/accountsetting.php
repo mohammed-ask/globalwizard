@@ -79,6 +79,7 @@ include "main/session.php";
                             <p class="card-subtitle mt-3"><span style="color: rgba(233, 3, 3, 0.92);">Important*</span> - For verification
                                 purpose, OTP will send to your registered email to change Mobile no or Password.
                             </p>
+                            <div id="otpinput"></div>
                             <div class="col-12 mt-3">
                                 <button type="button" class="btn btn-primary" id="otp" onclick="requestotp()">Send OTP</button>
                                 <button type="button" class="btn btn-primary" id="formsubmit" style="display: none;" onclick="sendForm('', '', 'updateprofile', 'resultid', 'addtax')">Submit</button>

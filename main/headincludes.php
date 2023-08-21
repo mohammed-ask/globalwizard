@@ -11,10 +11,10 @@
  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <title>Global Wizard Pvt Ltd</title>
- <script defer="" data-api="/stats/api/event" data-domain="preview.tabler.io" src="assets/js/script.js.download"></script>
+ <script defer="" data-api="/stats/api/event" data-domain="preview.tabler.io" src="main/dist/userjs/script.js.download"></script>
 
  <link rel="icon" href="main/images/logo/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="main/images/logo/favicon.png" type="image/x-icon">
+ <link rel="shortcut icon" href="main/images/logo/favicon.png" type="image/x-icon">
 
  <!-- CSS files -->
  <link href="main/dist/usercss/global-wizard.min.css" rel="stylesheet">
@@ -76,70 +76,67 @@
    }
 
 
-        /* --------------------alertify---------------- */
-        .alertify .ajs-header {
-            display: none;
+   /* --------------------alertify---------------- */
+   .alertify .ajs-header {
+     display: none;
 
-        }
-
-
-        .alertify .ajs-footer {
-            /* padding: 4px; */
-            margin-left: 0px !important;
-            margin-right: 0px !important;
-            min-height: 35px !important;
-            background-color: #cde6ff !important;
-            padding: 0px !important;
-        }
-
-        .alertify .ajs-dialog {
-
-            padding: 15px 0px 0 0px !important;
-            max-width: 400px !important;
-            border-radius: 15px !important;
-        }
-
-        .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
-            margin: 0px !important;
-        }
-
-        .alertify .ajs-commands {
-            margin: -12px 10px 0 0 !important;
-        }
-
-        .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
-            color: #fff !important;
-            border: 1px dotted #fff;
-            border-radius: 5px;
-            /* margin-right: 10px !important; */
-            margin: 5px 6px 5px 10px !important;
-            background-color: #0054a6;
-        }
-
-        .alertify .ajs-dimmer {
-
-            transition-timing-function: ease-in;
-            transition-duration: 500ms !important;
-        }
-
-        .alertify .ajs-modal {
-
-            transition-timing-function: ease-out;
-            transition-duration: 500ms !important;
-        }
+   }
 
 
+   .alertify .ajs-footer {
+     /* padding: 4px; */
+     margin-left: 0px !important;
+     margin-right: 0px !important;
+     min-height: 35px !important;
+     background-color: #cde6ff !important;
+     padding: 0px !important;
+   }
 
-        .form-control[type=file]:not(:disabled):not([readonly]) {
-            cursor: pointer;
-        }
+   .alertify .ajs-dialog {
 
-        .alertify .ajs-footer {
-    border-radius: 0 0 15px 15px;
-}
+     padding: 15px 0px 0 0px !important;
+     max-width: 400px !important;
+     border-radius: 15px !important;
+   }
+
+   .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
+     margin: 0px !important;
+   }
+
+   .alertify .ajs-commands {
+     margin: -12px 10px 0 0 !important;
+   }
+
+   .alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+     color: #fff !important;
+     border: 1px dotted #fff;
+     border-radius: 5px;
+     /* margin-right: 10px !important; */
+     margin: 5px 6px 5px 10px !important;
+     background-color: #0054a6;
+   }
+
+   .alertify .ajs-dimmer {
+
+     transition-timing-function: ease-in;
+     transition-duration: 500ms !important;
+   }
+
+   .alertify .ajs-modal {
+
+     transition-timing-function: ease-out;
+     transition-duration: 500ms !important;
+   }
 
 
 
+   .form-control[type=file]:not(:disabled):not([readonly]) {
+     cursor: pointer;
+   }
+
+   .alertify .ajs-footer {
+     border-radius: 0 0 15px 15px;
+   }
  </style>
 
  <?php
