@@ -1,6 +1,5 @@
 <?php
 include 'main/session.php';
-print_r($_GET);
 $plandetailid = '';
 if ($_GET['hakuna'] !== 'membership') {
     $plandetailid = $obj->selectfieldwhere('plandetail', 'id', 'planid=' . $_GET['hakuna'] . ' and plantypeid = ' . $_GET['what'] . ' and status = 1');
