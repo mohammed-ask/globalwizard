@@ -22,7 +22,7 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
     $platform = "test";
-} elseif ($_SERVER['HTTP_HOST'] == 'globalwizard.in') {
+} elseif ($_SERVER['HTTP_HOST'] == 'globalwizzard.in') {
     if (!defined("BASE_URL")) {
         define("BASE_URL", "https://globalwizard.com/");
     }
