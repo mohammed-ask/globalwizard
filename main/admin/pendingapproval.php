@@ -42,7 +42,7 @@ ob_start();
 $pagemaincontent = ob_get_contents();
 ob_end_clean();
 $pagemeta = "";
-$pagetitle = "PMS-Equity: Pending Approval";
+$pagetitle = "Global Wizard: Pending Approval";
 $contentheader = "";
 $pageheader = "";
 include "templete.php";
@@ -54,11 +54,11 @@ include "templete.php";
             "processing": true,
             "serverSide": true,
             "pageLength": 10,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [
