@@ -47,10 +47,9 @@ include './main/conn.php';
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
 
-   
+
 
     <style>
-
         /* --------------------alertify---------------- */
         .alertify .ajs-header {
             display: none;
@@ -110,8 +109,8 @@ include './main/conn.php';
         }
 
         .alertify .ajs-footer {
-    border-radius: 0 0 15px 15px;
-}
+            border-radius: 0 0 15px 15px;
+        }
     </style>
 </head>
 
@@ -121,7 +120,7 @@ include './main/conn.php';
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
                 <a href="#" class="navbar-brand navbar-brand-autodark">
-                    <img src="../main\images\logo\Global Wizard Colored Logo 2.0.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                    <img src="../main\images\logo\Global.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
                 </a>
             </div>
             <div class="card card-md">
@@ -133,7 +132,7 @@ include './main/conn.php';
                             <input type="email" data-bvalidator='required' name="email" class="form-control" style="    padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
                         </div>
                         <div class="mb-2" style="position: relative;">
-                        <label class="form-label">Password</label>
+                            <label class="form-label">Password</label>
                             <input data-bvalidator='required' type="password" class="form-control" style="    padding: 0.578rem 0.75rem;" placeholder="Your password" name="password" autocomplete="off" fdprocessedid="cllljp" id="pass">
                             <i id="eye" class="fa fa-eye" style="position: absolute; top:39px; right:10px" aria-hidden="true"></i>
                         </div>
