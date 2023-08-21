@@ -27,9 +27,9 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
         define("BASE_URL", "https://globalwizard.com/");
     }
     $host = "localhost";
-    $database_Username = "u477898878_root";
-    $database_Password = "l6V=jP0dxqf";
-    $database_Name = "u477898878_globalwizard";
+    $database_Username = "u477898878_wizzad_global";
+    $database_Password = "Globalwizzard@1998";
+    $database_Name = "u477898878_wizzard_global";
     $siteurl = "https://globalwizard.com/";
     $port = 3306;
     ini_set('display_errors', 1);
