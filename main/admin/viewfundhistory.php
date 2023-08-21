@@ -7,41 +7,39 @@ $id = $_GET['hakuna'];
 ?>
 <div class="page-body">
     <div class="container-xl">
-        <div class="flex" style="align-items: center;justify-content:space-between">
-            <h3>Plan History</h3>
-            <!-- <button @click="openModal" onclick='dynamicmodal("<?= $id ?>", "addinvestmentamount", "", "Add Fund")' class="my-6 px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-            + Add Fund
-        </button> -->
+        <div class="card">
+        <div class="card-header">
+            <h3 class="m-0">Plan History</h3>
 
         </div>
 
 
-        <div class="w-full overflow-hidden rounded-lg shadow-xs">
+        <div>
 
-            <div class="w-full ">
+            <div class="table-responsive fixTableHead" style="height: 450px;">
 
-                <table id="example2" class="table w-full whitespace-no-wrap">
+                <table id="example2" class="table card-table table-vcenter text-nowrap datatable">
                     <thead>
-                        <tr class="text-sm font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                            <th class="px-4 py-3">S.No.</th>
-                            <th class="px-4 py-3">Name</th>
-                            <th class="px-4 py-3">Amount</th>
-                            <th class="px-4 py-3">Mobile</th>
-                            <th class="px-4 py-3">Transaction ID</th>
-                            <th class="px-4 py-3">Payment Method</th>
-                            <th class="px-4 py-3">Payment For</th>
-                            <th class="px-4 py-3">Date & Time</th>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Mobile</th>
+                            <th>Transaction ID</th>
+                            <th>Payment Method</th>
+                            <th>Payment For</th>
+                            <th>Date & Time</th>
                             <!-- <th class="px-4 py-3">Action</th> -->
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y text-s dark:divide-gray-700 dark:bg-gray-800">
+                    <tbody>
                     </tbody>
                 </table>
 
             </div>
         </div>
 
-    </div>
+    </div></div>
 </div>
 <?php
 //Assign all Page Specific variables
@@ -60,11 +58,11 @@ include "main/admin/templete.php";
             "processing": true,
             "serverSide": true,
             "pageLength": 10,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [

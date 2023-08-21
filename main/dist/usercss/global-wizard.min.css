@@ -23609,7 +23609,7 @@ a.card-title:hover {
 .empty-header {
   margin: 0 0 1rem;
   font-size: 4rem;
-  font-weight: var(--tblr-font-weight-light);
+  font-weight: 600;
   line-height: 1;
   color: var(--tblr-secondary)
 }

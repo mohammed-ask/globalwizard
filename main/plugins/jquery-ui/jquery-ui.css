@@ -986,11 +986,15 @@ button.ui-button::-moz-focus-inner {
 	float: left;
 	padding: .5em 1em;
 	text-decoration: none;
+	border: 1px solid gray;
+    border-radius: 5px;
 }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
 	margin-bottom: -1px;
-	padding-bottom: 1px;
+	padding-bottom: 0px;
+	border: 1px solid gray;
+    border-radius: 5px;
 }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
@@ -1132,7 +1136,7 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
 	
-	background: #057c7c;
+	background: #0054a6;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -1148,7 +1152,7 @@ a.ui-button:active,
 .ui-state-active a:visited {
 	color: #ffffff !important;
 	text-decoration: none;
-	background-color: #057c7c;
+	background-color: #0054a6;
 }
 
 /* Interaction Cues
