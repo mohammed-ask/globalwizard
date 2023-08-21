@@ -6,12 +6,12 @@
     </button>
     <h1 class="navbar-brand navbar-brand-autodark mt-3">
       <a href="#">
-        <img src="../main\images\logo\Global Wizard Colored Logo 2.0.png"  width="110" height="32" alt="Tabler" class="navbar-brand-image">
+        <img src="../main\images\logo\Global.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
       </a>
     </h1>
     <div class="navbar-nav flex-row d-lg-none">
       <div class="nav-item d-none d-lg-flex me-3">
-       
+
       </div>
       <div class="d-none d-lg-flex">
         <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Enable dark mode" data-bs-original-title="Enable dark mode">
@@ -30,7 +30,7 @@
           </svg>
         </a>
         <div class="nav-item dropdown d-none d-md-flex me-3">
-          
+
         </div>
       </div>
       <div class="nav-item dropdown">

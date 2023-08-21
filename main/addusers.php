@@ -641,8 +641,8 @@
         }
 
         .alertify .ajs-footer {
-    border-radius: 0 0 15px 15px;
-}
+            border-radius: 0 0 15px 15px;
+        }
 
 
 
@@ -745,7 +745,7 @@
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
                 <a href="#" class="navbar-brand navbar-brand-autodark">
-                    <img src="main\images\logo\Global Wizard Colored Logo 2.0.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                    <img src="main\images\logo\Global.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
                 </a>
             </div>
             <div class="card card-md">
@@ -962,7 +962,7 @@
                 </div>
                 <div class="hr-text">or</div>
                 <div class="text-center mt-3 mb-3" style="font-size: 15px;">
-                   Already have account Account? <span style="font-weight: 600;"><a href="register" tabindex="-1">Sign In</a></span>
+                    Already have account Account? <span style="font-weight: 600;"><a href="register" tabindex="-1">Sign In</a></span>
                 </div>
             </div>
         </div>

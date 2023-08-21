@@ -22,14 +22,14 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
     $platform = "test";
-} elseif ($_SERVER['HTTP_HOST'] == 'globalwizard.com') {
+} elseif ($_SERVER['HTTP_HOST'] == 'globalwizzard.in') {
     if (!defined("BASE_URL")) {
         define("BASE_URL", "https://globalwizard.com/");
     }
     $host = "localhost";
-    $database_Username = "";
-    $database_Password = "";
-    $database_Name = "globalwizard";
+    $database_Username = "u477898878_wizzad_global";
+    $database_Password = "Globalwizzard@1998";
+    $database_Name = "u477898878_wizzard_global";
     $siteurl = "https://globalwizard.com/";
     $port = 3306;
     ini_set('display_errors', 1);
@@ -44,8 +44,8 @@ $obj = new db($host, $database_Username, $database_Password, $database_Name, $po
 // Colos
 include "colorconstants.php";
 // Main Settings
-$sendmailfrom = $platform === 'test'  ? "mohammedhusain559@gmail.com" : 'info@pmsequity.com';
-$sendemailpassword = $platform === 'test' ? "svcbitzquirlpwxk" : 'PMSEquity@1998';
+$sendmailfrom = $platform === 'test'  ? "mohammedhusain559@gmail.com" : 'support@globalwizzard.in';
+$sendemailpassword = $platform === 'test' ? "svcbitzquirlpwxk" : 'Globalwizzard@1998';
 $supportmail = 'support@pmsequity.com';
 $port = $platform === 'test' ? 465 : 465;
 $host = $platform === 'test' ? 'smtp.gmail.com' : 'smptout.secureserver.net';

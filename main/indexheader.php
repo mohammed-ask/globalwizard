@@ -77,52 +77,54 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
 </head>
 <div class="topPd" data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
 
-<header class="mainHeader">
+    <header class="mainHeader">
 
-    <div class="mainHeader_top">
+        <div class="mainHeader_top">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="row align-items-center">
+                <div class="row align-items-center">
 
-                <div class="col-sm-7">
+                    <div class="col-sm-7">
 
-                    <ul class="list-none contact-icons d-flex justify-content-center justify-content-sm-start">
+                        <ul class="list-none contact-icons d-flex justify-content-center justify-content-sm-start">
 
-                        <li>
+                            <li>
 
-                            <a href="mailto:<?= $companyemailid ?>">
+                                <a href="mailto:<?= $companyemailid ?>">
 
-                                <em class="fa fa-envelope mr-1"></em>
+                                    <em class="fa fa-envelope mr-1"></em>
 
-                                <?= $companyemailid ?>
-                            </a>
+                                    <?= $companyemailid ?>
+                                </a>
 
-                        </li>
+                            </li>
 
-                        <li>
+                            <li>
 
-                            <a href="tel:+91-<?= $companyphone ?>">
+                                <a href="tel:+91-<?= $companyphone ?>">
 
-                                <em class="fa fa-phone mr-1"></em>
+                                    <em class="fa fa-phone mr-1"></em>
 
-                                +91-<?= $companyphone ?>
-                            </a>
+                                    +91-<?= $companyphone ?>
+                                </a>
 
-                        </li>
+                            </li>
 
-                    </ul>
+                        </ul>
 
-                </div>
+                    </div>
 
-                <div class="col-sm-5">
+                    <div class="col-sm-5">
 
-                    <div class="d-flex align-items-center justify-content-center justify-content-sm-end">
+                        <div class="d-flex align-items-center justify-content-center justify-content-sm-end">
 
 
-                        <button type="button" style="margin-right: 10px;" onclick="window.location.href='login'" class="btn btn-primary" fdprocessedid="4unrra">Login</button>
+                            <button type="button" style="margin-right: 10px;" onclick="window.location.href='login'" class="btn btn-primary" fdprocessedid="4unrra">Login</button>
 
-                        <button type="button" onclick="window.location.href='register'" class="btn btn-primary" fdprocessedid="4unrra">Sign Up</button>
+                            <button type="button" onclick="window.location.href='register'" class="btn btn-primary" fdprocessedid="4unrra">Sign Up</button>
+
+                        </div>
 
                     </div>
 
@@ -132,67 +134,66 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
 
         </div>
 
-    </div>
+        <div class="mainHeader_down">
 
-    <div class="mainHeader_down">
+            <div class="container">
 
-        <div class="container">
+                <nav class="navbar p-0 navbar-expand-xl navbar-light">
 
-            <nav class="navbar p-0 navbar-expand-xl navbar-light">
+                    <a class="navbar-brand p-0 mr-0" href="index.html"><img src="main\images\logo\Global.png" alt="logo"></a>
 
-                <a class="navbar-brand p-0 mr-0" href="index.html"><img src="main\images\logo\Global Wizard Colored logo 2.0.png" alt="logo"></a>
+                    <button class="navbar-toggler menu-icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-                <button class="navbar-toggler menu-icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu-icon_line menu-icon_line-left"></span>
 
-                    <span class="menu-icon_line menu-icon_line-left"></span>
+                        <span class="menu-icon_line"></span>
 
-                    <span class="menu-icon_line"></span>
+                        <span class="menu-icon_line menu-icon_line-right"></span>
 
-                    <span class="menu-icon_line menu-icon_line-right"></span>
-
-                </button>
+                    </button>
 
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                    <ul class="navbar-nav ml-auto">
+                        <ul class="navbar-nav ml-auto">
 
-                        <li class="nav-item">
+                            <li class="nav-item">
 
-                            <a class="nav-link" href="index">Home</a>
+                                <a class="nav-link" href="index">Home</a>
 
-                        </li>
+                            </li>
 
-                        <li class="nav-item active">
+                            <li class="nav-item active">
 
-                            <a class="nav-link" href="aboutus">About</a>
+                                <a class="nav-link" href="aboutus">About</a>
 
-                        </li>
+                            </li>
 
 
 
-                        <li class="nav-item ">
+                            <li class="nav-item ">
 
-                            <a class="nav-link" href="pricing">Pricing</a>
+                                <a class="nav-link" href="pricing">Pricing</a>
 
-                        </li>
+                            </li>
 
-                        <li class="nav-item ">
+                            <li class="nav-item ">
 
-                            <a class="nav-link" href="contact">Contact</a>
+                                <a class="nav-link" href="contact">Contact</a>
 
-                        </li>
+                            </li>
 
 
 
-                    </ul>
+                        </ul>
 
-                </div>
+                    </div>
 
-            </nav>
+                </nav>
+
+            </div>
 
         </div>
 
-    </div>
-
-</header></div>
+    </header>
+</div>
