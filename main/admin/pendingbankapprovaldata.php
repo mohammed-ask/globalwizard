@@ -39,7 +39,7 @@ $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "bankaccountchange ",
     "*",
-    "status in (0) $search $order limit $start, $limit"
+    "status in (0) $search $order"
 );
 $num = $obj->total_rows($result);
 $data = array();

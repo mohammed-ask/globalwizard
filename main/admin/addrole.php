@@ -31,13 +31,15 @@ ob_start();
                             <div class="col-md-6 mb-5">
                                 <div class="card card-widget">
                                     <div class="card-header">
-                                        <div class=" d-inline ">
+                                        <div class=" d-inline form-check form-switch">
                                             <input type="checkbox" id="" title="checkall" onclick="$('.module<?php echo $rowmodule['id']; ?>').prop('checked', $(this).prop('checked'));" class="">
                                             <label for="<?php echo str_replace(" ", "_", $rowmodule['name']); ?>"><?php echo $rowmodule['name']; ?></label>
                                         </div>
                                         <div class="card-tools">
                                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                                <i class="fas fa-minus"></i>
+                                            <svg class="m-0" style="color: darkblue;" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-up" width="20" height="20" viewBox="0 0 22 22" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M17 11v6l-5 -4l-5 4v-6l5 -4z"></path>
                                             </button>
                                         </div>
                                     </div>

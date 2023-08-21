@@ -72,7 +72,7 @@ include './main/conn.php';
             margin-left: 0px !important;
             margin-right: 0px !important;
             min-height: 35px !important;
-            background-color: #00aaaa2e !important;
+            background-color: #cde6ff  !important;
             padding: 0px !important;
         }
 
@@ -98,7 +98,7 @@ include './main/conn.php';
             border-radius: 5px;
             /* margin-right: 10px !important; */
             margin: 5px 6px 5px 10px !important;
-            background-color: #00aaaa;
+            background-color: #0054a6;
         }
 
         .alertify .ajs-dimmer {

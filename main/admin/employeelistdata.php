@@ -39,7 +39,7 @@ $return['draw'] = $_GET['draw'];
 $result = $obj->selectextrawhereupdate(
     "users ",
     "*",
-    "status in (0,1) and type = 1 and id not in (1,46) $search $order limit $start, $limit"
+    "status in (0,1) and type = 1 and id not in (1,46) $search $order"
 );
 $num = $obj->total_rows($result);
 $data = array();

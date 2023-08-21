@@ -20,21 +20,21 @@ ob_start();
                 <h3>Plans</h3>
                 
             </div>
-            <div class="w-full overflow-hidden rounded-lg shadow-xs">
+            <div>
                 <!-- /.card-header -->
-                <div class="w-full">
-                    <table id="example2" class="table w-full whitespace-no-wrap">
+                <div class="table-responsive fixTableHead" style="height: 450px;">
+                    <table id="example2" class="table card-table table-vcenter text-nowrap datatable" >
                         <thead>
                             <tr>
-                                <th class="px-3 py-2">S.No.</th>
-                                <th class="px-3 py-2">Name</th>
-                                <th class="px-3 py-2">Plan Type</th>
-                                <th class="px-3 py-2">Users</th>
-                                <th class="px-3 py-2">Added on</th>
-                                <th class="px-3 py-2">Action</th>
+                                <th>S.No.</th>
+                                <th>Name</th>
+                                <th>Plan Type</th>
+                                <th>Users</th>
+                                <th>Added on</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                        <tbody>
                         </tbody>
                         <tfoot></tfoot>
                     </table>
@@ -61,11 +61,11 @@ include "templete.php";
             "processing": true,
             "serverSide": true,
             "pageLength": 1000,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [

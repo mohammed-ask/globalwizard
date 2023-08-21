@@ -138,7 +138,7 @@
 
                 <div class="col-sm-4">
 
-                    <p style="color:#fff;margin-top: 8px;text-align: center;">Global Wizard Pvt Ltd</p>
+                    <p style="color:#fff;margin-top: 8px;text-align: right;">Global Wizard Pvt Ltd</p>
 
                 </div>
 

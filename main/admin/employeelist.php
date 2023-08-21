@@ -21,7 +21,7 @@ if (!in_array(12, $permissions)) {
 
         <h3 class="card-header">Employee Details</h3>
 
-            <div class="table-responsive fixTableHead" style="height: 400px;">
+            <div class="table-responsive fixTableHead" style="height: 450px;">
 
                 <table id="example2" class="table card-table table-vcenter text-nowrap datatable">
                     <thead>
@@ -64,11 +64,11 @@ include "templete.php";
             "processing": true,
             "serverSide": true,
             "pageLength": 15,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [

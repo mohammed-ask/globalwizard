@@ -59,8 +59,9 @@ include './main/conn.php';
         body {
             font-feature-settings: "cv03", "cv04", "cv11";
         }
+   /* --------------------alertify---------------- */
 
-        .alertify .ajs-header {
+   .alertify .ajs-header {
             display: none;
 
         }
@@ -71,7 +72,7 @@ include './main/conn.php';
             margin-left: 0px !important;
             margin-right: 0px !important;
             min-height: 35px !important;
-            background-color: #00aaaa2e !important;
+            background-color: #cde6ff !important;
             padding: 0px !important;
         }
 
@@ -80,7 +81,6 @@ include './main/conn.php';
             padding: 15px 0px 0 0px !important;
             max-width: 400px !important;
             border-radius: 5px !important;
-            top: 25%;
         }
 
         .alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
@@ -97,7 +97,7 @@ include './main/conn.php';
             border-radius: 5px;
             /* margin-right: 10px !important; */
             margin: 5px 6px 5px 10px !important;
-            background-color: #00aaaa;
+            background-color: #0054a6;
         }
 
         .alertify .ajs-dimmer {
@@ -110,6 +110,12 @@ include './main/conn.php';
 
             transition-timing-function: ease-out;
             transition-duration: 500ms !important;
+        }
+
+
+
+        .form-control[type=file]:not(:disabled):not([readonly]) {
+            cursor: pointer;
         }
     </style>
 </head>

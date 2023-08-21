@@ -60,11 +60,11 @@ include "templete.php";
             "processing": true,
             "serverSide": true,
             "pageLength": 10,
-            "paging": true,
+            "paging": false,
             "lengthChange": false,
             "searching": false,
             "ordering": true,
-            "info": true,
+            "info": false,
             "autoWidth": false,
             "responsive": true,
             "order": [
