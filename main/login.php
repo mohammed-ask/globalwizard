@@ -59,9 +59,10 @@ include './main/conn.php';
         body {
             font-feature-settings: "cv03", "cv04", "cv11";
         }
-   /* --------------------alertify---------------- */
 
-   .alertify .ajs-header {
+        /* --------------------alertify---------------- */
+
+        .alertify .ajs-header {
             display: none;
 
         }
@@ -119,8 +120,8 @@ include './main/conn.php';
         }
 
         .alertify .ajs-footer {
-    border-radius: 0 0 15px 15px;
-}
+            border-radius: 0 0 15px 15px;
+        }
     </style>
 </head>
 
@@ -130,7 +131,7 @@ include './main/conn.php';
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
                 <a href="#" class="navbar-brand navbar-brand-autodark">
-                    <img src="main\images\logo\Global Wizard Colored Logo 2.0.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                    <img src="main\images\logo\Global.png" width="110" height="32" alt="Tabler" class="navbar-brand-image">
                 </a>
             </div>
             <div class="card card-md">
