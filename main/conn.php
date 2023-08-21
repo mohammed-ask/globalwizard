@@ -22,14 +22,14 @@ if (($_SERVER['HTTP_HOST'] == 'localhost')) {
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
     $platform = "test";
-} elseif ($_SERVER['HTTP_HOST'] == 'globalwizard.com') {
+} elseif ($_SERVER['HTTP_HOST'] == 'globalwizard.in') {
     if (!defined("BASE_URL")) {
         define("BASE_URL", "https://globalwizard.com/");
     }
     $host = "localhost";
-    $database_Username = "";
-    $database_Password = "";
-    $database_Name = "globalwizard";
+    $database_Username = "u477898878_root";
+    $database_Password = "l6V=jP0dxqf";
+    $database_Name = "u477898878_globalwizard";
     $siteurl = "https://globalwizard.com/";
     $port = 3306;
     ini_set('display_errors', 1);
