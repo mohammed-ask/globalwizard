@@ -65,22 +65,7 @@ include "templete.php";
                 [0, "desc"]
             ]
         });
-        $('#example3').DataTable({
-            "ajax": "../main/admin/pendingbankapprovaldata.php",
-            "processing": true,
-            "serverSide": true,
-            "pageLength": 10,
-            "paging": false,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": false,
-            "autoWidth": false,
-            "responsive": true,
-            "order": [
-                [0, "desc"]
-            ]
-        });
+      
     });
 
     $(document).on("click", ".showbox", function() {

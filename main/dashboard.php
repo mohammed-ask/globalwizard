@@ -232,7 +232,7 @@ if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
                       </div>
 
                       <div class="mt-3 modalbtn">
-                        <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("<?= $rowplan["id"] ?>", "addpayment", "1", "Add Payment")' class="btn btn-primary py-2 w-100" style="background-color: black; 
+                        <button data-bs-toggle="modal" data-bs-target="#modal-report" onclick='dynamicmodal("<?= $rowplan["id"] ?>", "addpayment", "1", "Payment Option")' class="btn btn-primary py-2 w-100" style="background-color: black; 
                           font-weight: 700;" type="button" data-bs-dismiss="pay" data-bs-toggle="modal" data-bs-target="#modal-scrollable">
                           I'm Ready to Pay
                         </button>
