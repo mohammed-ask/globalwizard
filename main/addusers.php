@@ -827,9 +827,9 @@
                                 </div>
                             </div>
 
-                            <div class="buttons button_space">
-                                <button class="back_button mt-3">Back</button>
-                                <button class="next_button">Next Step</button>
+                            <div class="row mt-3">
+                               <div class="col-6"> <button class="btn w-100 py-2">Back</button></div>
+                                <div class="col-6"><button class="btn btn-primary w-100 py-2">Next Step</button></div>
                             </div>
                         </div>
 
@@ -878,10 +878,11 @@
                                     <input type="file" name="path[]" class="form-control" placeholder="Upload clear image" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                             </div>
-                            <div class="buttons button_space">
-                                <button class="back_button mt-3">Back</button>
-                                <button class="next_button" id="otp_button">Next Step</button>
+                            <div class="row mt-3">
+                               <div class="col-6"> <button class="btn w-100 py-2">Back</button></div>
+                                <div class="col-6"><button class="btn btn-primary w-100 py-2" id="otp_button">Next Step</button></div>
                             </div>
+                            
 
                         </div>
 
@@ -936,10 +937,12 @@
                                         </a>
                                     </div>
                                 </div> -->
-                                <div class="buttons button_space">
-                                    <button class="back_button">Back</button>
-                                    <button id="subotp" class="submit_button" disabled="disabled">Verify</button>
-                                </div>
+                                <div class="row mt-3">
+                               <div class="col-6"> <button class="btn w-100 py-2">Back</button></div>
+                                <div class="col-6"><button class="btn btn-primary w-100 py-2 submit_button" id="subotp" disabled="disabled">Next Step</button></div>
+                            </div>
+                                
+                               
                             </div>
                         </div>
                     </form>
