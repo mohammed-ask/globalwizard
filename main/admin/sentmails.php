@@ -16,7 +16,7 @@ ob_start();
         </div>
        
 
-            <div class="table-responsive fixTableHead" style="height: 450px;">
+            <div class="table-responsive fixTableHead" style="height: 400px;">
 
                 <table id="example2" class="table card-table table-vcenter text-nowrap datatable">
                     <thead>

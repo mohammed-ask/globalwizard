@@ -50,20 +50,20 @@ $num = $obj->total_rows($result);
 $data = array();
 while ($row = $obj->fetch_assoc($result)) {
     $n = array();
-    $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M,Y");
+    $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M, Y");
     $n[] =  changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "H:i a");
     $n[] = "<strong>" . $row['name'] . "</strong>";
     $n[] = $row['pname'];
     $n[] = $row['ptname'];
-    $n[] = changedateformatespecito($row['expireon'], "Y-m-d", "d M Y");
+    $n[] = changedateformatespecito($row['expireon'], "Y-m-d", "d M, Y");
     $date1 = new DateTime();
     $date2 = new DateTime($row['expireon']);
     $interval = $date1->diff($date2);
     $days = $interval->days;
     $months = $interval->m;
     $years = $interval->y;
-    $n[] = $days . ' Remaining';
-    $n[] =  $row['status'] == 1 ? 'Active' : 'Expired';
+    $n[] = $days . ' Days';
+    $n[] =  $row['status'] == 1 ? '<span class="badge bg-success me-1"></span> Active' : '<span class="badge bg-danger me-1"></span> Expired';
     $data[] = $n;
     $i++;
 }

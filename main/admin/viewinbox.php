@@ -5,15 +5,17 @@ ob_start();
 ?>
 <div class="page-body">
     <div class="container-xl">
-        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
+
+
+        <div class="card">
             <!-- Card -->
             <h3 class="card-header">
                 Inbox
             </h3>
-        </div>
+        
         <div>
 
-            <div class="table-responsive fixTableHead" style="height: 450px;">
+            <div class="table-responsive fixTableHead" style="height: 400px;">
 
                 <table id="example2" class="table card-table table-vcenter text-nowrap datatable">
                     <thead>
@@ -31,7 +33,7 @@ ob_start();
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div></div>
     </div>
 </div>
 <?php

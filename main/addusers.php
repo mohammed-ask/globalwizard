@@ -962,7 +962,7 @@
                 </div>
                 <div class="hr-text">or</div>
                 <div class="text-center mt-3 mb-3" style="font-size: 15px;">
-                    Already have account Account? <span style="font-weight: 600;"><a href="register" tabindex="-1">Sign In</a></span>
+                    Already have account Account? <span style="font-weight: 600;"><a href="login" tabindex="-1">Sign In</a></span>
                 </div>
             </div>
         </div>
