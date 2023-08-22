@@ -124,7 +124,8 @@ if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
             <div class="card card-md">
               <div class="card-body text-center">
                 <div class="text-uppercase text-secondary font-weight-medium mb-3"><?= $rowplan['name'] ?></div>
-
+                <p class="m-0" style="    color: green; font-weight: 600;">Starting From</p>
+                <div class="display-5 fw-bold mb-3">₹7,999</div>
                 <table class="table table-sm table-borderless">
                   <!-- <thead>
                         <tr>
@@ -138,8 +139,11 @@ if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
                     while ($rowplandetail = $obj->fetch_assoc($plantype)) {
 
                     ?>
+                    
                       <tr>
+                      
                         <td>
+                          
                           <div class="progressbg">
                             <div class="progress progressbg-progress">
                               <div class="progress-bar" style="width: 85%; border-radius: 3px;" role="progressbar" aria-valuenow="82.54" aria-valuemin="0" aria-valuemax="100" aria-label="82.54% Complete">

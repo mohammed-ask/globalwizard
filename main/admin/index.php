@@ -66,10 +66,10 @@ ob_start();
                                     </div>
                                     <div class="col">
                                         <div class="font-weight-medium">
-                                            <span style="font-weight: 600;">13</span> <a style="color: #182433;" href="userlist">Active Users</a>
+                                            <span style="font-weight: 600;">13</span> <a style="color: #182433;" href="users">Active Users</a>
                                         </div>
                                         <div class="">
-                                            <span style="font-weight: 600;">13</span> <a style="color: #182433;" href="pendinguser">Pending Users</a>
+                                            <span style="font-weight: 600;">13</span> <a style="color: #182433;" href="pendingapproval">Pending Users</a>
                                         </div>
                                     </div>
                                 </div>
@@ -116,10 +116,10 @@ ob_start();
                                     </div>
                                     <div class="col">
                                         <div>
-                                            <span style="font-weight: 600;">06</span> Pending Plans
+                                        <span style="font-weight: 600;">06</span>  <a style="color: #182433;" href="pendingplan">Pending Plans</a>
                                         </div>
                                         <div class="">
-                                            <span style="font-weight: 600;">06</span> Membership Plans
+                                        <span style="font-weight: 600;">06</span>  <a style="color: #182433;" href="membershipplan">Membership Plans</a>
                                         </div>
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@ ob_start();
                                     </div>
                                     <div class="col">
                                         <div class="font-weight-medium">
-                                            <span style="font-weight: 600;">03</span> Mail
+                                        <span style="font-weight: 600;">03</span>  <a style="color: #182433;" href="viewinbox"> Mails</a>
                                         </div>
                                         <div class="" style="font-weight: 500;">
                                             Pending Mails

@@ -759,7 +759,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Name</label>
-                                <input name="username" id="username" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Name" autocomplete="off" fdprocessedid="obmv5h">
+                                <input name="username" id="username" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Name" autocomplete="off" fdprocessedid="obmv5h">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Email address</label>
@@ -767,7 +767,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Mobile No.</label>
-                                <input id="mobileno" name="mobileno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                <input id="mobileno" name="mobileno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Phone No." autocomplete="off" fdprocessedid="obmv5h">
                             </div>
 
                             <div class="row">
@@ -776,17 +776,10 @@
                                         Password
                                     </label>
                                     <div class="input-group input-group-flat">
-                                        <input id="password" name="password" required require type="password" class="form-control" placeholder="Your password" autocomplete="off" fdprocessedid="cllljp">
-                                        <span class="input-group-text">
-                                            <a href="#" class="link-secondary" data-bs-toggle="tooltip" aria-label="Show password" data-bs-original-title="Show password">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                                                    <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6">
-                                                    </path>
-                                                </svg>
-                                            </a>
-                                        </span>
+                                        <input style="padding: 0.578rem 0.75rem;" id="password" name="password" required require type="password" class="form-control" placeholder="Your password" autocomplete="off" fdprocessedid="cllljp">
+                                        <!-- <span class="input-group-text">
+                                           
+                                        </span> -->
                                     </div>
                                 </div>
 
@@ -795,17 +788,9 @@
                                         Confirm Password
                                     </label>
                                     <div class="input-group input-group-flat">
-                                        <input id="comfirmpass" name="confirmpass" required require type="password" class="form-control" placeholder="Your password" autocomplete="off" fdprocessedid="cllljp">
-                                        <span class="input-group-text">
-                                            <a href="#" class="link-secondary" data-bs-toggle="tooltip" aria-label="Show password" data-bs-original-title="Show password">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
-                                                    <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6">
-                                                    </path>
-                                                </svg>
-                                            </a>
-                                        </span>
+                                        <input style="padding: 0.578rem 0.75rem;" id="comfirmpass" name="confirmpass" required require type="password" class="form-control" placeholder="Re-Enter password" autocomplete="off" fdprocessedid="cllljp">
+                                        <!-- <span class="input-group-text">
+                                        </span> -->
                                     </div>
                                 </div>
                             </div>
@@ -821,20 +806,20 @@
                         <div class="main">
                             <div class="mb-3">
                                 <label class="form-label">Broker ID (if available)</label>
-                                <input id="employeeref" name="employeeref" type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                <input id="employeeref" name="employeeref" type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="(optional)" autocomplete="off" fdprocessedid="obmv5h">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Full Address</label>
-                                <input id="address" name="address" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                <input id="address" name="address" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Full Address" autocomplete="off" fdprocessedid="obmv5h">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Aadhar Number</label>
-                                <input id="adharno" name="adharno" required require type="email" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                <input id="adharno" name="adharno" required require type="email" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Aadhar No. without spaces" autocomplete="off" fdprocessedid="obmv5h">
                             </div>
                             <div class="row">
                                 <div class="mb-3 col-6">
                                     <label class="form-label">PAN Number</label>
-                                    <input id="panno" name="panno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                    <input id="panno" name="panno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter 10 digit pan no." autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Date of birth</label>
@@ -859,12 +844,12 @@
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Aadhar Card (Front)</label>
                                     <input hidden value="Aadhar Card Front" name="name[]">
-                                    <input type="file" name="path[]" class="form-control" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                    <input type="file" name="path[]" class="form-control" placeholder="Upload clear image" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Aadhar Card (Back)</label>
                                     <input hidden value="Aadhar Card Back" name="name[]">
-                                    <input type="file" name="path[]" class="form-control" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                    <input type="file" name="path[]" class="form-control" placeholder="Upload clear image" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                             </div>
 
@@ -872,12 +857,12 @@
                                 <div class="mb-3 col-6">
                                     <label class="form-label">PAN Card</label>
                                     <input hidden value="PAN card" name="name[]">
-                                    <input type="file" name="path[]" class="form-control" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                    <input type="file" name="path[]" class="form-control" placeholder="Upload clear image" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Passbook/Cheque</label>
                                     <input hidden value="Passbook" name="name[]">
-                                    <input type="file" name="path[]" class="form-control" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                    <input type="file" name="path[]" class="form-control" placeholder="Upload clear image" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                             </div>
 
@@ -885,12 +870,12 @@
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Passport Size Photo</label>
                                     <input hidden value="Passport Size Photo" name="name[]">
-                                    <input type="file" name="path[]" class="form-control" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                    <input type="file" name="path[]" class="form-control" placeholder="Upload clear image" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Signature</label>
                                     <input hidden value="Signature" name="name[]">
-                                    <input type="file" name="path[]" class="form-control" placeholder="your@email.com" autocomplete="off" fdprocessedid="obmv5h">
+                                    <input type="file" name="path[]" class="form-control" placeholder="Upload clear image" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                             </div>
                             <div class="buttons button_space">

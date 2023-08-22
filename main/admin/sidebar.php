@@ -38,7 +38,7 @@
           <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
         </a>
         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-          <a href="https://preview.tabler.io/settings.html" class="dropdown-item">Settings</a>
+          <a href="#" class="dropdown-item">Profile</a>
           <a href="logout" class="dropdown-item">Logout</a>
         </div>
       </div>

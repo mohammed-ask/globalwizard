@@ -69,7 +69,7 @@
         <!-- Navbar -->
         <?php include 'sidebar.php'; ?>
         <!-- /.navbar -->
-        <header class="navbar navbar-expand-md d-none d-lg-flex d-print-none" style="position: sticky; top: 0; z-index: 1;">
+        <header class="navbar navbar-expand-md d-none d-lg-flex d-print-none" style="position: sticky; top: 0; z-index: 1; background-color: #f6f8fb; box-shadow: none;">
             <div class="container-xl">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
