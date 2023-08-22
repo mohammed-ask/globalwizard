@@ -827,9 +827,9 @@
                                 </div>
                             </div>
 
-                            <div class="row mt-3">
-                               <div class="col-6"> <button class="btn w-100 py-2">Back</button></div>
-                                <div class="col-6"><button class="btn btn-primary w-100 py-2">Next Step</button></div>
+                            <div class="buttons button_space mt-3">
+                                <button class="back_button w-100">Back</button>
+                                <button class="next_button w-100">Next Step</button>
                             </div>
                         </div>
 
@@ -878,11 +878,10 @@
                                     <input type="file" name="path[]" class="form-control" placeholder="Upload clear image" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                             </div>
-                            <div class="row mt-3">
-                               <div class="col-6"> <button class="btn w-100 py-2">Back</button></div>
-                                <div class="col-6"><button class="btn btn-primary w-100 py-2" id="otp_button">Next Step</button></div>
+                            <div class="buttons button_space mt-3">
+                                <button class="back_button w-100">Back</button>
+                                <button class="next_button w-100" id="otp_button">Next Step</button>
                             </div>
-                            
 
                         </div>
 
@@ -937,12 +936,10 @@
                                         </a>
                                     </div>
                                 </div> -->
-                                <div class="row mt-3">
-                               <div class="col-6"> <button class="btn w-100 py-2">Back</button></div>
-                                <div class="col-6"><button class="btn btn-primary w-100 py-2 submit_button" id="subotp" disabled="disabled">Next Step</button></div>
-                            </div>
-                                
-                               
+                                <div class="buttons button_space">
+                                    <button class="back_button w-100">Back</button>
+                                    <button id="subotp" class="submit_button w-100" disabled="disabled">Verify</button>
+                                </div>
                             </div>
                         </div>
                     </form>
