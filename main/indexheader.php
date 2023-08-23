@@ -163,7 +163,7 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
 
                             </li>
 
-                            <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/abotus' ? 'active' : '' ?>">
+                            <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/aboutus' ? 'active' : '' ?>">
 
                                 <a class="nav-link" href="aboutus">About</a>
 
