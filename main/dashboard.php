@@ -139,11 +139,11 @@ if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
                     while ($rowplandetail = $obj->fetch_assoc($plantype)) {
 
                     ?>
-                    
+
                       <tr>
-                      
+
                         <td>
-                          
+
                           <div class="progressbg">
                             <div class="progress progressbg-progress">
                               <div class="progress-bar" style="width: 85%; border-radius: 3px;" role="progressbar" aria-valuenow="82.54" aria-valuemin="0" aria-valuemax="100" aria-label="82.54% Complete">
@@ -177,7 +177,7 @@ if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
 
                             <div class="col" style="text-align: left;">
                               <h4 class="card-title m-0">
-                                Subscribed Plan Name
+                                <?= $rowplan['name'] ?>
                               </h4>
                               <div class="mb-3">
                                 <div class="form-label"></div>

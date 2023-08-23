@@ -2,7 +2,13 @@
 include "main/session.php";
 /* @var $obj db */
 ob_start();
-
+$activeclient = $obj->selectfieldwhere("users", "count(id)", "status =1 and activate='Yes' and type=2 and id != 47");
+$pendinguser = $obj->selectfieldwhere("users", "count(id)", "status =0");
+$activesubscription = $obj->selectfieldwhere("subscribers", "count(id)", "status =1");
+$activesubscription = $obj->selectfieldwhere("subscribers", "count(id)", "status =1");
+$pendingplan = $obj->selectfieldwhere("fundrequest", "count(id)", "status =0 and paidfor='Plan'");
+$totalplan = $obj->selectfieldwhere("plan", "count(id)", "status =1");
+$unreadmail = $obj->selectfieldwhere("mail", "count(id)", "receiverid =" . $employeeid . " and readstatus = 0");
 ?>
 
 
@@ -66,10 +72,10 @@ ob_start();
                                     </div>
                                     <div class="col">
                                         <div class="font-weight-medium">
-                                            <span style="font-weight: 600;">13</span> <a style="color: #182433;" href="users">Active Users</a>
+                                            <span style="font-weight: 600;"><?= $activeclient ?></span> <a style="color: #182433;" href="users">Active Users</a>
                                         </div>
                                         <div class="">
-                                            <span style="font-weight: 600;">13</span> <a style="color: #182433;" href="pendingapproval">Pending Users</a>
+                                            <span style="font-weight: 600;"><?= $pendinguser ?></span> <a style="color: #182433;" href="pendingapproval">Pending Users</a>
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +98,7 @@ ob_start();
                                     </div>
                                     <div class="col">
                                         <div class="font-weight-medium">
-                                            <span style="font-weight: 600;">13</span> Users
+                                            <span style="font-weight: 600;"><?= $activesubscription ?></span> Users
                                         </div>
                                         <div class="" style="font-weight: 500;">
                                             Subscribers
@@ -116,10 +122,10 @@ ob_start();
                                     </div>
                                     <div class="col">
                                         <div>
-                                        <span style="font-weight: 600;">06</span>  <a style="color: #182433;" href="pendingplan">Pending Plans</a>
+                                            <span style="font-weight: 600;"><?= $pendingplan ?></span> <a style="color: #182433;" href="pendingplan">Pending Plans</a>
                                         </div>
                                         <div class="">
-                                        <span style="font-weight: 600;">06</span>  <a style="color: #182433;" href="membershipplan">Membership Plans</a>
+                                            <span style="font-weight: 600;"><?= $totalplan ?></span> <a style="color: #182433;" href="membershipplan">Membership Plans</a>
                                         </div>
                                     </div>
                                 </div>
@@ -144,7 +150,7 @@ ob_start();
                                     </div>
                                     <div class="col">
                                         <div class="font-weight-medium">
-                                        <span style="font-weight: 600;">03</span>  <a style="color: #182433;" href="viewinbox"> Mails</a>
+                                            <span style="font-weight: 600;"><?= $unreadmail ?></span> <a style="color: #182433;" href="viewinbox"> Mails</a>
                                         </div>
                                         <div class="" style="font-weight: 500;">
                                             Pending Mails

@@ -108,12 +108,12 @@ include "main/templete.php"; ?>
         addoverlay()
         $.post("main/otpforprofile.php",
             function(data) {
-                if (data === "Success") {
-                    removeoverlay()
-                    $("#otpinput").append(" <div class='mt-3 row row-cols-lg-auto g-3 align-items-center'><div class='col-12'><input class='form-control' name='otp' data-bvalidator='digit,required,minlength[4],maxlength[4]' type='text' placeholder='Enter OTP' value=''></div></div>")
-                    $("#formsubmit").css("display", "block")
-                    $("#otp").css("display", "none")
-                }
+                // if (data === "Success") {
+                removeoverlay()
+                $("#otpinput").append(" <div class='mt-3 row row-cols-lg-auto g-3 align-items-center'><div class='col-12'><input class='form-control' name='otp' data-bvalidator='digit,required,minlength[4],maxlength[4]' type='text' placeholder='Enter OTP' value=''></div></div>")
+                $("#formsubmit").css("display", "block")
+                $("#otp").css("display", "none")
+                // }
             },
         );
     }
