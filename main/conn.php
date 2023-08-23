@@ -68,7 +68,7 @@ $topadd = $compdata["address_1"] . " " . $compdata["city"] . " Pincode-" . $comp
 $state = ($compdata["state"] == "") ? $obj->selectfield("state_list", "state", "id", $compdata["indian_state"]) : $state;
 $country = $obj->selectfield("country", "country_name", "id", $compdata["country_id"]);
 
-$companyaddress = $compdata["address_1"] . ", " . $compdata["city"] . "-" . $compdata["pincode"] . " (" . $state . ") " . $country;
+$companyaddress = $compdata["address_1"];
 $companyaddress1 = $compdata["address_1"] . ", <br>" . $compdata["city"] . "-" . $compdata["pincode"] . " (" . $state . ") " . $country;
 $companyphone = $compdata["phone"];
 $companyemailid = $compdata["email"];
