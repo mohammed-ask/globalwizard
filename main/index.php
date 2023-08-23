@@ -806,7 +806,7 @@
                                 <div class="serviceBox" style="text-align: center;">
                                     
                                    
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
 
                                     <h3 class="m-0">Satish Sisodhiya</h3>
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Pune, India</p>
@@ -821,7 +821,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="serviceBox" style="text-align: center;">
                                    
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
                                     <h3 class="m-0">Rohit Gayakwad</h3>
                                    
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Delhi, India</p>
@@ -833,7 +833,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="serviceBox" style="text-align: center;">
                                     
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
                                     <h3 class="m-0">Surendra Yadav</h3>
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Mumbai, India</p>
                                     <p class="mb-1" style="font-weight:700; font-size:18px;"> 5.0 <i class="fa fa-star checked"></i></p>
@@ -868,7 +868,7 @@
                                 <div class="serviceBox" style="text-align: center;">
                                     
                                    
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
 
                                     <h3 class="m-0">Poja Gupta</h3>
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Bhopal, India</p>
@@ -883,7 +883,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="serviceBox" style="text-align: center;">
                                    
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
                                     <h3 class="m-0">Rajesh Shrivastva</h3>
                                    
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Chattisgarh, India</p>
@@ -895,7 +895,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="serviceBox" style="text-align: center;">
                                     
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
                                     <h3 class="m-0">Mahendra Pal</h3>
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Bangalore, India</p>
                                     <p class="mb-1" style="font-weight:700; font-size:18px;"> 5.0 <i class="fa fa-star checked"></i></p>
@@ -929,7 +929,7 @@
                                 <div class="serviceBox" style="text-align: center;">
                                     
                                    
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
 
                                     <h3 class="m-0">Akshat Singh</h3>
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Pune, India</p>
@@ -944,7 +944,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="serviceBox" style="text-align: center;">
                                    
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
                                     <h3 class="m-0">Aby Methew</h3>
                                    
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Chennai, India</p>
@@ -956,7 +956,7 @@
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="serviceBox" style="text-align: center;">
                                     
-                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="main/dist/indeximage/testimonial.png" alt="Stock Cash Premium Services">
                                     <h3 class="m-0">Bhujendra Tomer</h3>
                                     <p class="mt-1 mb-2" style="font-weight: 600;">Mumbai, India</p>
                                     <p class="mb-1" style="font-weight:700; font-size:18px;"> 4.4 <i class="fa fa-star checked"></i></p>
