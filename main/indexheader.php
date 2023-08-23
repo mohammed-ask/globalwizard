@@ -73,7 +73,9 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
     <title>Global Wizard</title>
 
 
-
+    .checked {
+  color: orange;
+}
 </head>
 <div class="topPd" data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
 

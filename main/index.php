@@ -755,7 +755,248 @@
     </section>
 
 
+  <!-- testimonial start -->
 
+  <section class="serviceSec py-80">
+
+
+
+<div class="container">
+
+
+
+    <div class="commonHead text-center">
+
+
+
+        <span class="commonHead_subtitle">Testimonials</span>
+
+
+
+        <h2 class="commonHead_title">WHAT OUR CLIENTS SAY ABOUT US</h2>
+
+
+
+        <div class="line-bot"></div>
+    </div>
+
+
+
+</div>
+
+<div class="owl-carousel owl-theme owlBanner owl-loaded owl-drag">
+
+
+
+
+    <div class="owl-stage-outer">
+        <div class="owl-stage">
+            <div class="owl-item cloned">
+                <div class="slide-items">
+
+
+
+                    <div class="container">
+        
+        
+                        <div class="row justify-content-center">
+                
+                
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                    
+                                   
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+
+                                    <h3 class="m-0">Satish Sisodhiya</h3>
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Pune, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 4.5 <i class="fa fa-star checked"></i></p>
+                                    
+
+                                    <p>Global Wizard Pvt Ltd has been an invaluable partner in guiding my business towards success. Their expert team provided insightful advice that helped me make informed decisions, leading to increased efficiency and profitability. Their dedication and personalized approach truly set them apart.
+                                    </p>
+                
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                   
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <h3 class="m-0">Rohit Gayakwad</h3>
+                                   
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Delhi, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 4.8 <i class="fa fa-star checked"></i></p>
+                                    <p>Global Wizard Pvt Ltd exceeded our expectations in every way. Their proactive guidance empowered us to make informed choices, mitigating risks and maximizing returns. Their dedication to understanding our unique challenges showcased their commitment to our success. With their partnership, we're confident in conquering future endeavors.</p>
+                
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                    
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <h3 class="m-0">Surendra Yadav</h3>
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Mumbai, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 5.0 <i class="fa fa-star checked"></i></p>
+                                    <p>In the competitive business landscape, having Global Wizard Pvt Ltd as our advisors gave us a distinct edge. Their seamless blend of global insights and local expertise is a rarity. They not only helped us navigate economic fluctuations but also identified untapped opportunities that translated into remarkable growth. Highly recommended!</p>
+                                </div>
+                            </div>
+                
+                
+                
+                
+                
+                        </div>
+                            </div>
+
+
+
+                </div>
+            </div>
+           
+            <div class="owl-item cloned">
+                <div class="slide-items">
+
+
+
+                    <div class="container">
+        
+        
+                        <div class="row justify-content-center">
+                
+                
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                    
+                                   
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+
+                                    <h3 class="m-0">Poja Gupta</h3>
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Bhopal, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 4.7 <i class="fa fa-star checked"></i></p>
+                                    
+
+                                    <p>I owe a big thank you to Global Wizard Pvt Ltd for revolutionizing our approach. Their industry knowledge and strategic insights reshaped how we do things. With their unwavering support, we tackled challenges with ease and achieved milestones we never dreamed of before. A truly dependable ally!
+                                    </p>
+                
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                   
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <h3 class="m-0">Rajesh Shrivastva</h3>
+                                   
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Chattisgarh, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 4.9 <i class="fa fa-star checked"></i></p>
+                                    <p>Global Wizard Pvt Ltd exemplifies professionalism and excellence. Their tailor-made solutions were just what we needed to drive growth and innovation. Their commitment to client triumph shines through in every interaction. Working with them has been an honor and a catalyst for success.</p>
+                
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                    
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <h3 class="m-0">Mahendra Pal</h3>
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Bangalore, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 5.0 <i class="fa fa-star checked"></i></p>
+                                    <p>Global Wizard Pvt Ltd transformed our mission and our vision. Their hands-on approach and insightful analysis gave us new perspectives. Their knack for simplifying complex problems into clear, doable steps is remarkable. We credit a significant part of our accomplishments to their unswerving guidance</p>
+                                </div>
+                            </div>
+                
+                
+                
+                
+                
+                        </div>
+                            </div>
+
+
+
+                </div>
+            </div>
+            <div class="owl-item active">
+                <div class="slide-items">
+
+
+
+                    <div class="container">
+        
+        
+                        <div class="row justify-content-center">
+                
+                
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                    
+                                   
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+
+                                    <h3 class="m-0">Akshat Singh</h3>
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Pune, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 4.5 <i class="fa fa-star checked"></i></p>
+                                    
+
+                                    <p>Global Wizard Pvt Ltd exceeded our expectations in every way. Their proactive guidance empowered us to make informed choices, mitigating risks and maximizing returns. Their dedication to understanding our unique challenges showcased their commitment to our success. With their partnership, we're confident in conquering future endeavors.
+                                    </p>
+                
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                   
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <h3 class="m-0">Aby Methew</h3>
+                                   
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Chennai, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 5.0 <i class="fa fa-star checked"></i></p>
+                                    <p>Partnering with Global Wizard Pvt Ltd was a game-changer for us. Their hands-on approach and in-depth analysis brought fresh perspectives to our projects. Their ability to dissect complex issues and present them in a clear, actionable manner is truly commendable. We owe a significant portion of our achievements to their guidance.</p>
+                
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="serviceBox" style="text-align: center;">
+                                    
+                                    <img style="width: 25% !important; display: block !important; margin-left: auto !important; margin-right: auto !important;" width="30%" src="assets/img/testimonial.png" alt="Stock Cash Premium Services">
+                                    <h3 class="m-0">Bhujendra Tomer</h3>
+                                    <p class="mt-1 mb-2" style="font-weight: 600;">Mumbai, India</p>
+                                    <p class="mb-1" style="font-weight:700; font-size:18px;"> 4.4 <i class="fa fa-star checked"></i></p>
+                                    <p>Global Wizard Pvt Ltd stands out as a beacon of professionalism and excellence. Their tailored solutions addressed our specific needs, fostering growth and innovation within our organization. Their team's commitment to client success is evident in every interaction. It's a privilege to work with such a top-notch advisory company.</p>
+                                </div>
+                            </div>
+                
+                
+                
+                
+                
+                        </div>
+                            </div>
+
+
+                </div>
+            </div>
+           
+           
+        </div>
+    </div>
+    <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span
+                aria-label="Previous">‹</span></button><button type="button" role="presentation"
+            class="owl-next"><span aria-label="Next">›</span></button></div>
+    <div class="owl-dots"><button role="button" class="owl-dot"
+            fdprocessedid="503bwt"><span></span></button><button role="button" class="owl-dot active"
+            fdprocessedid="0nn18b"><span></span></button><button role="button" class="owl-dot"
+            fdprocessedid="0nn18b"><span></span></button></div>
+</div>
+
+
+
+
+
+
+
+
+</section>
+
+<!-- testimonial end -->
 
 
 
