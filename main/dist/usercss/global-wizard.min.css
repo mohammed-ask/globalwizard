@@ -23456,7 +23456,8 @@ a.card-title:hover {
   display: flex;
   align-items: center;
   margin: 0;
-  line-height: 1.4285714286
+  line-height: 1.4285714286;
+  cursor: pointer;
 }
 
 .dropdown-item-icon {
