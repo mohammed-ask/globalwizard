@@ -157,13 +157,13 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
 
                         <ul class="navbar-nav ml-auto">
 
-                            <li class="nav-item">
+                            <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/index' || $_SERVER['REQUEST_URI'] === '' ? 'active' : '' ?>">
 
                                 <a class="nav-link" href="index">Home</a>
 
                             </li>
 
-                            <li class="nav-item active">
+                            <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/aboutus' ? 'active' : '' ?>">
 
                                 <a class="nav-link" href="aboutus">About</a>
 
@@ -171,13 +171,13 @@ $plan = $obj->selectextrawhere("plan", "status =1 limit 6");
 
 
 
-                            <li class="nav-item ">
+                            <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/pricing' ? 'active' : '' ?>">
 
                                 <a class="nav-link" href="pricing">Pricing</a>
 
                             </li>
 
-                            <li class="nav-item ">
+                            <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/contact' ? 'active' : '' ?>">
 
                                 <a class="nav-link" href="contact">Contact</a>
 
