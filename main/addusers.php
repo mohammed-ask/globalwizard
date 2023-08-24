@@ -268,7 +268,7 @@
             border: none;
             outline: 0;
             border-radius: 5px;
-            border: 1px solid #057c7c;
+            border: 1px solid #0917c6;
             gap: 20px;
             box-sizing: border-box;
             padding: 0px 10px;
@@ -280,7 +280,7 @@
             border: none;
             outline: 0;
             border-radius: 5px;
-            border: 1px solid #057c7c;
+            border: 1px solid #0917c6;
             gap: 20px;
             box-sizing: border-box;
             padding: 0px 10px;
@@ -292,7 +292,7 @@
             border: none;
             outline: 0;
             border-radius: 5px;
-            border: 1px solid #057c7c;
+            border: 1px solid #0917c6;
             gap: 20px;
             box-sizing: border-box;
             padding: 0px 10px;
@@ -304,7 +304,7 @@
             border: none;
             outline: 0;
             border-radius: 5px;
-            border: 1px solid #057c7c;
+            border: 1px solid #0917c6;
             gap: 20px;
             box-sizing: border-box;
             padding: 0px 10px;
@@ -351,8 +351,8 @@
 
         .button_space button:nth-child(1) {
             background-color: #fff;
-            color: #057c7c;
-            border: 1px solid #057c7c;
+            color: #0917c6;
+            border: 1px solid #0917c6;
         }
 
         .user_card {
@@ -689,7 +689,7 @@
 
 
         .file-input:hover>.button {
-            background: #057c7c;
+            background: #0917c6;
             color: white;
         }
 
@@ -917,7 +917,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="timer"></div>
+                                        <div style="text-align: center; font-size: 16px; font-weight: 700; color: #1d00d1;" id="timer"></div>
                                     </div>
                                 </div>
                                 <!-- <div class="my-4">
@@ -1008,7 +1008,7 @@
     <script>
         function startTimer() {
             var timerElement = $("#timer");
-            var totalTime = 90; // Total time in seconds
+            var totalTime = 75; // Total time in seconds
             var minutes, seconds;
 
             var timer = setInterval(function() {
@@ -1026,7 +1026,7 @@
                     clearInterval(timer); // Stop the timer
                     // Perform any desired actions when the timer finishes
                     $("#subotp").removeAttr("disabled");
-                    timerElement.html("<strong style='color:green'>OTP Send</strong>");
+                    timerElement.html("<strong style='color:green'>OTP Sent Successfully!</strong>");
                 } else {
                     totalTime--; // Decrease the total time by 1 second
                 }

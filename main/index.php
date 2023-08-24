@@ -270,7 +270,7 @@
 
 
 
-                        <h2>More Than 5+ Years, We Provide Business Solutions.</h2>
+                        <h2>More Than 15+ Years, We Provide Business Solutions.</h2>
 
 
 
@@ -813,7 +813,7 @@
                                     <p class="mb-1" style="font-weight:700; font-size:18px;"> 4.5 <i class="fa fa-star checked"></i></p>
                                     
 
-                                    <p>Global Wizard Pvt Ltd has been an invaluable partner in guiding my business towards success. Their expert team provided insightful advice that helped me make informed decisions, leading to increased efficiency and profitability. Their dedication and personalized approach truly set them apart.
+                                    <p>Global Wizard Pvt Ltd team has been an invaluable partner in guiding my business towards success. Their expert team provided insightful advice & tips that helped me make informed decisions for money growth, leading to increased efficiency and profitability. Their dedication and personalized approach truly set them apart.
                                     </p>
                 
                                 </div>

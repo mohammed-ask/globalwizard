@@ -150,12 +150,12 @@ if ($_GET['hakuna'] !== 'membership') {
 
 <h5 style="margin-top: 5px !important; margin-bottom: 3px !important;" class="my-3 text-danger">Important*</h5>
 <ul class="mb-0 custom-para-size">
-    <li>Your payment request will take approximately 30 minutes to 1 hour to be reviewed by our team.</li>
+    <li>Your payment request will take approximately 15-30 minutes to be reviewed by our team.</li>
 
     <li>There is no any hidden Charges like transaction fee, processing fee & more.</li>
 </ul>
 
 </div>
 <script>
-    $('#modalfooterbtn').html('Send Payment Detail for approval')
+    $('#modalfooterbtn').html('Payment Done')
 </script>
