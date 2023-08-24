@@ -95,7 +95,6 @@ if ($_SESSION['otp'] != implode("", $_POST['otp'])) {
             $tb_name = "userdocuments";
             $pradin = $obj->insertnew($tb_name, $postdata);
         }
-        die;
         $obj->saveactivity("Customer Registered", "", $userid, $userid, "User", "Customer Registered");
         echo "Success";
     }
