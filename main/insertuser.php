@@ -7,7 +7,7 @@ session_start();
 // die;
 include './function.php';
 include './conn.php';
-if ($_SESSION['otp'] != $_POST['otp']) {
+if ($_SESSION['otp'] != implode(",", $_POST['otp'])) {
     echo "Failed";
 } else {
 
