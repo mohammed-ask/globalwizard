@@ -2,7 +2,8 @@
 session_start();
 // ini_set('display_errors', 1);
 // error_reporting(E_ALL);
-print_r($_POST);
+print_r($implode(",", $_POST['otp']));
+print_r($_SESSION['otp']);
 // print_r($_FILES);
 // die;
 include './function.php';
