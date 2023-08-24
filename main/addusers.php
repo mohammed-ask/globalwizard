@@ -938,7 +938,7 @@
                                 </div> -->
                                 <div class="buttons button_space">
                                     <button class="back_button w-100">Back</button>
-                                    <button id="subotp" class="submit_button w-100" disabled="disabled">Verify</button>
+                                    <button id="subotp" class="submit_button w-100">Verify</button>
                                 </div>
                             </div>
                         </div>
