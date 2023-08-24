@@ -67,7 +67,7 @@
 
                         <span>About company</span>
 
-                        <h2>More Than 5+ Years, We Provide Business Solutions.</h2>
+                        <h2>More Than 15+ Years, We Provide Business Solutions.</h2>
 
                         <p>The Global Wizard Research Investment Advisor is a one-stop solution for the share market trading tips, associated with Indian Stock market and Commodity market. We have a team of knowledgeable as well as veteran Technical Analysts, who on the basis of their exhaustive research provide extremely valuable tips to our clients.</p>
 
@@ -321,7 +321,7 @@
 
                                 <h3>Clients</h3>
 
-                                <h4>1232+</h4>
+                                <h4>3696+</h4>
 
                             </div>
 
@@ -339,7 +339,7 @@
 
                                 <h3>Team members</h3>
 
-                                <h4>75+</h4>
+                                <h4>175+</h4>
 
                             </div>
 
