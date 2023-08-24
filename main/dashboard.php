@@ -1,6 +1,6 @@
 <?php
 include "main/session.php";
-$plan = $obj->selectextrawhere("plan", "status =1");
+$plan = $obj->selectextrawhere("plan", "status =1 and (planfor='Universal' or FIND_IN_SET('$employeeid', userid))");
 $activeplan = $obj->selectextrawhereupdate('subscribers inner join plandetail on plandetail.id = subscribers.plandetailid inner join plan on plan.id = plandetail.planid inner join plantypes on plantypes.id = plandetail.plantypeid', "subscribers.id,subscribers.expireon,subscribers.added_on,plan.name,plantypes.name as pname,subscribers.status", "subscribers.userid=$employeeid and subscribers.status = 1")->fetch_assoc();
 $curdate = date('Y-m-d');
 if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
@@ -133,7 +133,7 @@ if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
               <div class="card-body text-center">
                 <div class="text-uppercase text-secondary font-weight-medium mb-3"><?= $rowplan['name'] ?></div>
                 <p class="m-0" style="    color: green; font-weight: 600;">Starting From</p>
-                <div class="display-5 fw-bold mb-3">₹7,999</div>
+                <div class="display-5 fw-bold mb-3">₹<?= round($monthlyplan['price'], 0) ?></div>
                 <table class="table table-sm table-borderless">
                   <!-- <thead>
                         <tr>

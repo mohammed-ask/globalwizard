@@ -69,8 +69,9 @@ include "main/session.php";
                             <p class="card-subtitle">To Change Currect Password, Enter New Password & Click on
                                 Change.</p>
                             <div class="row g-2">
-                                <div class="col-auto">
-                                    <input name="password" type="password" class="form-control w-auto" value="" fdprocessedid="dj6rjv">
+                                <div class="col-auto" style="position: relative;">
+                                    <input id="password" value="<?= $obj->selectfieldwhere("users", "password", "id=" . $employeeid . "") ?>" name="password" type="password" class="form-control w-auto">
+                                    <i id="eye" class="fa fa-eye" style="position: absolute; top:10px; right:15px" aria-hidden="true"></i>
                                 </div>
                                 <!-- <div class="col-auto"><a href="#" class="btn">
                                         Change
@@ -103,6 +104,21 @@ $contentheader = "";
 $pageheader = "";
 include "main/templete.php"; ?>
 <script>
+    $(function() {
+
+        $("#eye").click(() => {
+            iconname = $("#eye").attr("class");
+            if (iconname === 'fa fa-eye') {
+                $('#password').attr('type', 'text')
+                $("#eye").attr('class', 'fa fa-eye-slash')
+
+            } else {
+                $('#password').attr('type', 'password')
+                $("#eye").attr('class', 'fa fa-eye')
+            }
+        })
+    });
+
     function requestotp() {
         event.preventDefault();
         addoverlay()

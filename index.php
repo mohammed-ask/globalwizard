@@ -165,6 +165,12 @@ switch ($request['path']) {
     case "$head/admin/adminprofile";
         require __DIR__ . '/main/admin/adminprofile.php';
         break;
+    case "$head/admin/updateactivationamount";
+        require __DIR__ . '/main/admin/updateactivationamount.php';
+        break;
+    case "$head/admin/approveuser";
+        require __DIR__ . '/main/admin/approveuser.php';
+        break;
     case "$head/admin/logout";
         require __DIR__ . '/main/logout.php';
         break;
