@@ -52,9 +52,9 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] =  "<button class='px-4 py-2 leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700' aria-label='view'>
     <span class='w-5 h-5' fill='currentColor'>Pending</span>
 </button>";
-    $n[] =  "<button class='btn' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
+    $n[] =  "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
     if (in_array(44, $permissions)) {
-        $n[] = "<button class='px-3 py-1  text-sm  bg-blue  rounded-sm ' @click='openModal'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
+        $n[] = "<button class='px-3 py-1  text-sm  bg-blue  rounded-sm ' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
     View Docs</button>";
     } else {
         $n[] = "";
@@ -66,7 +66,7 @@ while ($row = $obj->fetch_assoc($result)) {
           Actions
         </button>
         <div class='dropdown-menu dropdown-menu-end'>
-          <a class='dropdown-item' onclick='fun1(\"" . $row['id'] . " \", \"approveuser\", \"resultid\",\"Approve\")'>
+          <a class='dropdown-item' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"updateactivationamount\", \"\", \"Activation Amount\")'>
             Approve
           </a>
           <a class='dropdown-item' onclick='fun1(\"" . $row['id'] . " \", \"approveuser\", \"resultid\",\"Reject\")'>

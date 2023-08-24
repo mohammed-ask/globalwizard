@@ -10,15 +10,16 @@ require 'main/PHPMailer/src/PHPMailer.php';
 require 'main/PHPMailer/src/SMTP.php';
 
 include "main/session.php";
-$obj->saveactivity("Customer Approved/Reject", "", $_GET["hakuna"], $_GET["hakuna"], "User", "Customer Approved/Reject");
-$id = $_GET['hakuna'];
+$obj->saveactivity("Customer Approved/Reject", "", $_POST["hakuna"], $_POST["hakuna"], "User", "Customer Approved/Reject");
+$id = $_POST['hakuna'];
 $email = $obj->selectfieldwhere("users", "email", "id=" . $id . "");
 $password = $obj->selectfieldwhere("users", "password", "id=" . $id . "");
 
-if ($_GET['what'] === 'Approve') {
+if ($_POST['what'] === 'Approve') {
     $xx['status'] = 1;
     $xx["approveon"] = date('Y-m-d H:i:s');
     $xx['approveby'] = $employeeid;
+    $xx['activationmoney'] = $_POST['activationmoney'];
     $obj->update("users", $xx, $id);
 
     $mail = new PHPMailer(true);
@@ -377,9 +378,9 @@ if ($_GET['what'] === 'Approve') {
 
                                             <h3 class="name">Your Login ID & Password is here</h3>
                                             <h4 class="name" style="font-size: 14px; margin-top: 15px; margin-bottom: 0px;">Usename/Email</h4>
-                                            <p style="font-weight: 500; margin: 0px; font-size: 13px; color: #6e6e6e; margin-top: -3px;">Singh@gmail.com</p>
+                                            <p style="font-weight: 500; margin: 0px; font-size: 13px; color: #6e6e6e; margin-top: -3px;"><?= $obj->selectfieldwhere('users', 'email', "id=$id") ?></p>
                                             <h4 style="font-size: 14px; margin-top: 15px; margin-bottom: 0px;" class="name">Password</h4>
-                                            <p style="margin: 0px; font-size: 13px; color: #6e6e6e; margin-top: -3px; font-weight: 500;">Singh@gmail.com</p>
+                                            <p style="margin: 0px; font-size: 13px; color: #6e6e6e; margin-top: -3px; font-weight: 500;"><?= $obj->selectfieldwhere('users', 'password', "id=$id") ?></p>
                                         </div>
                                     </td>
                                 </tr>
@@ -424,6 +425,7 @@ if ($_GET['what'] === 'Approve') {
     ob_end_clean();
     $mail->Body = $templatedata;
     $mail->send();
+    echo "Redirect :User Approve Successfully! URLpendingapproval";
 } elseif ($_GET['what'] === 'Reject') {
     $yy['status'] = 91;
     $yy["approveon"] = date('Y-m-d H:i:s');
