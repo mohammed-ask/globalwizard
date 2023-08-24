@@ -13,7 +13,7 @@ if ($num4) {
     // $month = strtoupper(date("M", strtotime($date)));
     $uniqueid = str_replace(array("{prefix}", "{number}"), array($row4['prefix'], $generatedcode), $row4['pattern']);
 } else {
-    $cg['prefix'] = "EMP";
+    $cg['prefix'] = "GW";
     $cg['number'] = 0;
     $cg['pattern'] = "{prefix}{number}";
     $cg['category'] = "employeecode";
@@ -29,44 +29,47 @@ if ($num4) {
 ?>
 <form id="adduser" onsubmit="event.preventDefault();sendForm('', '', 'insertemployee', 'resultid', 'adduser');return 0;">
 
-<div class="row">
-    <label class="col-6 block form-label">
-        <span class="text-gray-700 dark:text-gray-400">Employee ID</span>
-        <input name="usercode" class="form-control" readonly value="<?= $uniqueid ?>" placeholder="Enter Employee ID" />
-    </label>
-    <label class="col-6 col-6 block form-label">
-        <span class="text-gray-700 dark:text-gray-400">Name</span>
-        <input name="name" data-bvalidator="required" class="form-control" placeholder="Employee's Name" />
-    </label></div>
+    <div class="row">
+        <label class="col-6 block form-label">
+            <span class="text-gray-700 dark:text-gray-400">Employee ID</span>
+            <input name="usercode" class="form-control" readonly value="<?= $uniqueid ?>" placeholder="Enter Employee ID" />
+        </label>
+        <label class="col-6 col-6 block form-label">
+            <span class="text-gray-700 dark:text-gray-400">Name</span>
+            <input name="name" data-bvalidator="required" class="form-control" placeholder="Employee's Name" />
+        </label>
+    </div>
 
     <div class="row">
-    <label class="col-6 block form-label">
-        <span class="text-gray-700 dark:text-gray-400">Mob No.</span>
-        <input type="number" name="phone" data-bvalidator="minlength[10],maxlength[10]" class="form-control" placeholder="Employee Mobile No." />
-    </label>
-    <label class="col-6 block form-label">
-        <span class="text-gray-700 dark:text-gray-400">Email</span>
-        <input name="email" data-bvalidator="required,email" class="form-control" placeholder="Employee's Email ID" />
-    </label></div>
+        <label class="col-6 block form-label">
+            <span class="text-gray-700 dark:text-gray-400">Mob No.</span>
+            <input type="number" name="phone" data-bvalidator="minlength[10],maxlength[10]" class="form-control" placeholder="Employee Mobile No." />
+        </label>
+        <label class="col-6 block form-label">
+            <span class="text-gray-700 dark:text-gray-400">Email</span>
+            <input name="email" data-bvalidator="required,email" class="form-control" placeholder="Employee's Email ID" />
+        </label>
+    </div>
 
     <div class="row">
-    <label class="col-6 block form-label">
-        <span class="text-gray-700 dark:text-gray-400">Password</span>
-        <input type="password" data-bvalidator="required,minlength[6]" id="password" name="password" class="form-control" placeholder="Please Give Strong Password!" />
-    </label>
-    <label class="col-6 block form-label">
-        <span class="text-gray-700 dark:text-gray-400">Employee Role</span>
-        <select data-bvalidator="required" class="form-control select2" name="role" id="role">
-            <option value="">Select Role</option>
-            <?php
-            $role = $obj->selectextrawhereupdate("roles", "id,name", "status = 1 and id != 1");
-            $emprole = mysqli_fetch_all($role);
-            foreach ($emprole as list($id, $name)) { ?>
-                <option value="<?php echo $id; ?>"> <?php echo $name; ?></option>
-            <?php
-            } ?>
-        </select>
-    </label></div>
+        <label class="col-6 block form-label">
+            <span class="text-gray-700 dark:text-gray-400">Password</span>
+            <input type="password" data-bvalidator="required,minlength[6]" id="password" name="password" class="form-control" placeholder="Please Give Strong Password!" />
+        </label>
+        <label class="col-6 block form-label">
+            <span class="text-gray-700 dark:text-gray-400">Employee Role</span>
+            <select data-bvalidator="required" class="form-control select2" name="role" id="role">
+                <option value="">Select Role</option>
+                <?php
+                $role = $obj->selectextrawhereupdate("roles", "id,name", "status = 1 and id != 1");
+                $emprole = mysqli_fetch_all($role);
+                foreach ($emprole as list($id, $name)) { ?>
+                    <option value="<?php echo $id; ?>"> <?php echo $name; ?></option>
+                <?php
+                } ?>
+            </select>
+        </label>
+    </div>
 
 
     <label class="block form-label">
