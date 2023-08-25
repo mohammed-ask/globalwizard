@@ -812,18 +812,39 @@
                                 <label class="form-label">Full Address</label>
                                 <input id="address" name="address" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Full Address" autocomplete="off" fdprocessedid="obmv5h">
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Aadhar Number</label>
-                                <input id="adharno" name="adharno" required require type="email" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Aadhar No. without spaces" autocomplete="off" fdprocessedid="obmv5h">
-                            </div>
                             <div class="row">
-                                <div class="mb-3 col-6">
+                            <div class="col-6 mb-3">
+                                <label class="form-label">Aadhar Number</label>
+                                <input id="adharno" name="adharno" required require type="number" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Aadhar No. without spaces" autocomplete="off" fdprocessedid="obmv5h">
+                            </div>
+
+                            <div class="mb-3 col-6">
                                     <label class="form-label">PAN Number</label>
                                     <input id="panno" name="panno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter 10 digit pan no." autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
+                        
+                        
+                        </div>
+                            <div class="row">
+                               
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Date of birth</label>
                                     <input name="dob" id="dob" required require type="date" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="" autocomplete="off" fdprocessedid="obmv5h">
+                                </div>
+                                <div class="mb-3 col-6">
+                                    <label class="form-label">Bank Name</label>
+                                    <input id="panno" name="panno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Eg. BOI, HDFC, SBI" autocomplete="off" fdprocessedid="obmv5h">
+                                </div>
+                            </div>
+                            <div class="row">
+                               
+                                <div class="mb-3 col-6">
+                                    <label class="form-label">Account Numer</label>
+                                    <input name="dob" id="dob" required require type="number" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter bank a/c no." autocomplete="off" fdprocessedid="obmv5h">
+                                </div>
+                                <div class="mb-3 col-6">
+                                    <label class="form-label">IFSC</label>
+                                    <input id="panno" name="panno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter 10 digit pan no." autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                             </div>
 
@@ -839,6 +860,8 @@
                         <!-- ------------------------------------- third step Started ------------------------------------------>
 
                         <div class="main">
+                        <h3 class="h3 text-center m-0">Upload Documents</h3>
+                        <p class="m-0 text-center mb-3" style="font-size: 12px; color: #a70000;">(Png, jpg, jpeg & Pdf Supported Only, Max-Size: 1 MB)*</p>
 
                             <div class="row">
                                 <div class="mb-3 col-6">

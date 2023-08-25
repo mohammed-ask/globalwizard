@@ -6,7 +6,8 @@ $rowmail = $obj->selectextrawhere("mail", "id=" . $id . "")->fetch_assoc();
 $attachment = $obj->selectextrawhere('maildocuments', "mailid=" . $id . "");
 $type = $what == 'sentmail' ? 'senderid' : 'receiverid';
 ?>
-<label class="block text-sm" style="margin-bottom: 5px;">
+<label class="block 
+" style="margin-bottom: 5px;">
     <span class="text-gray-700 dark:text-gray-400">Email
         <?= $what == 'sentmail' ? 'Send From :' : 'Received in :' ?></span>
     <input disabled class="block w-full  text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" value="<?= $sendmailfrom ?>" placeholder="abc@domain.com" />

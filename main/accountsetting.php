@@ -53,7 +53,7 @@ include "main/session.php";
                             </div>
 
                             <h3 class="card-title mt-4">Mobile No</h3>
-                            <p class="card-subtitle">To Change Currect mobile no, Enter New number & Click on
+                            <p class="card-subtitle mb-2">To Change Currect Mobile no, Enter New number & Click on
                                 Change button.</p>
                             <div>
                                 <div class="row g-2">
@@ -66,7 +66,7 @@ include "main/session.php";
                                 </div>
                             </div>
                             <h3 class="card-title mt-4">Password</h3>
-                            <p class="card-subtitle">To Change Currect Password, Enter New Password & Click on
+                            <p class="card-subtitle mb-2">To Change Currect Password, Enter New Password & Click on
                                 Change.</p>
                             <div class="row g-2">
                                 <div class="col-auto" style="position: relative;">
@@ -81,8 +81,8 @@ include "main/session.php";
                                 purpose, OTP will send to your registered email to change Mobile no or Password.
                             </p>
                             <div id="otpinput"></div>
-                            <div class="col-12 mt-3">
-                                <button type="button" class="btn btn-primary" id="otp" onclick="requestotp()">Send OTP</button>
+                            <div class="col-12 my-3">
+                                <button type="button" class="btn btn-primary" id="otp" onclick="requestotp()">Save Changes</button>
                                 <button type="button" class="btn btn-primary" id="formsubmit" style="display: none;" onclick="sendForm('', '', 'updateprofile', 'resultid', 'addtax')">Submit</button>
                             </div>
                             <div id="resultid"></div>
