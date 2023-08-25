@@ -50,7 +50,7 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] = $row['email'];
     $n[] =  $row['mobile'];
     $n[] =  "
-    <span aria-label='view' class='badge bg-warning me-1'>Pending</span>";
+    <span class='badge bg-warning me-1' aria-label='view'></span> Pending";
     $n[] =  "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
     if (in_array(44, $permissions)) {
         $n[] = "<button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
