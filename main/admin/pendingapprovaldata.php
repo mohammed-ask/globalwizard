@@ -49,12 +49,11 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] = $row['name'];
     $n[] = $row['email'];
     $n[] =  $row['mobile'];
-    $n[] =  "<button class='px-4 py-2 leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700' aria-label='view'>
-    <span class='w-5 h-5' fill='currentColor'>Pending</span>
-</button>";
+    $n[] =  "
+    <span aria-label='view' class='badge bg-warning me-1'>Pending</span>";
     $n[] =  "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewusermodal\", \"\", \"User Details\")' aria-label='Edit'>More Detail</button>";
     if (in_array(44, $permissions)) {
-        $n[] = "<button class='px-3 py-1  text-sm  bg-blue  rounded-sm ' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
+        $n[] = "<button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#modal-report'  onclick='dynamicmodal(\"" . $row['id'] . "\", \"userdocs\", \"\", \"Customer Documents\")' aria-label='Edit'>
     View Docs</button>";
     } else {
         $n[] = "";
