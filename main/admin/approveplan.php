@@ -15,7 +15,9 @@ $obj->saveactivity("Plan Request Request Approved/Disapprove", "", $_GET["hakuna
 $id = $_GET['hakuna'];
 $rowfund = $obj->selectextrawhere("fundrequest", "id=" . $id . "")->fetch_assoc();
 $plandays = $obj->selectfieldwhere("plandetail inner join plantypes on plantypes.id = plandetail.plantypeid", "plantypes.days", "plandetail.id=" . $rowfund['plandetailid'] . "");
-echo $plandays;
+$planname = $obj->selectfieldwhere("plandetail inner join plan on plan.id = plandetail.planid", "plan.name", "plandetail.id=" . $rowfund['plandetailid'] . "");
+$plantypename = $obj->selectfieldwhere("plandetail inner join plantypes on plantypes.id = plandetail.plantypeid", "plantypes.name", "plandetail.id=" . $rowfund['plandetailid'] . "");
+// echo $plandays;
 $email = $obj->selectfieldwhere("users", "email", "id=" . $rowfund['userid'] . "");
 $currentDate = new DateTime();
 $currentDate->modify("+$plandays days");
@@ -402,7 +404,7 @@ ob_start();
                             <tr>
                                 <td style="padding: 0 2.5em; text-align: center; padding-bottom: 2em;">
                                     <div class="text">
-                                        <h2>Payment has been done Successfully for Plan Mera Vala Plan (Quaterly).</h2>
+                                        <h2>Payment has been done Successfully for <?= $planname ?> (<?= $plantypename ?>).</h2>
                                     </div>
                                 </td>
                             </tr>
@@ -415,22 +417,22 @@ ob_start();
                                             <h3 style="text-align: center; margin-bottom: 10px;">Your Transaction Detials</h3>
                                             <tr>
                                                 <td style="    font-weight: 600;">Transaction ID</td>
-                                                <td>TRU67353757iuh</td>
+                                                <td><?= $rowfund['transactionid'] ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td style="width: 150px;    font-weight: 600;">Payment Method</td>
-                                                <td>Phone Pe</td>
+                                                <td><?= $rowfund['paymentmethod'] ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td style="    font-weight: 600;">Date & Time</td>
-                                                <td>20 May, 2023 12:00</td>
+                                                <td><?= changedateformatespecito($rowfund['added_on'], "Y-m-d H:i:s", "d M, Y H:i") ?></td>
                                             </tr>
 
                                             <tr>
                                                 <td style="    font-weight: 600;">Amount</td>
-                                                <td>₹ 4000</td>
+                                                <td>₹ <?= $rowfund['amount'] ?></td>
                                             </tr>
 
                                         </table>

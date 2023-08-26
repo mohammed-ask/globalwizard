@@ -813,38 +813,38 @@
                                 <input id="address" name="address" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Full Address" autocomplete="off" fdprocessedid="obmv5h">
                             </div>
                             <div class="row">
-                            <div class="col-6 mb-3">
-                                <label class="form-label">Aadhar Number</label>
-                                <input id="adharno" name="adharno" required require type="number" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Aadhar No. without spaces" autocomplete="off" fdprocessedid="obmv5h">
-                            </div>
+                                <div class="col-6 mb-3">
+                                    <label class="form-label">Aadhar Number</label>
+                                    <input id="adharno" name="adharno" required require type="number" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter Aadhar No. without spaces" autocomplete="off" fdprocessedid="obmv5h">
+                                </div>
 
-                            <div class="mb-3 col-6">
+                                <div class="mb-3 col-6">
                                     <label class="form-label">PAN Number</label>
                                     <input id="panno" name="panno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter 10 digit pan no." autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
-                        
-                        
-                        </div>
+
+
+                            </div>
                             <div class="row">
-                               
+
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Date of birth</label>
                                     <input name="dob" id="dob" required require type="date" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Bank Name</label>
-                                    <input id="panno" name="panno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Eg. BOI, HDFC, SBI" autocomplete="off" fdprocessedid="obmv5h">
+                                    <input id="bankname" name="bankname" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Eg. BOI, HDFC, SBI" autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                             </div>
                             <div class="row">
-                               
+
                                 <div class="mb-3 col-6">
                                     <label class="form-label">Account Numer</label>
-                                    <input name="dob" id="dob" required require type="number" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter bank a/c no." autocomplete="off" fdprocessedid="obmv5h">
+                                    <input id="accountno" name="accountno" required require type="number" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter bank a/c no." autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                                 <div class="mb-3 col-6">
                                     <label class="form-label">IFSC</label>
-                                    <input id="panno" name="panno" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter 10 digit pan no." autocomplete="off" fdprocessedid="obmv5h">
+                                    <input name="ifsc" id="ifsc" required require type="text" class="form-control" style="padding: 0.578rem 0.75rem;" placeholder="Enter 10 digit pan no." autocomplete="off" fdprocessedid="obmv5h">
                                 </div>
                             </div>
 
@@ -860,8 +860,8 @@
                         <!-- ------------------------------------- third step Started ------------------------------------------>
 
                         <div class="main">
-                        <h3 class="h3 text-center m-0">Upload Documents</h3>
-                        <p class="m-0 text-center mb-3" style="font-size: 12px; color: #a70000;">(Png, jpg, jpeg & Pdf Supported Only, Max-Size: 1 MB)*</p>
+                            <h3 class="h3 text-center m-0">Upload Documents</h3>
+                            <p class="m-0 text-center mb-3" style="font-size: 12px; color: #a70000;">(Png, jpg, jpeg & Pdf Supported Only, Max-Size: 1 MB)*</p>
 
                             <div class="row">
                                 <div class="mb-3 col-6">
@@ -1029,6 +1029,25 @@
     <script src="main/dist/js/select2.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var inputs = document.querySelectorAll('[data-code-input]');
+            // Attach an event listener to each input element
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('input', function(e) {
+                    // If the input field has a character, and there is a next input field, focus it
+                    if (e.target.value.length === e.target.maxLength && i + 1 < inputs.length) {
+                        inputs[i + 1].focus();
+                    }
+                });
+                inputs[i].addEventListener('keydown', function(e) {
+                    // If the input field is empty and the keyCode for Backspace (8) is detected, and there is a previous input field, focus it
+                    if (e.target.value.length === 0 && e.keyCode === 8 && i > 0) {
+                        inputs[i - 1].focus();
+                    }
+                });
+            }
+        });
+
         function startTimer() {
             var timerElement = $("#timer");
             var totalTime = 75; // Total time in seconds

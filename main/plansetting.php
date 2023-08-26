@@ -79,8 +79,10 @@ if (!empty($activeplan) && $curdate > $activeplan['expireon']) {
                             <?php } ?>
 
                         </div>
-                        <div class="plan-expired-date"> Your Current Plan Will Expired on <span style="font-weight: 600;margin-right: 5px;"><?= changedateformatespecito($activeplan['expireon'], "Y-m-d", "d M, Y") ?></span>
-                        </div>
+                        <?php if (!empty($activeplan)) { ?>
+                            <div class="plan-expired-date"> Your Current Plan Will Expired on <span style="font-weight: 600;margin-right: 5px;"><?= changedateformatespecito($activeplan['expireon'], "Y-m-d", "d M, Y") ?></span>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

@@ -49,7 +49,7 @@ while ($row = $obj->fetch_assoc($result)) {
     $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "d M,Y H:i");;
     $n[] = changedateformatespecito($row['added_on'], "Y-m-d H:i:s", "H:i a");
     $n[] =  $row['subject'];
-    $n[] =  "<button class='btn' data-bs-toggle='modal' data-bs-target='#myModal' onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewmaildetail\", \"\", \"Add New User\")'>View</button>";
+    $n[] =  "<button class='btn' data-bs-toggle='modal' data-bs-target='#modal-report' onclick='dynamicmodal(\"" . $row['id'] . "\", \"viewmaildetail\", \"\", \"Add New User\")'>View</button>";
     $data[] = $n;
 
     $i++;

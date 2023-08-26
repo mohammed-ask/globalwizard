@@ -51,16 +51,17 @@ $plan = $obj->selectextrawhere("plan", "status =1");
                         <h4 class="mt-3">Send Message To Global Wizard Team</h4>
                         <form class="row gy-2 gx-3 align-items-end" id="addtax" enctype="multipart/form-data">
                             <div class="mb-3">
+                                <input name="userid" data-bvalidator="required" class="d-none" value='59' placeholder="Subject" />
                                 <label class="form-label">Subject</label>
-                                <input type="text" class="form-control" name="example-text-input" placeholder="Message subject" fdprocessedid="vsy1l">
+                                <input type="text" data-bvalidator="required" class="form-control" name="subject" placeholder="Message subject" fdprocessedid="vsy1l">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Message<span class="form-label-description"></label>
-                                <textarea class="form-control" name="example-textarea-input" rows="8" placeholder="Type your message"></textarea>
+                                <textarea class="form-control" data-bvalidator="required" name="message" rows="8" placeholder="Type your message"></textarea>
                             </div>
                             <div class="mb-5 col-lg-4 col-md-6">
                                 <div class="form-label">Attach File</div>
-                                <input type="file" class="form-control">
+                                <input name="files[]" multiple data-bvalidator="extension[jpg:jpeg:png:pdf:word]" data-bvalidator-msg-extension="This File Format Not Allowed" type="file" class="form-control">
                             </div>
                             <!-- <a class="btn btn-green w-35" href="#">
                                 Send Message
