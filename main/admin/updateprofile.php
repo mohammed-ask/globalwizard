@@ -7,7 +7,7 @@ if ($emailcount > 0) {
     $xx['updated_on'] = date('Y-m-d H:i:s');
     $xx['updated_by'] = $employeeid;
     $xx['email'] = $_POST['email'];
-    $xx['mobile'] = $_POST['phone'];
+    // $xx['mobile'] = $_POST['phone'];
     $xx['password'] = $_POST['password'];
     $tb_name = 'users';
     $profile = $obj->update($tb_name, $xx, $employeeid);
