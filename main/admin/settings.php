@@ -120,7 +120,7 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                             </div>
 
 
-                            <div class="form-row mb-3">
+                            <!-- <div class="form-row mb-3">
 
                                 <div class="form-group col-md-6">
                                     <label class="mb-1" for="activationmoney">Activation Amount</label>
@@ -130,7 +130,7 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                                                                                             }
                                                                                                             ?>" id="activationmoney" placeholder="">
                                 </div>
-                            </div>
+                            </div> -->
 
 
                             <div class="form-group">
@@ -285,16 +285,16 @@ $path = $obj->fetchattachment($row['uploadfile_id']);
                                 </div>
                                 <div class="form-group">
                                     <labelclass="mb-1" for="upiid" class="col-sm-12 col-form-label">UPI Id</label>
-                                    <div class="col-sm-12 input-group sinput-group">
-                                        <div>
-                                            <span class=""><i class="fa-solid fa-at"></i></span>
+                                        <div class="col-sm-12 input-group sinput-group">
+                                            <div>
+                                                <span class=""><i class="fa-solid fa-at"></i></span>
+                                            </div>
+                                            <input name="upiid" type="text" class="form-control" value="<?php
+                                                                                                        if (isset($row["upiid"])) {
+                                                                                                            echo $row["upiid"];
+                                                                                                        }
+                                                                                                        ?>" id="upiid" placeholder="UPI Id">
                                         </div>
-                                        <input name="upiid" type="text" class="form-control" value="<?php
-                                                                                                    if (isset($row["upiid"])) {
-                                                                                                        echo $row["upiid"];
-                                                                                                    }
-                                                                                                    ?>" id="upiid" placeholder="UPI Id">
-                                    </div>
                                 </div>
                                 <!-- <div class="form-group">
                             <label for="branch_name" class="col-sm-12 col-form-label">Branch Name</label>
