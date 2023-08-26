@@ -20,6 +20,8 @@ $avatarpath = $obj->fetchattachment($rowuserdata['avatar']);
 $username = $rowuserdata['name'];
 $useremail = $rowuserdata['email'];
 $usermobile = $rowuserdata['mobile'];
+$activationamt = $rowuserdata["activationmoney"];
+
 $membershipstatus = $rowuserdata['membershipstatus'];
 $permissions = array();
 if (isset($_SESSION['permissions']) && (!empty($_SESSION['permissions']))) {
